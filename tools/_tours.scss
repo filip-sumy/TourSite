@@ -4,27 +4,61 @@
     padding-top: 15px;
     padding-right: 15px;
     cursor: pointer;
+    img {
+        width: 30px;
+        height: 30px;
+    }
 }
 
-.menu-btn img {
-    width: 30px;
-    height: 30px;
+nav {
+    position: relative;
+    .left__circle {
+        position: absolute;
+        top: -230px;
+        left: -90px;
+    }
+    
+    .right__circle {
+        position: absolute;
+        top: 150px;
+        left: 180px;
+    }
 }
+    
+
+
+
+ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .nav__text {
+        text-decoration: none;
+        font-family: "Manrope";
+        font-size: 40px;
+        font-weight: 600;
+        color: #000000;
+        &:hover {
+            color: #E95200;
+        }
+    }
+}
+
 
 .hidden {
     display: none;
 }
 
 #menu {
-    background-color: #f8f9fa;
-    border: 1px solid #ccc;
-    padding: 10px;
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    width: 200px;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .tours {
+    //padding-bottom: 350px;
     .tours__img {
         position: absolute;
         top: 25px;
@@ -113,7 +147,7 @@
             }
         }
     }
-    margin-bottom: 200px;
+    margin-bottom: 600px;
 }
 
 @media (min-width: 670px) {

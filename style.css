@@ -35,10 +35,41 @@ body {
   padding-right: 15px;
   cursor: pointer;
 }
-
 .menu-btn img {
   width: 30px;
   height: 30px;
+}
+
+nav {
+  position: relative;
+}
+nav .left__circle {
+  position: absolute;
+  top: -230px;
+  left: -90px;
+}
+nav .right__circle {
+  position: absolute;
+  top: 150px;
+  left: 180px;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+ul .nav__text {
+  text-decoration: none;
+  font-family: "Manrope";
+  font-size: 40px;
+  font-weight: 600;
+  color: #000000;
+}
+ul .nav__text:hover {
+  color: #E95200;
 }
 
 .hidden {
@@ -46,17 +77,14 @@ body {
 }
 
 #menu {
-  background-color: #f8f9fa;
-  border: 1px solid #ccc;
-  padding: 10px;
   position: absolute;
-  top: 50px;
-  right: 10px;
-  width: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .tours {
-  margin-bottom: 200px;
+  margin-bottom: 600px;
 }
 .tours .tours__img {
   position: absolute;
@@ -161,4 +189,10 @@ body {
   .scroll {
     display: none;
   }
+}
+.questions__text {
+  font-family: "Manrope";
+  font-size: 44px;
+  font-weight: 600;
+  padding-left: 15px;
 }/*# sourceMappingURL=style.css.map */

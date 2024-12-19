@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const scroll = document.getElementById("scroll");
 
+    const main = document.getElementById("main");
+
     function toggleMenu(button) {
         menu.classList.toggle("hidden");
 
@@ -15,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
         slider.classList.toggle("hidden");
 
         scroll.classList.toggle("hidden");
+
+        main.classList.toggle("hidden");
         // Создаём новую кнопку с изображением
         const newButton = document.createElement("button");
         newButton.id = "menuButton";
