@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        padding-top: 15px;
+        padding-left: 15px;
+    }
+    .menu {
+        padding-top: 27px;
+        padding-right: 15px;
+    }
+}
+
