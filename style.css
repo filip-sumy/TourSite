@@ -190,9 +190,26 @@ ul .nav__text:hover {
     display: none;
   }
 }
-.questions__text {
+.questions {
+  padding-left: 15px;
+}
+.questions .questions__text {
   font-family: "Manrope";
   font-size: 44px;
   font-weight: 600;
   padding-left: 15px;
+}
+.questions .activities {
+  margin-top: 30px;
+  width: 345px;
+  height: 130px;
+  border-radius: 30px;
+  background-color: #FAFAFA;
+}
+.questions .activities .activities__text {
+  font-family: "Manrope";
+  font-size: 30px;
+  font-weight: 600;
+  padding-top: 30px;
+  padding-left: 25px;
 }/*# sourceMappingURL=style.css.map */
