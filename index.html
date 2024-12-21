@@ -156,11 +156,21 @@
         <section id="contact" class="contact">
             <div class="contact__div">
                 <p class="contact__text">
-                    Зв’язатися з менеджарами:
+                    Зв’язатися з менеджерами:
                 </p>
             </div>
-            <div class="contact__form">
-                
+            <div class="form-container">
+                <form action="send_mail.php" method="post">
+                    <div class="input-wrapper">
+                        <img class="icon" src="images/name-icon.svg" alt="">
+                        <input class="input" type="text" name="name" placeholder="Введіть ваше ім'я" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <img class="icon" src="images/tel-icon.svg" alt="">
+                        <input class="input" type="tel" name="phone" placeholder="Введіть ваш номер телефону" required>
+                    </div>
+                    <button class="form-button" type="submit">ЗАМОВИТИ ДЗВІНОК</button>
+                </form>
             </div>
         </section>
     </main>

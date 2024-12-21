@@ -1,3 +1,7 @@
+.contact {
+    margin-left: 15px;
+}
+
 .contact__div {
     margin-bottom: 50px;
     .contact__text {
@@ -6,5 +10,65 @@
         font-weight: 600;
         line-height: 44px;
     }
+}
 
+.form-container {
+    margin: 0 auto;
+    //width: 50%;
+    background-color: #161616;
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    width: 345px;
+}
+
+.input {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    background-color: #F2F2F2;
+}
+
+.input::placeholder {
+    color: #A0A0A0;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.form-button {
+    width: 73%;
+    padding: 15px;
+    font-size: 18px;
+    font-family: "Manrope";
+    font-weight: 400;  
+    color: #fff;
+    background-color: #E95200;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #FF6C1C;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input {
+    padding-left: 40px;
+}
+
+.icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #A0A0A0;
 }
