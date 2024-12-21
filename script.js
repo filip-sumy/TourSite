@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menu = document.getElementById("menu");
     
-    const ourTours = document.getElementById("block__text");
+    //const ourTours = document.getElementById("block__text");
 
-    const slider = document.getElementById("slider");
+    //const slider = document.getElementById("slider");
 
-    const scroll = document.getElementById("scroll");
+    //const scroll = document.getElementById("scroll");
 
     const main = document.getElementById("main");
 
     function toggleMenu(button) {
         menu.classList.toggle("hidden");
 
-        ourTours.classList.toggle("hidden");
+        //ourTours.classList.toggle("hidden");
 
-        slider.classList.toggle("hidden");
+        //slider.classList.toggle("hidden");
 
-        scroll.classList.toggle("hidden");
+        //scroll.classList.toggle("hidden");
 
         main.classList.toggle("hidden");
         // Создаём новую кнопку с изображением

@@ -1,4 +1,7 @@
 .questions {
+    margin-bottom: 75px;
+    position: relative;
+    z-index: 1;
     padding-left: 15px;
     .questions__text {
         font-family: "Manrope";
@@ -21,4 +24,18 @@
             padding-left: 25px;
         }
     }
+}
+
+.questions__left__circle {
+    position: absolute;
+    z-index: -1;
+    top: 400px;
+    left: 0px;
+}
+
+.questions__right__circle {
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    right: 0px;
 }

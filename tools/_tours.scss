@@ -1,3 +1,11 @@
+.contact-button {
+    width: 75px;
+    position: fixed;
+    z-index: 2;
+    bottom: 50px;
+    right: 35px;
+}
+
 .menu-btn {
     background: none;
     border: none;
@@ -151,6 +159,9 @@ ul {
 }
 
 @media (min-width: 670px) {
+    .menu-btn  {
+        display: none;
+    }
     .tours {
         .tours__block {
             .wrapper {
