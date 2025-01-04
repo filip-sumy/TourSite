@@ -1,6 +1,6 @@
 .questions {
     margin-bottom: 75px;
-    position: relative;
+    //position: relative;
     z-index: 1;
     padding-left: 15px;
     .questions__text {
@@ -9,13 +9,18 @@
         font-weight: 600;
         padding-left: 15px;
     }
-    
+    .questions__wrapper {
+        
+        display: flex;
+        flex-direction: column;
+    }
     .activities {
         margin-top: 30px;
         width: 345px;
         height: 130px;
         border-radius: 30px;
         background-color: #FAFAFA;
+        /*margin: 20px auto;*/
         .activities__text {
             font-family: "Manrope";
             font-size: 30px;
@@ -29,13 +34,48 @@
 .questions__left__circle {
     position: absolute;
     z-index: -1;
-    top: 400px;
+    top: 1000px;
     left: 0px;
 }
 
 .questions__right__circle {
     position: absolute;
     z-index: -1;
-    top: 0px;
-    right: 0px;
+    top: 500px;
+    right: -50px;
+}
+
+@media (min-width: 676px) {
+    .questions__wrapper {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (min-width: 1070px) {
+    .questions {
+        padding-left: 100px;
+    }
+    .questions__wrapper {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    .questions__right__circle {
+        right: -85px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .questions {
+        padding-left: 200px;
+    }
+}
+
+@media (min-width: 1400px) {
+    
+    .questions__right__circle {
+        right: 0px;
+    }
 }

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,14 @@
         <div class="logo">
             <img src="images/logo.svg" alt="logo">
         </div>
+        <ul class="nav">
+            <li>
+                <a class="nav__link" href="index.html">Головна</a>
+            </li>
+            <li>
+                <a class="nav__link" href="booking.html">Бронювання</a>
+            </li>
+        </ul>
         <button id="menuButton" class="menu-btn">
             <img src="images/Menu_button.svg" alt="Открыть меню" id="menuIcon">
         </button>
@@ -34,94 +43,104 @@
     </nav>
     <main id="main" class="main">
         <div class="contact-us">
-            <a href="#contact">
-                <img class="contact-button" src="images/Property 1=Variant2.svg" alt=""></div>
-            </a>
+            <a class="contact-button" href="#contact"></a>
         <section class="tours">
             <img class="tours__img" src="images/Frame 12 (2).svg" alt="img">
             <div class="tours__block">
-                <p id="block__text" class= "block__text">Наші тури:</p>
-                <div id="slider" class="wrapper">
-                    <div  class="slider">
-                        <div class="slide">
-                            <div class="card">
-                                <div class="card__wrapper">
-                                    <div class="month">
-                                        <p class="month__name">Грудень</p>
+                <p id="block__text" class= "block__text">Наші тури:</p>  
+            </div>
+        </section>
+        <section class="slider">
+            <div class="container swiper">
+                <div class="card-wrapper">
+                    <ul class="card-list swiper-wrapper">
+                        <li class="card-item swiper-slide">
+                            <div class="slide">
+                                <div class="card">
+                                    <div class="card__wrapper">
+                                        <div class="month">
+                                            <p class="month__name">Грудень</p>
+                                        </div>
+                                        <div class="star">
+                                            <img class="star__image" src="images/material-symbols_asterisk.svg" alt="star">
+                                        </div>
+                                        <div class="rectangle">
+                                            <p class="rectangle__text">1/3</p>
+                                        </div>
                                     </div>
-                                    <div class="star">
-                                        <img class="star__image" src="images/material-symbols_asterisk.svg" alt="star">
+                                    <div class="card__description">
+                                        <p class="description__text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing<br> 
+                                            elit. Sed ullamcorper, magna et iaculis dictum, velit<br> 
+                                            diam efficitur metus, in dapibus odio lectus non<br> 
+                                            nibh. Nam ut tempus mi. Aliquam aliquam nisi non<br> 
+                                            libero vehicula porttitor. Fusce et tincidunt risus. In<br> 
+                                            commodo faucibus lectus faucibus molestie.
+                                        </p>
                                     </div>
-                                    <div class="rectangle">
-                                        <p class="rectangle__text">1/3</p>
-                                    </div>
-                                </div>
-                                <div class="card__description">
-                                    <p class="description__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing<br> 
-                                        elit. Sed ullamcorper, magna et iaculis dictum, velit<br> 
-                                        diam efficitur metus, in dapibus odio lectus non<br> 
-                                        nibh. Nam ut tempus mi. Aliquam aliquam nisi non<br> 
-                                        libero vehicula porttitor. Fusce et tincidunt risus. In<br> 
-                                        commodo faucibus lectus faucibus molestie.
-                                    </p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="slide">
-                            <div class="card">
-                                <div class="card__wrapper">
-                                    <div class="month">
-                                        <p class="month__name">Січень</p>
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <div class="slide">
+                                <div class="card">
+                                    <div class="card__wrapper">
+                                        <div class="month">
+                                            <p class="month__name">Січень</p>
+                                        </div>
+                                        <div class="star">
+                                            <img class="star__image" src="images/material-symbols_asterisk.svg" alt="star">
+                                        </div>
+                                        <div class="rectangle">
+                                            <p class="rectangle__text">2/3</p>
+                                        </div>
                                     </div>
-                                    <div class="star">
-                                        <img class="star__image" src="images/material-symbols_asterisk.svg" alt="star">
+                                    <div class="card__description">
+                                        <p class="description__text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing<br> 
+                                            elit. Sed ullamcorper, magna et iaculis dictum, velit<br> 
+                                            diam efficitur metus, in dapibus odio lectus non<br> 
+                                            nibh. Nam ut tempus mi. Aliquam aliquam nisi non<br> 
+                                            libero vehicula porttitor. Fusce et tincidunt risus. In<br> 
+                                            commodo faucibus lectus faucibus molestie.
+                                        </p>
                                     </div>
-                                    <div class="rectangle">
-                                        <p class="rectangle__text">2/3</p>
-                                    </div>
-                                </div>
-                                <div class="card__description">
-                                    <p class="description__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing<br> 
-                                        elit. Sed ullamcorper, magna et iaculis dictum, velit<br> 
-                                        diam efficitur metus, in dapibus odio lectus non<br> 
-                                        nibh. Nam ut tempus mi. Aliquam aliquam nisi non<br> 
-                                        libero vehicula porttitor. Fusce et tincidunt risus. In<br> 
-                                        commodo faucibus lectus faucibus molestie.
-                                    </p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="slide">
-                            <div class="card">
-                                <div class="card__wrapper">
-                                    <div class="month">
-                                        <p class="month__name">Лютий</p>
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <div class="slide">
+                                <div class="card">
+                                    <div class="card__wrapper">
+                                        <div class="month">
+                                            <p class="month__name">Лютий</p>
+                                        </div>
+                                        <div class="star">
+                                            <img class="star__image" src="images/material-symbols_asterisk.svg" alt="star">
+                                        </div>
+                                        <div class="rectangle">
+                                            <p class="rectangle__text">3/3</p>
+                                        </div>
                                     </div>
-                                    <div class="star">
-                                        <img class="star__image" src="images/material-symbols_asterisk.svg" alt="star">
+                                    <div class="card__description">
+                                        <p class="description__text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing<br> 
+                                            elit. Sed ullamcorper, magna et iaculis dictum, velit<br> 
+                                            diam efficitur metus, in dapibus odio lectus non<br> 
+                                            nibh. Nam ut tempus mi. Aliquam aliquam nisi non<br> 
+                                            libero vehicula porttitor. Fusce et tincidunt risus. In<br> 
+                                            commodo faucibus lectus faucibus molestie.
+                                        </p>
                                     </div>
-                                    <div class="rectangle">
-                                        <p class="rectangle__text">3/3</p>
-                                    </div>
-                                </div>
-                                <div class="card__description">
-                                    <p class="description__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing<br> 
-                                        elit. Sed ullamcorper, magna et iaculis dictum, velit<br> 
-                                        diam efficitur metus, in dapibus odio lectus non<br> 
-                                        nibh. Nam ut tempus mi. Aliquam aliquam nisi non<br> 
-                                        libero vehicula porttitor. Fusce et tincidunt risus. In<br> 
-                                        commodo faucibus lectus faucibus molestie.
-                                    </p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block__scroll">
-                    <img id="scroll" class="scroll" src="images/Scroll.svg" alt="Scroll">
+                        </li>
+                    </ul>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </section>
@@ -137,20 +156,32 @@
                     Популярні питанння:
                 </p>
             </div>
-            <div class="activities">
-                <p class="activities__text">
-                    Чим зайнятися на Драгобраті?👇🏻
-                </p>
-            </div>
-            <div class="activities">
-                <p class="activities__text">
-                    Чим зайнятися на Драгобраті?👇🏻
-                </p>
-            </div>
-            <div class="activities">
-                <p class="activities__text">
-                    Чим зайнятися на Драгобраті?👇🏻
-                </p>
+            <div class="questions__wrapper">
+                <div class="activities">
+                    <p class="activities__text">
+                        Чим зайнятися на Драгобраті?👇🏻
+                    </p>
+                </div>
+                <div class="activities">
+                    <p class="activities__text">
+                        Чим зайнятися на Драгобраті?👇🏻
+                    </p>
+                </div>
+                <div class="activities">
+                    <p class="activities__text">
+                        Чим зайнятися на Драгобраті?👇🏻
+                    </p>
+                </div>
+                <div class="activities">
+                    <p class="activities__text">
+                        Чим зайнятися на Драгобраті?👇🏻
+                    </p>
+                </div>
+                <div class="activities">
+                    <p class="activities__text">
+                        Чим зайнятися на Драгобраті?👇🏻
+                    </p>
+                </div>
             </div>
         </section>
         <section id="contact" class="contact">
@@ -160,7 +191,9 @@
                 </p>
             </div>
             <div class="form-container">
-                <form action="send_mail.php" method="post">
+                <form action="send_mail.php" method="POST">
+                <!--<input type="hidden" name="access_key" value="ba5e537e-e7e3-4288-b455-0a46c6fd2966">
+                -->
                     <div class="input-wrapper">
                         <img class="icon" src="images/name-icon.svg" alt="">
                         <input class="input" type="text" name="name" placeholder="Введіть ваше ім'я" required>
@@ -173,7 +206,15 @@
                 </form>
             </div>
         </section>
+        <section class="reviews">
+            <div class="your-reviews">
+                <p class="reviews__text">
+                    Відгуки:
+                </p>
+            </div>
+        </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

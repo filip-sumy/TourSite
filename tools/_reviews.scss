@@ -1,0 +1,13 @@
+.reviews {
+    margin-top: 50px;
+    .your-reviews {
+        /*can also be a margin*/
+        padding-left: 15px;
+        .reviews__text {
+            font-size: 44px;
+            font-weight: 600;
+            text-align: left;
+            font-family: "Manrope";
+        }
+    }
+}

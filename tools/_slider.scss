@@ -1,0 +1,119 @@
+.container {
+    margin-top: 75px;
+    margin-bottom: 50px;
+    .card-list {
+        display: flex;
+        flex-direction: row;
+        //gap: 5%;/*Расстояние между слайдами*/
+        margin-bottom: 50px;/*Отступ для точек*/
+        .card-item {
+            list-style: none;
+            .slide {
+                .card {
+                    width: 335px;
+                    height: 340px;
+                    border-radius: 30px;
+                    background-color: #EEEEEE;
+                    .card__wrapper {
+                        display: flex;
+                    }
+                    .month {
+                        padding-top: 45px;
+                        padding-left: 25px;
+                        .month__name {
+                            font-size: 40px;
+                            font-weight: 600;
+                            font-family: "Manrope";
+
+                        }
+                    }
+                    .star {
+                        margin-top: 50px;
+                        margin-left: 50px;
+                        
+                    }
+                    .rectangle {
+                        border: 1px solid #B2B2B2;
+                        border-radius: 20px;
+                        height: 25px;
+                        width: 50px;
+                        margin-top: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .rectangle__text {
+                            //text-align: center;
+                            //padding: 3px 0px 3px 10px;
+                            color: #B2B2B2;
+                        }
+                    }
+                    .card__description {
+                        padding-top: 50px;
+                        padding-left: 25px;
+                        .description__text {
+                            text-align: left;
+                            font-size: 12px;
+                            font-weight: 400;
+                            font-family: "Manrope";
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+  
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #E95200;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    opacity: 0.7;
+    background: #E95200;
+}
+
+.swiper-pagination-bullet-active {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
+
+@media (min-width: 1070px) {
+    .container {
+        .card-list {
+            
+            .card-item {
+                .slide {
+                    margin-left: 100px;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .container {
+        .card-list {
+            gap: 25px;
+            .card-item {
+                .slide {
+                    margin-left: 200px;
+                }
+            }
+        }
+    }
+    
+}

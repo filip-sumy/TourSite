@@ -4,6 +4,7 @@
 
 .contact__div {
     margin-bottom: 50px;
+    /*text-align: center;*/
     .contact__text {
         font-family: "Manrope";
         font-size: 44px;
@@ -13,13 +14,14 @@
 }
 
 .form-container {
-    margin: 0 auto;
-    //width: 50%;
+    //margin: 0 auto;
+    width: 60%;
     background-color: #161616;
     padding: 30px;
     border-radius: 30px;
     text-align: center;
-    width: 345px;
+    min-width: 345px;
+    max-width: 700px;
 }
 
 .input {
@@ -71,4 +73,25 @@
     top: 50%;
     transform: translateY(-50%);
     color: #A0A0A0;
+}
+
+@media (min-width: 1070px) {
+    .form-button {
+        width: 38%;
+    }
+    .input {
+        width: 65%;
+    }
+    .contact__div {
+        padding-left: 100px;
+    }
+    .form-container {
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contact__div {
+        padding-left: 200px;
+    }
 }

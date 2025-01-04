@@ -5,9 +5,56 @@
         padding-top: 15px;
         padding-left: 15px;
     }
+    .nav {
+        padding-top: 25px;
+        padding-right: 20%;
+        display: none;
+        .nav__link {
+            text-decoration: none;
+            font-family: "Manrope";
+            font-size: 20px;
+            font-weight: 600;
+            color: #000000;
+            transition: color 0.3s ease-in-out;
+            &:hover {
+                color: #E95200;
+            }
+        }
+    }
     .menu {
         padding-top: 27px;
         padding-right: 15px;
+    }
+}
+
+@media (min-width: 670px) {
+    .header {
+        .nav {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+        }
+    }
+}
+
+@media (min-width: 1070px) {
+    .header {
+        padding-left: 100px;
+        .logo {
+            width: 100px;
+        }
+        .nav {
+            padding-right: 10%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        padding-left: 200px;
+        .nav {
+            padding-right: 15%;
+        }
     }
 }
 

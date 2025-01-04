@@ -1,44 +1,79 @@
+new Swiper('.card-wrapper', {
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 1,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  
+  breakpoints: {
+      0 : {
+          slidesPerView: 1,
+          
+      },
+      375 : {
+        slidesPerView: 1.2,
+        spaceBetween: 30,
+      },
+      400: {
+        slidesPerView: 1.2,
+        spaceBetween: 50,
+      },
+      420: {
+        slidesPerView: 1.2,
+        spaceBetween: -50,
+      },
+      768 : {
+          slidesPerView: 2.2,
+          spaceBetween: 50,
+          
+      },
+      1024 : {
+          slidesPerView: 2,
+          spaceBetween: -80,
+      },
+      1200 : {
+        slidesPerView: 2.2,
+        spaceBetween: -150,
+      },
+      1400: {
+        slidesPerView: 4,
+        spaceBetween: 60,
+    }
+  }
+
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const menu = document.getElementById("menu");
-    
-    //const ourTours = document.getElementById("block__text");
-
-    //const slider = document.getElementById("slider");
-
-    //const scroll = document.getElementById("scroll");
-
     const main = document.getElementById("main");
+    const menuButton = document.getElementById("menuButton");
+    const menuIcon = document.getElementById("menuIcon");
 
-    function toggleMenu(button) {
+    function toggleMenu() {
         menu.classList.toggle("hidden");
-
-        //ourTours.classList.toggle("hidden");
-
-        //slider.classList.toggle("hidden");
-
-        //scroll.classList.toggle("hidden");
-
         main.classList.toggle("hidden");
-        // Создаём новую кнопку с изображением
-        const newButton = document.createElement("button");
-        newButton.id = "menuButton";
-        newButton.className = "menu-btn";
 
-        const icon = document.createElement("img");
-        icon.id = "menuIcon";
-        icon.src = menu.classList.contains("hidden") ? "images/Menu_button.svg" : "images/Menu_button_back.svg";
-        icon.alt = menu.classList.contains("hidden") ? "Открыть меню" : "Закрыть меню";
-
-        newButton.appendChild(icon);
-
-        // Заменяем старую кнопку
-        button.replaceWith(newButton);
-
-        // Назначаем обработчик на новую кнопку
-        newButton.addEventListener("click", () => toggleMenu(newButton));
+        // Изменяем иконку и alt текст в зависимости от состояния меню
+        if (menu.classList.contains("hidden")) {
+            menuIcon.src = "images/Menu_button.svg";
+            menuIcon.alt = "Открыть меню";
+        } else {
+            menuIcon.src = "images/Menu_button_back.svg";
+            menuIcon.alt = "Закрыть меню";
+        }
     }
 
-    // Назначаем обработчик на первую кнопку
-    const initialButton = document.getElementById("menuButton");
-    initialButton.addEventListener("click", () => toggleMenu(initialButton));
+    // Добавляем обработчик события на кнопку
+    menuButton.addEventListener("click", toggleMenu);
 });
