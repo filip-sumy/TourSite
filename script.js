@@ -1,7 +1,8 @@
 new Swiper('.card-wrapper', {
   loop: true,
-  spaceBetween: 30,
+  spaceBetween: 0,
   slidesPerView: 1,
+  initialSlide: 1,
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
@@ -24,26 +25,90 @@ new Swiper('.card-wrapper', {
         slidesPerView: 1.2,
         spaceBetween: 30,
       },
-      400: {
-        slidesPerView: 1.2,
+      
+      420: {
+        slidesPerView: 1.4,
         spaceBetween: 50,
       },
-      420: {
-        slidesPerView: 1.2,
+      470: {
+        slidesPerView: 1.6,
+        spaceBetween: 50,
+      },
+      520: {
+        slidesPerView: 1.8,
+        spaceBetween: 50,
+      },
+      600: {
+        slidesPerView: 1.8,
+        spaceBetween: 30,
+      },
+      640: {
+        slidesPerView: 1.8,
+        spaceBetween: 10,
+      },
+      670: {
+        slidesPerView: 1.8,
+        spaceBetween: 0,
+      },
+      700: {
+        slidesPerView: 1.9,
+        spaceBetween: -70,
+      },
+      720: {
+        slidesPerView: 1.9,
         spaceBetween: -50,
+      },
+      740: {
+        slidesPerView: 2,
+        spaceBetween: -20,
       },
       768 : {
           slidesPerView: 2.2,
-          spaceBetween: 50,
-          
+          spaceBetween: 0, 
       },
-      1024 : {
-          slidesPerView: 2,
-          spaceBetween: -80,
+      820 : {
+        slidesPerView: 2.4,
+        spaceBetween: 0, 
+      },
+      870 : {
+        slidesPerView: 2.6,
+        spaceBetween: 0, 
+      },
+      920 : {
+        slidesPerView: 2.8,
+        spaceBetween: 0, 
+      },
+      970 : {
+        slidesPerView: 2.8,
+        spaceBetween: -10, 
+      },
+      1000 : {
+        slidesPerView: 2.8,
+        spaceBetween: -30, 
+      },
+      1060 : {
+        slidesPerView: 2.8,
+        spaceBetween: -50, 
+      },
+      1100 : {
+        slidesPerView: 2.8,
+        spaceBetween: -70, 
+      },
+      1130 : {
+        slidesPerView: 2.9,
+        spaceBetween: -70, 
+      },
+      1150 : {
+        slidesPerView: 2.9,
+        spaceBetween: -100, 
       },
       1200 : {
-        slidesPerView: 2.2,
-        spaceBetween: -150,
+        slidesPerView: 2.9,
+        spaceBetween: -170,
+      },
+      1250 : {
+        slidesPerView: 3,
+        spaceBetween: -320,
       },
       1400: {
         slidesPerView: 4,

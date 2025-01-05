@@ -4,13 +4,13 @@
     .card-list {
         display: flex;
         flex-direction: row;
-        //gap: 5%;/*Расстояние между слайдами*/
+        //gap: 3%;/*Расстояние между слайдами*/
         margin-bottom: 50px;/*Отступ для точек*/
         .card-item {
             list-style: none;
             .slide {
                 .card {
-                    width: 335px;
+                    width: 360px;
                     height: 340px;
                     border-radius: 30px;
                     background-color: #EEEEEE;
@@ -93,7 +93,7 @@
 @media (min-width: 1070px) {
     .container {
         .card-list {
-            
+            //gap: 0px;
             .card-item {
                 .slide {
                     margin-left: 100px;
@@ -107,7 +107,7 @@
 @media (min-width: 1200px) {
     .container {
         .card-list {
-            gap: 25px;
+            // gap: 25px;
             .card-item {
                 .slide {
                     margin-left: 200px;

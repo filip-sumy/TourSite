@@ -192,7 +192,7 @@ ul .nav__text:hover {
   list-style: none;
 }
 .container .card-list .card-item .slide .card {
-  width: 335px;
+  width: 360px;
   height: 340px;
   border-radius: 30px;
   background-color: #EEEEEE;
@@ -267,9 +267,6 @@ ul .nav__text:hover {
   }
 }
 @media (min-width: 1200px) {
-  .container .card-list {
-    gap: 25px;
-  }
   .container .card-list .card-item .slide {
     margin-left: 200px;
   }
