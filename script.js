@@ -1,19 +1,19 @@
-new Swiper('.card-wrapper', {
+const slider1 = new Swiper('.card-wrapper', {
   loop: true,
   spaceBetween: 0,
   slidesPerView: 1,
   initialSlide: 1,
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: '.card-wrapper .swiper-pagination',
     clickable: true,
     dynamicBullets: true,
   },
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.card-wrapper .swiper-button-next',
+    prevEl: '.card-wrapper .swiper-button-prev',
   },
   
   breakpoints: {
@@ -117,6 +117,249 @@ new Swiper('.card-wrapper', {
   }
 
 });
+
+const slider2 = new Swiper('.reviews-wrapper', {
+  loop: true,
+  spaceBetween: 0,
+  slidesPerView: 1,
+  initialSlide: 0,
+  // If we need pagination
+  pagination: {
+    el: '.reviews-wrapper .swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.reviews-wrapper .swiper-button-next',
+    prevEl: '.reviews-wrapper .swiper-button-prev',
+  },
+  
+  breakpoints: {
+      0 : {
+          slidesPerView: 1,
+          
+      },
+      375 : {
+        slidesPerView: 1.2,
+        spaceBetween: 30,
+      },
+      
+      420: {
+        slidesPerView: 1.4,
+        spaceBetween: 50,
+      },
+      470: {
+        slidesPerView: 1.6,
+        spaceBetween: 50,
+      },
+      520: {
+        slidesPerView: 1.8,
+        spaceBetween: 50,
+      },
+      600: {
+        slidesPerView: 1.8,
+        spaceBetween: 30,
+      },
+      640: {
+        slidesPerView: 1.8,
+        spaceBetween: 10,
+      },
+      670: {
+        slidesPerView: 1.8,
+        spaceBetween: 0,
+      },
+      700: {
+        slidesPerView: 1.9,
+        spaceBetween: -70,
+      },
+      720: {
+        slidesPerView: 1.9,
+        spaceBetween: -50,
+      },
+      740: {
+        slidesPerView: 2,
+        spaceBetween: -20,
+      },
+      768 : {
+          slidesPerView: 2.2,
+          spaceBetween: 0, 
+      },
+      820 : {
+        slidesPerView: 2.4,
+        spaceBetween: 0, 
+      },
+      870 : {
+        slidesPerView: 2.6,
+        spaceBetween: 0, 
+      },
+      920 : {
+        slidesPerView: 2.8,
+        spaceBetween: 0, 
+      },
+      970 : {
+        slidesPerView: 2.8,
+        spaceBetween: -10, 
+      },
+      1000 : {
+        slidesPerView: 2.8,
+        spaceBetween: -30, 
+      },
+      1060 : {
+        slidesPerView: 2.8,
+        spaceBetween: -50, 
+      },
+      1100 : {
+        slidesPerView: 2.8,
+        spaceBetween: -70, 
+      },
+      1130 : {
+        slidesPerView: 2.9,
+        spaceBetween: -70, 
+      },
+      1150 : {
+        slidesPerView: 2.9,
+        spaceBetween: -100, 
+      },
+      1200 : {
+        slidesPerView: 2.9,
+        spaceBetween: -170,
+      },
+      1250 : {
+        slidesPerView: 3,
+        spaceBetween: -320,
+      },
+      1400: {
+        slidesPerView: 4,
+        spaceBetween: 60,
+    }
+  }
+
+});
+
+const slider3 = new Swiper('.photos-wrapper', {
+  loop: true,
+  spaceBetween: 0,
+  slidesPerView: 1,
+  initialSlide: 0,
+
+  // Pagination
+  pagination: {
+      el: '.photos-wrapper .swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+      nextEl: '.photos-wrapper .swiper-button-next',
+      prevEl: '.photos-wrapper .swiper-button-prev',
+  },
+
+  // Breakpoints for responsiveness
+  breakpoints: {
+    0 : {
+        slidesPerView: 1,
+        
+    },
+    375 : {
+      slidesPerView: 1.2,
+      spaceBetween: 30,
+    },
+    
+    420: {
+      slidesPerView: 1.4,
+      spaceBetween: 50,
+    },
+    470: {
+      slidesPerView: 1.6,
+      spaceBetween: 50,
+    },
+    520: {
+      slidesPerView: 1.8,
+      spaceBetween: 50,
+    },
+    600: {
+      slidesPerView: 1.8,
+      spaceBetween: 30,
+    },
+    640: {
+      slidesPerView: 1.8,
+      spaceBetween: 10,
+    },
+    670: {
+      slidesPerView: 1.8,
+      spaceBetween: 0,
+    },
+    700: {
+      slidesPerView: 1.9,
+      spaceBetween: -70,
+    },
+    720: {
+      slidesPerView: 1.9,
+      spaceBetween: -50,
+    },
+    740: {
+      slidesPerView: 2,
+      spaceBetween: -20,
+    },
+    768 : {
+        slidesPerView: 2.2,
+        spaceBetween: 0, 
+    },
+    820 : {
+      slidesPerView: 2.4,
+      spaceBetween: 0, 
+    },
+    870 : {
+      slidesPerView: 2.6,
+      spaceBetween: 0, 
+    },
+    920 : {
+      slidesPerView: 2.8,
+      spaceBetween: 0, 
+    },
+    970 : {
+      slidesPerView: 2.8,
+      spaceBetween: -10, 
+    },
+    1000 : {
+      slidesPerView: 2.8,
+      spaceBetween: -30, 
+    },
+    1060 : {
+      slidesPerView: 2.8,
+      spaceBetween: -50, 
+    },
+    1100 : {
+      slidesPerView: 2.8,
+      spaceBetween: -70, 
+    },
+    1130 : {
+      slidesPerView: 2.9,
+      spaceBetween: -70, 
+    },
+    1150 : {
+      slidesPerView: 2.9,
+      spaceBetween: -100, 
+    },
+    1200 : {
+      slidesPerView: 2.9,
+      spaceBetween: -170,
+    },
+    1250 : {
+      slidesPerView: 3,
+      spaceBetween: -320,
+    },
+    1400: {
+      slidesPerView: 4,
+      spaceBetween: 60,
+  }
+}
+});
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {

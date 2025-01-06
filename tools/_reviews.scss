@@ -1,5 +1,12 @@
 .reviews {
     margin-top: 50px;
+    
+    .reviews__img {
+        position: absolute; /* Абсолютное позиционирование */
+        z-index: -1;
+        top: 1500px;
+        right: -50px;
+    }
     .your-reviews {
         /*can also be a margin*/
         padding-left: 15px;
@@ -8,6 +15,38 @@
             font-weight: 600;
             text-align: left;
             font-family: "Manrope";
+        }
+    }
+}
+
+
+
+@media (min-width: 1070px) {
+    .reviews {
+        // .reviews__img {
+        //     right: -85px;
+        // }
+        .your-reviews {
+            padding-left: 100px;
+        }
+    }  
+}
+
+
+
+@media (min-width: 1200px) {
+    .reviews {
+        .your-reviews {
+            padding-left: 200px;
+        }
+    }
+    
+}
+
+@media (min-width: 1400px) {
+    .reviews {
+        .reviews__img {
+            right: 0px;
         }
     }
 }

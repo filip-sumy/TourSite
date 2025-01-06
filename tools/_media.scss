@@ -1,0 +1,29 @@
+.photos {
+    margin-top: 50px;
+    .your-photos {
+        .photos__text {
+            font-family: "Manrope";
+            font-size: 48px;
+            font-weight: 600;
+        }
+    }
+}
+
+@media (min-width: 1070px) {
+    .photos {
+        .your-photos {
+            padding-left: 100px;
+        }
+    }  
+}
+
+
+
+@media (min-width: 1200px) {
+    .photos {
+        .your-photos {
+            padding-left: 200px;
+        }
+    }
+    
+}

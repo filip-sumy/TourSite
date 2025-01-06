@@ -40,9 +40,9 @@ body {
 .header .nav .nav__link:hover {
   color: #E95200;
 }
-.header .menu {
-  padding-top: 27px;
-  padding-right: 15px;
+.header .menu-btn {
+  padding-top: 15px;
+  padding-right: 25px;
 }
 
 @media (min-width: 670px) {
@@ -74,8 +74,8 @@ body {
 .contact-button {
   position: fixed;
   z-index: 2;
-  bottom: 50px;
-  right: 35px;
+  bottom: 25px;
+  right: 25px;
   width: 75px;
   height: 75px;
   border: none;
@@ -102,9 +102,6 @@ body {
   height: 30px;
 }
 
-nav {
-  position: relative;
-}
 nav .left__circle {
   position: absolute;
   top: -230px;
@@ -179,41 +176,40 @@ ul .nav__text:hover {
     padding-left: 200px;
   }
 }
-.container {
-  margin-top: 75px;
+.slider {
   margin-bottom: 50px;
 }
-.container .card-list {
+.slider .card-list {
   display: flex;
   flex-direction: row;
   margin-bottom: 50px; /*Отступ для точек*/
 }
-.container .card-list .card-item {
+.slider .card-list .card-item {
   list-style: none;
 }
-.container .card-list .card-item .slide .card {
+.slider .card-list .card-item .slide .card {
   width: 360px;
   height: 340px;
   border-radius: 30px;
   background-color: #EEEEEE;
 }
-.container .card-list .card-item .slide .card .card__wrapper {
+.slider .card-list .card-item .slide .card .card__wrapper {
   display: flex;
 }
-.container .card-list .card-item .slide .card .month {
+.slider .card-list .card-item .slide .card .month {
   padding-top: 45px;
   padding-left: 25px;
 }
-.container .card-list .card-item .slide .card .month .month__name {
+.slider .card-list .card-item .slide .card .month .month__name {
   font-size: 40px;
   font-weight: 600;
   font-family: "Manrope";
 }
-.container .card-list .card-item .slide .card .star {
+.slider .card-list .card-item .slide .card .star {
   margin-top: 50px;
   margin-left: 50px;
 }
-.container .card-list .card-item .slide .card .rectangle {
+.slider .card-list .card-item .slide .card .rectangle {
   border: 1px solid #B2B2B2;
   border-radius: 20px;
   height: 25px;
@@ -223,20 +219,84 @@ ul .nav__text:hover {
   justify-content: center;
   align-items: center;
 }
-.container .card-list .card-item .slide .card .rectangle .rectangle__text {
+.slider .card-list .card-item .slide .card .rectangle .rectangle__text {
   color: #B2B2B2;
 }
-.container .card-list .card-item .slide .card .card__description {
+.slider .card-list .card-item .slide .card .card__description {
   padding-top: 50px;
   padding-left: 25px;
 }
-.container .card-list .card-item .slide .card .card__description .description__text {
+.slider .card-list .card-item .slide .card .card__description .description__text {
   text-align: left;
   font-size: 12px;
   font-weight: 400;
   font-family: "Manrope";
 }
 
+.slider-1 {
+  margin-top: 75px;
+}
+
+.slider-2 {
+  margin-top: 15px;
+}
+.slider-2 .card .card__container {
+  padding-left: 25px;
+  padding-top: 55px;
+  display: flex;
+  gap: 25px;
+}
+.slider-2 .card .card__container .info__name {
+  text-align: left;
+  font-family: "Manrope";
+  font-size: 18px;
+  font-weight: 600;
+}
+.slider-2 .card .card__container .info__date {
+  padding-top: 5px;
+  text-align: left;
+  font-family: "Manrope";
+  font-size: 10px;
+  font-weight: 400;
+  color: #E95200;
+}
+.slider-2 .card .card__description {
+  text-align: left;
+  font-family: "Manrope";
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.slider-3 .slide {
+  width: 380px;
+  height: 360px;
+}
+.slider-3 .slide .card__image {
+  display: block;
+}
+
+/*
+.slider-3 {
+    //margin-bottom: 50px;
+    .image-list {
+        display: flex;
+        flex-direction: row;
+        //margin-bottom: 50px;
+    }
+
+    .image-item {
+        list-style: none;
+    }
+
+    .image-item img {
+        width: 360px;
+        height: 340px; 
+        object-fit: cover; 
+        // border-radius: 15px;
+    }
+
+}
+*/
 .swiper-button-next,
 .swiper-button-prev {
   color: #E95200;
@@ -444,6 +504,12 @@ ul .nav__text:hover {
 .reviews {
   margin-top: 50px;
 }
+.reviews .reviews__img {
+  position: absolute; /* Абсолютное позиционирование */
+  z-index: -1;
+  top: 1500px;
+  right: -50px;
+}
 .reviews .your-reviews {
   /*can also be a margin*/
   padding-left: 15px;
@@ -453,4 +519,39 @@ ul .nav__text:hover {
   font-weight: 600;
   text-align: left;
   font-family: "Manrope";
+}
+
+@media (min-width: 1070px) {
+  .reviews .your-reviews {
+    padding-left: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  .reviews .your-reviews {
+    padding-left: 200px;
+  }
+}
+@media (min-width: 1400px) {
+  .reviews .reviews__img {
+    right: 0px;
+  }
+}
+.photos {
+  margin-top: 50px;
+}
+.photos .your-photos .photos__text {
+  font-family: "Manrope";
+  font-size: 48px;
+  font-weight: 600;
+}
+
+@media (min-width: 1070px) {
+  .photos .your-photos {
+    padding-left: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  .photos .your-photos {
+    padding-left: 200px;
+  }
 }/*# sourceMappingURL=style.css.map */
