@@ -364,6 +364,7 @@ const slider3 = new Swiper('.photos-wrapper', {
 
 document.addEventListener("DOMContentLoaded", () => {
     const menu = document.getElementById("menu");
+    const body__container = document.getElementById("body__container");
     const main = document.getElementById("main");
     const menuButton = document.getElementById("menuButton");
     const menuIcon = document.getElementById("menuIcon");
@@ -371,7 +372,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function toggleMenu() {
         menu.classList.toggle("hidden");
         main.classList.toggle("hidden");
-
+        body__container.classList.toggle("hidden");
         // Изменяем иконку и alt текст в зависимости от состояния меню
         if (menu.classList.contains("hidden")) {
             menuIcon.src = "images/Menu_button.svg";

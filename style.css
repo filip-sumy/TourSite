@@ -16,6 +16,44 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.body {
+  position: relative;
+  z-index: 1;
+}
+
+.item {
+  position: absolute;
+  z-index: -2;
+}
+
+.item__image {
+  display: block;
+}
+
+.item.left {
+  left: 0; /* Прижимаем к левому краю */
+}
+
+.item.right {
+  right: 0; /* Прижимаем к правому краю */
+}
+
+.item:nth-child(1) {
+  top: 50px;
+}
+
+.item:nth-child(2) {
+  top: 600px;
+}
+
+.item:nth-child(3) {
+  top: 1300px;
+}
+
+.item:nth-child(4) {
+  top: 1900px;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -53,6 +91,9 @@ body {
   }
 }
 @media (min-width: 1070px) {
+  .item__image {
+    width: 200px;
+  }
   .header {
     padding-left: 100px;
   }
@@ -64,6 +105,9 @@ body {
   }
 }
 @media (min-width: 1200px) {
+  .item__image {
+    width: 250px;
+  }
   .header {
     padding-left: 200px;
   }
@@ -102,17 +146,6 @@ body {
   height: 30px;
 }
 
-nav .left__circle {
-  position: absolute;
-  top: -230px;
-  left: -90px;
-}
-nav .right__circle {
-  position: absolute;
-  top: 150px;
-  left: 180px;
-}
-
 ul {
   list-style: none;
   text-align: center;
@@ -144,10 +177,6 @@ ul .nav__text:hover {
 
 .tours {
   margin-bottom: 100px;
-}
-.tours .tours__img {
-  position: absolute;
-  top: 25px;
 }
 .tours .tours__block {
   position: absolute;
@@ -362,20 +391,6 @@ ul .nav__text:hover {
   padding-left: 25px;
 }
 
-.questions__left__circle {
-  position: absolute;
-  z-index: -1;
-  top: 1000px;
-  left: 0px;
-}
-
-.questions__right__circle {
-  position: absolute;
-  z-index: -1;
-  top: 500px;
-  right: -50px;
-}
-
 @media (min-width: 676px) {
   .questions__wrapper {
     flex-direction: row !important;
@@ -392,18 +407,10 @@ ul .nav__text:hover {
     flex-wrap: wrap;
     gap: 25px;
   }
-  .questions__right__circle {
-    right: -85px;
-  }
 }
 @media (min-width: 1200px) {
   .questions {
     padding-left: 200px;
-  }
-}
-@media (min-width: 1400px) {
-  .questions__right__circle {
-    right: 0px;
   }
 }
 .contact {
@@ -471,13 +478,13 @@ ul .nav__text:hover {
 }
 
 .input {
-  padding-left: 40px;
+  padding-left: 30px;
 }
 
 .icon {
   position: absolute;
-  left: 15px;
-  top: 50%;
+  right: 15px;
+  top: 40%;
   transform: translateY(-50%);
   color: #A0A0A0;
 }
@@ -488,6 +495,9 @@ ul .nav__text:hover {
   }
   .input {
     width: 65%;
+  }
+  .icon {
+    right: 120px;
   }
   .contact__div {
     padding-left: 100px;
@@ -503,12 +513,6 @@ ul .nav__text:hover {
 }
 .reviews {
   margin-top: 50px;
-}
-.reviews .reviews__img {
-  position: absolute; /* Абсолютное позиционирование */
-  z-index: -1;
-  top: 1500px;
-  right: -50px;
 }
 .reviews .your-reviews {
   /*can also be a margin*/
@@ -529,11 +533,6 @@ ul .nav__text:hover {
 @media (min-width: 1200px) {
   .reviews .your-reviews {
     padding-left: 200px;
-  }
-}
-@media (min-width: 1400px) {
-  .reviews .reviews__img {
-    right: 0px;
   }
 }
 .photos {

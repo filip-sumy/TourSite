@@ -31,20 +31,6 @@
     }
 }
 
-.questions__left__circle {
-    position: absolute;
-    z-index: -1;
-    top: 1000px;
-    left: 0px;
-}
-
-.questions__right__circle {
-    position: absolute;
-    z-index: -1;
-    top: 500px;
-    right: -50px;
-}
-
 @media (min-width: 676px) {
     .questions__wrapper {
         flex-direction: row !important;
@@ -62,9 +48,6 @@
         flex-wrap: wrap;
         gap: 25px;
     }
-    .questions__right__circle {
-        right: -85px;
-    }
 }
 
 @media (min-width: 1200px) {
@@ -73,9 +56,3 @@
     }
 }
 
-@media (min-width: 1400px) {
-    
-    .questions__right__circle {
-        right: 0px;
-    }
-}
