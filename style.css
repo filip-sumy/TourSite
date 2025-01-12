@@ -194,6 +194,9 @@ ul .nav__text:hover {
   .menu-btn {
     display: none;
   }
+  #menu {
+    display: none;
+  }
 }
 @media (min-width: 1070px) {
   .tours .tours__block {
@@ -297,35 +300,32 @@ ul .nav__text:hover {
 }
 
 .slider-3 .slide {
-  width: 380px;
-  height: 360px;
+  width: 360px;
+  height: 340px;
 }
 .slider-3 .slide .card__image {
   display: block;
 }
 
-/*
-.slider-3 {
-    //margin-bottom: 50px;
-    .image-list {
-        display: flex;
-        flex-direction: row;
-        //margin-bottom: 50px;
-    }
-
-    .image-item {
-        list-style: none;
-    }
-
-    .image-item img {
-        width: 360px;
-        height: 340px; 
-        object-fit: cover; 
-        // border-radius: 15px;
-    }
-
+.slider-4 .slide {
+  width: 345px;
+  height: 130px;
 }
-*/
+.slider-4 .slide .activities {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-color: #FAFAFA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-4 .slide .activities .activities__text {
+  font-family: "Manrope";
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   color: #E95200;
@@ -344,6 +344,18 @@ ul .nav__text:hover {
   opacity: 1;
 }
 
+@media (max-width: 600px) {
+  .slider-4 .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .slider-4 .swiper-button-prev,
+  .slider-4 .swiper-button-next,
+  .slider-4 .swiper-pagination {
+    display: none; /* Скрываем кнопки и пагинацию */
+  }
+}
 @media (max-width: 768px) {
   .swiper-button-next,
   .swiper-button-prev {
@@ -552,5 +564,72 @@ ul .nav__text:hover {
 @media (min-width: 1200px) {
   .photos .your-photos {
     padding-left: 200px;
+  }
+}
+.footer {
+  background-color: #1A1A1A;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.footer .info__link {
+  font-family: "Manrope";
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  color: #FF6C1C;
+  text-decoration: none;
+}
+.footer .info__link:hover {
+  text-decoration: underline;
+}
+.footer .socials {
+  font-family: "Manrope";
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #FFFFFF;
+}
+.footer .socials-items .item__icon {
+  display: flex;
+  gap: 15px;
+}
+.footer .socials-items .item__icon .icon__image {
+  border-radius: 50px;
+  transition: all 0.3s ease-out;
+}
+.footer .socials-items .item__icon .icon__image:hover {
+  background-color: #FF6C1C;
+}
+.footer .powered-by {
+  font-family: "Manrope";
+  font-size: 8px;
+  font-weight: 400;
+  text-align: center;
+  color: #717171;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 670px) {
+  .footer {
+    padding: 50px 0 30px 0;
+  }
+  .footer .info__link {
+    font-size: 18px;
+  }
+  .footer .socials {
+    font-size: 22px;
+  }
+  .footer .icon__image {
+    width: 35px;
+  }
+  .footer .powered-by {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=style.css.map */
