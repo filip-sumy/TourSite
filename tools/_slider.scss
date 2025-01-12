@@ -7,7 +7,7 @@
         margin-bottom: 50px;/*Отступ для точек*/
         .card-item {
             list-style: none;
-            .slide {
+            .slide {               
                 .card {
                     width: 360px;
                     height: 340px;
@@ -113,25 +113,51 @@
 }
 
 .slider-4 {
-    .slide {
-        width: 345px;
-        height: 130px;
-        .activities {
-            width: 100%;
-            height: 100%;
-            border-radius: 30px;
-            background-color: #FAFAFA;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .activities__text {
-                font-family: "Manrope";
-                font-size: 30px;
-                font-weight: 600;
+    .card-item {
+        .activity {
+            .slide {
+                //outline: 2px solid black;
+                width: 345px;
+                //height: 130px;
                 
+                .activities {
+                    width: 100%;
+                    //height: 100%;
+                    height: 130px;
+                    border-radius: 30px;
+                    background-color: #FAFAFA;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .activities__text {
+                        font-family: "Manrope";
+                        font-size: 30px;
+                        font-weight: 600;
+                    }
+                }
+                .whatToDo {
+                    background-color: #161616;
+                    border-radius: 30px;
+                    padding: 15px;
+                    .whatToDo__item {
+                        height: 55px;
+                        padding: 5px 10px;
+                        color: #FFFFFF;
+                        font-size: 15px;
+                        border-radius: 30px;
+                        border: 1px solid #FFFFFF;
+                        margin-bottom: 10px;
+                    }
+                }
             }
         }
     }
+    
+}
+
+
+.hidden {
+    display: none;
 }
 
 .swiper-button-next,
@@ -160,11 +186,12 @@
             flex-direction: column;
             gap: 25px;
         }
+        
         .swiper-button-prev,
         .swiper-button-next,
         .swiper-pagination {
             display: none; /* Скрываем кнопки и пагинацию */
-    }
+        }
     }
     
 }

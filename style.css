@@ -307,23 +307,40 @@ ul .nav__text:hover {
   display: block;
 }
 
-.slider-4 .slide {
+.slider-4 .card-item .activity .slide {
   width: 345px;
-  height: 130px;
 }
-.slider-4 .slide .activities {
+.slider-4 .card-item .activity .slide .activities {
   width: 100%;
-  height: 100%;
+  height: 130px;
   border-radius: 30px;
   background-color: #FAFAFA;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.slider-4 .slide .activities .activities__text {
+.slider-4 .card-item .activity .slide .activities .activities__text {
   font-family: "Manrope";
   font-size: 30px;
   font-weight: 600;
+}
+.slider-4 .card-item .activity .slide .whatToDo {
+  background-color: #161616;
+  border-radius: 30px;
+  padding: 15px;
+}
+.slider-4 .card-item .activity .slide .whatToDo .whatToDo__item {
+  height: 55px;
+  padding: 5px 10px;
+  color: #FFFFFF;
+  font-size: 15px;
+  border-radius: 30px;
+  border: 1px solid #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
 }
 
 .swiper-button-next,
