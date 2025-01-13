@@ -36,9 +36,32 @@
   .item:nth-child(4) {
     top: 1900px;  
   }  
+  // For circles in hidden nav
+  .container-item {
+    position: absolute;
+    z-index: -2;
+  }
   
-    
+  .container__image {
+    display: block;
+  }
+
+  .item-left {
+    left: 0;
+  }
   
+  .item-right {
+    right: 0;
+  }
+
+  .container-item:nth-child(1) {
+    top: 50px;  
+  }  
+  
+  .container-item:nth-child(2) {
+    top: 300px;  
+  }  
+  //
   .header {
     display: flex;
     justify-content: space-between;
@@ -75,6 +98,9 @@
             flex-direction: row;
             gap: 25px;
         }
+    }
+    .container__image {
+      width: 200px;
     }
 }
 

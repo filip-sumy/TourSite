@@ -480,11 +480,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuButton = document.getElementById("menuButton");
     const menuIcon = document.getElementById("menuIcon");
     const footer = document.getElementById("footer");
+    const header__container = document.getElementById("header__container");
     function toggleMenu() {
         menu.classList.toggle("hidden");
         main.classList.toggle("hidden");
         footer.classList.toggle("hidden");
         body__container.classList.toggle("hidden");
+        header__container.classList.toggle("hidden");
         // Изменяем иконку и alt текст в зависимости от состояния меню
         if (menu.classList.contains("hidden")) {
             menuIcon.src = "images/Menu_button.svg";
