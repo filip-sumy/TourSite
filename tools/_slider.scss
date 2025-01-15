@@ -16,6 +16,21 @@
                     .card__wrapper {
                         display: flex;
                     }
+                    .card__link {
+                        padding-top: 30px;
+                        padding-left: 25px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        .link__container {
+                            display: flex;
+                            gap: 25px;
+                            .link__text {
+                                text-decoration: none;
+                                color: #E95200;
+                            }
+                        }
+                    }
                     .month {
                         padding-top: 45px;
                         padding-left: 25px;
@@ -155,10 +170,24 @@
     
 }
 
+.activities__text.active {
+    color: #FFFFFF;
+}
+
+.activities.active {
+    background-color: #E95200 !important;
+}
 
 .hidden {
-    display: none;
+    display: none !important;
 }
+
+.card.active {
+    height: auto !important;
+}
+
+
+
 
 .swiper-button-next,
 .swiper-button-prev {

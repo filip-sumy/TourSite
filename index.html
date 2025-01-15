@@ -75,9 +75,9 @@
             <div class="container swiper">
                 <div class="card-wrapper">
                     <ul class="card-list swiper-wrapper">
-                        <li class="card-item swiper-slide">
+                        <li id="card-button" class="card-item swiper-slide">
                             <div class="slide">
-                                <div class="card">
+                                <div id="card" class="card">
                                     <div class="card__wrapper">
                                         <div class="month">
                                             <p class="month__name">Лютий</p>
@@ -98,6 +98,48 @@
                                             libero vehicula porttitor. Fusce et tincidunt risus. In<br> 
                                             commodo faucibus lectus faucibus molestie.
                                         </p>
+                                    </div>
+                                    <div id="card__link" class="card__link hidden">
+                                        <div class="link__container">
+                                            <div class="link__icon">
+                                                <img src="images/la_skiing.png" alt="">
+                                            </div>
+                                            <div class="link__date">
+                                                <a class="link__text" href="">09.01 - 13.01 - 4 дні/3 ночі</a>
+                                            </div>
+                                        </div>
+                                        <div class="link__container">
+                                            <div class="link__icon">
+                                                <img src="images/la_skiing.png" alt="">
+                                            </div>
+                                            <div class="link__date">
+                                                <a class="link__text" href="">09.01 - 13.01 - 4 дні/3 ночі</a>
+                                            </div>
+                                        </div>
+                                        <div class="link__container">
+                                            <div class="link__icon">
+                                                <img src="images/la_skiing.png" alt="">
+                                            </div>
+                                            <div class="link__date">
+                                                <a class="link__text" href="">09.01 - 13.01 - 4 дні/3 ночі</a>
+                                            </div>
+                                        </div>
+                                        <div class="link__container">
+                                            <div class="link__icon">
+                                                <img src="images/la_skiing.png" alt="">
+                                            </div>
+                                            <div class="link__date">
+                                                <a class="link__text" href="">09.01 - 13.01 - 4 дні/3 ночі</a>
+                                            </div>
+                                        </div>
+                                        <div class="link__container">
+                                            <div class="link__icon">
+                                                <img src="images/la_skiing.png" alt="">
+                                            </div>
+                                            <div class="link__date">
+                                                <a class="link__text" href="">09.01 - 13.01 - 4 дні/3 ночі</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -178,8 +220,8 @@
                     <li id="whatToDoButton-1" class="card-item swiper-slide">
                         <div class="activity">
                             <div class="slide">
-                                <div class="activities">
-                                    <p class="activities__text">
+                                <div id="activities-1" class="activities">
+                                    <p id="activities__text-1" class="activities__text">
                                         Чим зайнятися на Драгобраті?👇🏻
                                     </p>
                                 </div>
@@ -233,8 +275,8 @@
                     <li id="whatToDoButton-2" class="card-item swiper-slide">
                         <div class="activity">
                             <div class="slide">
-                                <div class="activities">
-                                    <p class="activities__text">
+                                <div id="activities-2" class="activities">
+                                    <p id="activities__text-2" class="activities__text">
                                         Чим зайнятися на Драгобраті?👇🏻
                                     </p>
                                 </div>
@@ -288,8 +330,8 @@
                     <li id="whatToDoButton-3" class="card-item swiper-slide">
                         <div class="activity">
                             <div class="slide">
-                                <div class="activities">
-                                    <p class="activities__text">
+                                <div id="activities-3" class="activities">
+                                    <p id="activities__text-3" class="activities__text">
                                         Чим зайнятися на Драгобраті?👇🏻
                                     </p>
                                 </div>
@@ -343,8 +385,8 @@
                     <li id="whatToDoButton-4" class="card-item swiper-slide">
                         <div class="activity">
                             <div class="slide">
-                                <div class="activities">
-                                    <p class="activities__text">
+                                <div id="activities-4" class="activities">
+                                    <p id="activities__text-4" class="activities__text">
                                         Чим зайнятися на Драгобраті?👇🏻
                                     </p>
                                 </div>
@@ -398,8 +440,8 @@
                     <li id="whatToDoButton-5" class="card-item swiper-slide">
                         <div class="activity">
                             <div class="slide">
-                                <div class="activities">
-                                    <p class="activities__text">
+                                <div id="activities-5" class="activities">
+                                    <p id="activities__text-5" class="activities__text">
                                         Чим зайнятися на Драгобраті?👇🏻
                                     </p>
                                 </div>
@@ -465,16 +507,14 @@
                 </p>
             </div>
             <div class="form-container">
-                <form action="send_mail.php" method="POST">
-                <input type="hidden" name="access_key" value="ba5e537e-e7e3-4288-b455-0a46c6fd2966">
-                
+                <form action="mail.php" method="POST">
                     <div class="input-wrapper">
                         <img class="icon" src="images/name-icon.svg" alt="">
-                        <input class="input" type="text" name="name" placeholder="Введіть ваше ім'я" required>
+                        <input class="input" type="text" name="user_name" placeholder="Введіть ваше ім'я" required>
                     </div>
                     <div class="input-wrapper">
                         <img class="icon" src="images/tel-icon.svg" alt="">
-                        <input class="input" type="tel" name="phone" placeholder="Введіть ваш номер телефону" required>
+                        <input class="input" type="tel" name="user_phone" placeholder="Введіть ваш номер телефону" required>
                     </div>
                     <button class="form-button" type="submit">ЗАМОВИТИ ДЗВІНОК</button>
                 </form>

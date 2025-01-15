@@ -256,6 +256,21 @@ ul .nav__text:hover {
 .slider .card-list .card-item .slide .card .card__wrapper {
   display: flex;
 }
+.slider .card-list .card-item .slide .card .card__link {
+  padding-top: 30px;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.slider .card-list .card-item .slide .card .card__link .link__container {
+  display: flex;
+  gap: 25px;
+}
+.slider .card-list .card-item .slide .card .card__link .link__container .link__text {
+  text-decoration: none;
+  color: #E95200;
+}
 .slider .card-list .card-item .slide .card .month {
   padding-top: 45px;
   padding-left: 25px;
@@ -367,8 +382,20 @@ ul .nav__text:hover {
   margin-bottom: 10px;
 }
 
+.activities__text.active {
+  color: #FFFFFF;
+}
+
+.activities.active {
+  background-color: #E95200 !important;
+}
+
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.card.active {
+  height: auto !important;
 }
 
 .swiper-button-next,

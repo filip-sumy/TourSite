@@ -4,7 +4,10 @@ const slider1 = new Swiper('.card-wrapper', {
   slidesPerView: 1,
   initialSlide: 1,
   freeMode: true,
-  // If we need pagination
+  
+  // observer: false,
+  // observeParents: false,
+  
   pagination: {
     el: '.card-wrapper .swiper-pagination',
     clickable: true,
@@ -112,6 +115,7 @@ const slider1 = new Swiper('.card-wrapper', {
         spaceBetween: -320,
       },
       1400: {
+        updateOnWindowResize: false,
         slidesPerView: 4,
         spaceBetween: 60,
     }
@@ -501,37 +505,26 @@ document.addEventListener("DOMContentLoaded", () => {
     menuButton.addEventListener("click", toggleMenu);
 });
 
-const whatToDoButton_1 = document.getElementById('whatToDoButton-1');
-const whatToDo_1 = document.getElementById('whatToDo-1');
+for (let i = 1; i <= 5; i++) {
+  const whatToDoButton = document.getElementById(`whatToDoButton-${i}`);
+  const whatToDo = document.getElementById(`whatToDo-${i}`);
+  const activitiesText = document.getElementById(`activities__text-${i}`);
+  const activities = document.getElementById(`activities-${i}`);
 
-whatToDoButton_1.addEventListener('click', () => {
-  whatToDo_1.classList.toggle('hidden');
+  whatToDoButton.addEventListener('click', () => {
+    whatToDo.classList.toggle('hidden');
+    activitiesText.classList.toggle('active');
+    activities.classList.toggle('active');
+  });
+}
+
+const cardButton = document.getElementById("card-button");
+const cardLink = document.getElementById("card__link");
+const card = document.getElementById("card");
+
+cardButton.addEventListener('click', () => {
+  cardLink.classList.toggle('hidden');
+  card.classList.toggle('active');
+  
 });
 
-const whatToDoButton_2 = document.getElementById('whatToDoButton-2');
-const whatToDo_2 = document.getElementById('whatToDo-2');
-
-whatToDoButton_2.addEventListener('click', () => {
-  whatToDo_2.classList.toggle('hidden');
-});
-
-const whatToDoButton_3 = document.getElementById('whatToDoButton-3');
-const whatToDo_3 = document.getElementById('whatToDo-3');
-
-whatToDoButton_3.addEventListener('click', () => {
-  whatToDo_3.classList.toggle('hidden');
-});
-
-const whatToDoButton_4 = document.getElementById('whatToDoButton-4');
-const whatToDo_4 = document.getElementById('whatToDo-4');
-
-whatToDoButton_4.addEventListener('click', () => {
-  whatToDo_4.classList.toggle('hidden');
-});
-
-const whatToDoButton_5 = document.getElementById('whatToDoButton-5');
-const whatToDo_5 = document.getElementById('whatToDo-5');
-
-whatToDoButton_5.addEventListener('click', () => {
-  whatToDo_5.classList.toggle('hidden');
-});
