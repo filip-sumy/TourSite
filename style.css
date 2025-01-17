@@ -251,7 +251,7 @@ ul .nav__text:hover {
   width: 360px;
   height: 340px;
   border-radius: 30px;
-  background-color: #EEEEEE;
+  background-color: #FAFAFA;
 }
 .slider .card-list .card-item .slide .card .card__wrapper {
   display: flex;
@@ -269,7 +269,7 @@ ul .nav__text:hover {
 }
 .slider .card-list .card-item .slide .card .card__link .link__container .link__text {
   text-decoration: none;
-  color: #E95200;
+  color: #EEEEEE;
 }
 .slider .card-list .card-item .slide .card .month {
   padding-top: 45px;
@@ -395,7 +395,20 @@ ul .nav__text:hover {
 }
 
 .card.active {
+  background-color: #E95200 !important;
   height: auto !important;
+}
+.card.active .month__name {
+  color: #FAFAFA;
+}
+.card.active .description__text {
+  color: #FAFAFA;
+}
+.card.active .rectangle__text {
+  color: #FAFAFA !important;
+}
+.card.active .rectangle {
+  border: 1px solid #FAFAFA !important;
 }
 
 .swiper-button-next,

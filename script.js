@@ -518,13 +518,14 @@ for (let i = 1; i <= 5; i++) {
   });
 }
 
-const cardButton = document.getElementById("card-button");
-const cardLink = document.getElementById("card__link");
-const card = document.getElementById("card");
+for (let i = 1; i <= 3; i++) {
+  const cardButton = document.getElementById(`card-button-${i}`);
+  const cardLink = document.getElementById(`card__link-${i}`);
+  const card = document.getElementById(`card-${i}`);
 
-cardButton.addEventListener('click', () => {
-  cardLink.classList.toggle('hidden');
-  card.classList.toggle('active');
-  
-});
+  cardButton.addEventListener('click', () => {
+    cardLink.classList.toggle('hidden');
+    card.classList.toggle('active');
+  });
+}
 
