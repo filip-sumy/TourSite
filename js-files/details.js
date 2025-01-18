@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menu = document.getElementById("menu");
     const body__container = document.getElementById("body__container");
-    //const main = document.getElementById("main");
+    const main = document.getElementById("main");
     const menuButton = document.getElementById("menuButton");
     const menuIcon = document.getElementById("menuIcon");
     const footer = document.getElementById("footer");
     const header__container = document.getElementById("header__container");
     function toggleMenu() {
         menu.classList.toggle("hidden");
-        //main.classList.toggle("hidden");
+        main.classList.toggle("hidden");
         footer.classList.toggle("hidden");
         body__container.classList.toggle("hidden");
         header__container.classList.toggle("hidden");
