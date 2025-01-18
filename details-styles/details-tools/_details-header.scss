@@ -1,0 +1,181 @@
+.body {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .item {
+    position: absolute;  
+    z-index: -2;
+  }  
+  
+  .item__image {
+    display: block;
+    
+  }
+
+  .item.left {
+    left: 0; /* Прижимаем к левому краю */  
+  }  
+  
+  .item.right {
+    right: 0; /* Прижимаем к правому краю */  
+  }  
+  
+  .item:nth-child(1) {
+    top: 50px;  
+  }  
+  
+  .item:nth-child(2) {
+    top: 600px;  
+  }  
+
+  // For circles in hidden nav
+  .container-item {
+    position: absolute;
+    z-index: -2;
+  }
+  
+  .container__image {
+    display: block;
+  }
+
+  .item-left {
+    left: 0;
+  }
+  
+  .item-right {
+    right: 0;
+  }
+
+  .container-item:nth-child(1) {
+    top: 50px;  
+  }  
+  
+  .container-item:nth-child(2) {
+    top: 300px;  
+  }  
+  //
+  .header {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        padding-top: 15px;
+        padding-left: 15px;
+    }
+    .nav {
+        padding-top: 25px;
+        padding-right: 20%;
+        display: none;
+        .nav__link {
+            text-decoration: none;
+            font-family: "Manrope";
+            font-size: 20px;
+            font-weight: 600;
+            color: #000000;
+            transition: color 0.3s ease-in-out;
+            &:hover {
+                color: #E95200;
+            }
+        }
+    }
+    .menu-btn {
+        padding-top: 15px;
+        padding-right: 25px;
+    }
+}
+
+@media (min-width: 670px) {
+    .header {
+        .nav {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+        }
+    }
+    .container__image {
+      width: 200px;
+    }
+}
+
+@media (min-width: 1070px) {
+    .item__image {
+        width: 200px;
+    }
+    .header {
+        padding-left: 100px;
+        .logo {
+            width: 100px;
+        }
+        .nav {
+            padding-right: 10%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .item__image {
+        width: 250px;
+    }
+    .header {
+        padding-left: 200px;
+        .nav {
+            padding-right: 15%;
+        }
+    }
+}
+
+
+.menu-btn {
+    background: none;
+    border: none;
+    padding-top: 15px;
+    //padding-right: 15px;
+    cursor: pointer;
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .nav__text {
+        text-decoration: none;
+        font-family: "Manrope";
+        font-size: 40px;
+        font-weight: 600;
+        color: #000000;
+        &:hover {
+            color: #E95200;
+        }
+    }
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+#menu {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@media (min-width: 670px) {
+    .menu-btn  {
+        display: none;
+    }
+    #menu {
+        display: none;
+    }
+}
+
+
