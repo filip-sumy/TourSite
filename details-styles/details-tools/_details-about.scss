@@ -4,6 +4,27 @@
     .back-arrow {
         padding-left: 15px;
     }
+    .navigation-block {
+        padding-left: 15px;
+        display: none;
+        .main__link {
+            font-family: "Manrope";
+            font-size: 20px;
+            font-weight: 600;
+            color: #E95200;
+            text-decoration: none;
+        }
+        .arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .details__text {
+            font-family: "Manrope";
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
     .tour-title {
         padding-left: 15px;
         padding-top: 20px;
@@ -46,9 +67,24 @@
     }
 }
 
+@media (min-width: 670px) {
+    .details-about {
+        .back-arrow {
+            display: none;
+        } 
+        .navigation-block {
+            display: flex;
+            gap: 10px;
+        }
+    }
+}
+
 @media (min-width: 1070px) {
     .details-about {
         .back-arrow {
+            padding-left: 100px;
+        }
+        .navigation-block {
             padding-left: 100px;
         }
         .tour-title {
@@ -60,6 +96,9 @@
 @media (min-width: 1200px) {
     .details-about {
         .back-arrow {
+            padding-left: 200px;
+        }
+        .navigation-block {
             padding-left: 200px;
         }
         .tour-title {

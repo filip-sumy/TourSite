@@ -257,6 +257,27 @@ ul .nav__text:hover {
 .details-about .back-arrow {
   padding-left: 15px;
 }
+.details-about .navigation-block {
+  padding-left: 15px;
+  display: none;
+}
+.details-about .navigation-block .main__link {
+  font-family: "Manrope";
+  font-size: 20px;
+  font-weight: 600;
+  color: #E95200;
+  text-decoration: none;
+}
+.details-about .navigation-block .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.details-about .navigation-block .details__text {
+  font-family: "Manrope";
+  font-size: 20px;
+  font-weight: 600;
+}
 .details-about .tour-title {
   padding-left: 15px;
   padding-top: 20px;
@@ -298,8 +319,20 @@ ul .nav__text:hover {
   color: #E95200;
 }
 
+@media (min-width: 670px) {
+  .details-about .back-arrow {
+    display: none;
+  }
+  .details-about .navigation-block {
+    display: flex;
+    gap: 10px;
+  }
+}
 @media (min-width: 1070px) {
   .details-about .back-arrow {
+    padding-left: 100px;
+  }
+  .details-about .navigation-block {
     padding-left: 100px;
   }
   .details-about .tour-title {
@@ -310,7 +343,125 @@ ul .nav__text:hover {
   .details-about .back-arrow {
     padding-left: 200px;
   }
+  .details-about .navigation-block {
+    padding-left: 200px;
+  }
   .details-about .tour-title {
     padding-left: 200px;
+  }
+}
+.slider {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.slider .card-list {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px; /*Отступ для точек*/
+}
+.slider .card-list .card-item {
+  list-style: none;
+}
+.slider .card-list .card-item .slide .card {
+  width: 360px;
+  height: 340px;
+  border-radius: 30px;
+  background-color: #FAFAFA;
+}
+.slider .card-list .card-item .slide .card .card__wrapper {
+  display: flex;
+}
+.slider .card-list .card-item .slide .card .card__link {
+  padding-top: 30px;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.slider .card-list .card-item .slide .card .card__link .link__container {
+  display: flex;
+  gap: 25px;
+}
+.slider .card-list .card-item .slide .card .card__link .link__container .link__text {
+  text-decoration: none;
+  color: #EEEEEE;
+}
+.slider .card-list .card-item .slide .card .month {
+  padding-top: 45px;
+  padding-left: 25px;
+}
+.slider .card-list .card-item .slide .card .month .month__name {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Manrope";
+}
+.slider .card-list .card-item .slide .card .star {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.slider .card-list .card-item .slide .card .rectangle {
+  border: 1px solid #B2B2B2;
+  border-radius: 20px;
+  height: 25px;
+  width: 50px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider .card-list .card-item .slide .card .rectangle .rectangle__text {
+  color: #B2B2B2;
+}
+.slider .card-list .card-item .slide .card .card__description {
+  padding-top: 50px;
+  padding-left: 25px;
+}
+.slider .card-list .card-item .slide .card .card__description .description__text {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Manrope";
+}
+
+.slider-4 .card-item .activity .slide {
+  width: 345px;
+}
+.slider-4 .card-item .activity .slide .activities {
+  width: 100%;
+  height: 130px;
+  border-radius: 30px;
+  background-color: #FAFAFA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-4 .card-item .activity .slide .activities .activities__text {
+  font-family: "Manrope";
+  font-size: 30px;
+  font-weight: 600;
+}
+.slider-4 .card-item .activity .slide .whatToDo {
+  background-color: #161616;
+  border-radius: 30px;
+  padding: 15px;
+}
+.slider-4 .card-item .activity .slide .whatToDo .whatToDo__item {
+  height: 55px;
+  padding: 5px 10px;
+  color: #FFFFFF;
+  font-size: 15px;
+  border-radius: 30px;
+  border: 1px solid #FFFFFF;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1070px) {
+  .container {
+    margin-left: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    margin-left: 200px;
   }
 }/*# sourceMappingURL=details.css.map */

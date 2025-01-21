@@ -1,5 +1,6 @@
 .slider {
     margin-bottom: 50px;
+    margin-top: 50px;
     .card-list {
         display: flex;
         flex-direction: row;
@@ -79,54 +80,6 @@
   
 }
 
-.slider-1 {
-    margin-top: 75px;
-}
-
-.slider-2 {
-    margin-top: 15px;
-    .card {
-        .card__container {
-            padding-left: 25px;
-            padding-top: 55px;
-            display: flex;
-            gap: 25px;
-            .info__name {
-                text-align: left;
-                font-family: "Manrope";
-                font-size: 18px;
-                font-weight: 600;
-                
-            }
-            .info__date {
-                padding-top: 5px;
-                text-align: left;
-                font-family: "Manrope";
-                font-size: 10px;
-                font-weight: 400;
-                color: #E95200;
-            }
-        }
-        .card__description {
-            text-align: left;
-            font-family: "Manrope";
-            font-size: 12px;
-            font-weight: 400;
-        }
-    }
-      
-}
-
-.slider-3 {
-    .slide {
-        width: 360px;
-        height: 340px;
-        .card__image {
-            display: block;
-        }
-    }
-}
-
 .slider-4 {
     .card-item {
         .activity {
@@ -170,129 +123,16 @@
     
 }
 
-.activities__text.active {
-    color: #FFFFFF;
-}
-
-.activities.active {
-    background-color: #E95200 !important;
-}
-
-.hidden {
-    display: none !important;
-}
-
-.card.active {
-    background-color: #E95200 !important;
-    height: auto !important;
-    .month__name {
-        color: #FAFAFA;
-    }
-    .description__text {
-        color: #FAFAFA;
-    }
-    .rectangle__text {
-        color: #FAFAFA !important;
-    }
-    .rectangle {
-        border: 1px solid #FAFAFA !important;
-    }
-}
-
-
-
-
-.swiper-button-next,
-.swiper-button-prev {
-    color: #E95200;
-}
-
-.swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    opacity: 0.7;
-    background: #E95200;
-}
-
-.swiper-pagination-bullet-active {
-    width: 12px;
-    height: 12px;
-    opacity: 1;
-}
-
-
-@media (max-width: 600px) {
-    .slider-4 {
-        .swiper-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-        
-        .swiper-button-prev,
-        .swiper-button-next,
-        .swiper-pagination {
-            display: none; /* Скрываем кнопки и пагинацию */
-        }
-    }
-    
-}
-
-@media (max-width: 768px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-        display: none;
-    }
-    // .card {
-    //     width: 335px !important;
-    // }
-    // .slider-3 {
-    //     .card__image {
-    //         width: 335px !important;
-    //     }
-    // }
-    
-}
-
 @media (min-width: 1070px) {
-    .slider,
-    .slider-4 {
-        .container {
-            margin-left: 100px;
-        }
+    .container {
+        margin-left: 100px;
     }
-    // .slider-2 ,
-    // .slider-3 {
-    //     .container {
-    //         .card-list {
-    //             .card-item {
-    //                 .slide {
-    //                     margin-left: 100px !important;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+    
 }
 
 @media (min-width: 1200px) {
-    .slider,
-    .slider-4 {
-        .container {
-            margin-left: 200px;
-        }
+    .container {
+        margin-left: 200px;
     }
-    // .slider-2 ,
-    // .slider-3 {
-    //     .container {
-    //         .card-list {
-    //             .card-item {
-    //                 .slide {
-    //                     margin-left: 200px !important;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+    
 }
-

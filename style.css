@@ -448,12 +448,14 @@ ul .nav__text:hover {
   }
 }
 @media (min-width: 1070px) {
-  .container .card-list .card-item .slide {
+  .slider .container,
+  .slider-4 .container {
     margin-left: 100px;
   }
 }
 @media (min-width: 1200px) {
-  .container .card-list .card-item .slide {
+  .slider .container,
+  .slider-4 .container {
     margin-left: 200px;
   }
 }
