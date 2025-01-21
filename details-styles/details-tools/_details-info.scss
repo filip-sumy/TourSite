@@ -1,0 +1,67 @@
+.details {
+        margin: 0px auto;
+        padding: 20px 0;
+        border-radius: 30px;
+        background-color: #161616;
+        width: 80%;
+        min-width: 345px;
+        max-width: 757px;
+        .details__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            .title__text {
+                font-family: "Manrope";
+                font-size: 30px;
+                font-weight: 600;
+                color: #FFFFFF;
+            }
+            .description__text {
+                font-family: "Manrope";
+                font-size: 14px;
+                font-weight: 500;
+                color: #FFFFFF;
+                text-align-last: center;
+            }
+            .details__cost {
+                display: flex;
+                flex-direction: row;
+                //justify-content: center;
+                align-items: center;
+                gap: 20px;
+                .number__text {
+                    font-family: "Manrope";
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #FFFFFF;
+                }
+                .price__text {
+                    font-family: "Manrope";
+                    font-size: 22px;
+                    font-weight: 600;
+                    color: #FFFFFF;
+                }
+            }
+            .booking__button {
+                text-decoration: none;
+                width: 250px;
+                height: 65px;
+                border-radius: 30px;
+                background-color: #E95200;
+                &:hover {
+                    background-color: #FF6C1C;
+                }
+                .button__text {
+                    //text-decoration: none;
+                    text-align: center;
+                    padding: 17px 25px;
+                    font-family: "Manrope";
+                    font-size: 24px;
+                    font-weight: 400;
+                    color: #FFFFFF;
+                }
+            }
+        }
+}

@@ -27,15 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const slider4 = new Swiper('.question-wrapper', {
-  
+        allowTouchMove: true,
+        freeMode: true,
+        loop: true,
+        pagination: {
+          el: '.question-wrapper .swiper-pagination',
+          clickable: true,
+          dynamicBullets: true,
+        },
     // Breakpoints for responsiveness
     breakpoints: {
-      0 : {
-        allowTouchMove: false,
-        freeMode: false,
-        loop: false,
-        //initialSlide: 0,
-      },
+      // 0 : {
+        
+      // },
       375 : {
         slidesPerView: 1.2,
         spaceBetween: 30,
@@ -130,8 +134,24 @@ const slider4 = new Swiper('.question-wrapper', {
         spaceBetween: -320,
       },
       1400: {
+        updateOnWindowResize: false,
         slidesPerView: 4,
         spaceBetween: 60,
     }
   }
   });
+
+  for (let i = 1; i <= 5; i++) {
+    const whatToDoButton = document.getElementById(`whatToDoButton-${i}`);
+    const whatToDo = document.getElementById(`whatToDo-${i}`);
+    const activitiesText = document.getElementById(`activities__text-${i}`);
+    const activities = document.getElementById(`activities-${i}`);
+  
+    whatToDoButton.addEventListener('click', () => {
+      whatToDo.classList.toggle('hidden');
+      activitiesText.classList.toggle('active');
+      activities.classList.toggle('active');
+    });
+  }
+
+  
