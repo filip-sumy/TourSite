@@ -448,7 +448,7 @@ ul .nav__text:hover {
     display: none;
   }
 }
-@media (max-width: 1069px) {
+@media (max-width: 1070px) {
   .slider .container {
     margin-left: 20px;
   }
