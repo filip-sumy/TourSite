@@ -2,7 +2,7 @@ const slider1 = new Swiper('.card-wrapper', {
   loop: true,
   spaceBetween: 0,
   slidesPerView: 1,
-  initialSlide: 1,
+  initialSlide: 0,
   freeMode: true,
   
   // observer: false,
@@ -113,6 +113,7 @@ const slider1 = new Swiper('.card-wrapper', {
       1250 : {
         slidesPerView: 3,
         spaceBetween: -320,
+        
       },
       1400: {
         updateOnWindowResize: false,

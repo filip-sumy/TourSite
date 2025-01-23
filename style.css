@@ -258,6 +258,7 @@ ul .nav__text:hover {
 }
 .slider .card-list .card-item .slide .card .card__link {
   padding-top: 30px;
+  padding-bottom: 30px;
   padding-left: 25px;
   display: flex;
   flex-direction: column;
@@ -445,6 +446,11 @@ ul .nav__text:hover {
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
+  }
+}
+@media (max-width: 1069px) {
+  .slider .container {
+    margin-left: 20px;
   }
 }
 @media (min-width: 1070px) {
