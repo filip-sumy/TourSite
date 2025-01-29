@@ -90,6 +90,14 @@
     opacity: 1;
 }
 
+@media (max-width: 1070px) {
+    .slider {
+        .container {
+            margin-left: 20px;// the space between slider-container and left border
+        }
+    }
+}
+
 @media (min-width: 1070px) {
     .container {
         margin-left: 100px;
@@ -97,7 +105,7 @@
     
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
     .container {
         margin-left: 200px;
     }

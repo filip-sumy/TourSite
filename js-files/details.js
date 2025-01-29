@@ -37,106 +37,165 @@ const slider4 = new Swiper('.question-wrapper', {
         },
     // Breakpoints for responsiveness
     breakpoints: {
-      // 0 : {
-        
-      // },
-      375 : {
+      0 : {
         slidesPerView: 1.2,
         spaceBetween: 30,
       },
       
-      420: {
+      390 : {
+        slidesPerView: 1.3,
+        spaceBetween: 30,
+      },
+
+      420 : {
         slidesPerView: 1.4,
-        spaceBetween: 50,
+        spaceBetween: 30,
       },
-      470: {
+      
+      450 : {
+        slidesPerView: 1.5,
+        spaceBetween: 30,
+      },
+
+      480 : {
         slidesPerView: 1.6,
-        spaceBetween: 50,
+        spaceBetween: 30,
       },
-      520: {
-        slidesPerView: 1.8,
-        spaceBetween: 50,
+
+      510 : {
+        slidesPerView: 1.7,
+        spaceBetween: 30,
       },
-      600: {
-        allowTouchMove: true,
-        freeMode: true,
-        loop: true,
-        //initialSlide: 0,
+
+      540 : {
         slidesPerView: 1.8,
         spaceBetween: 30,
       },
-      640: {
-        slidesPerView: 1.8,
+
+      570 : {
+        slidesPerView: 1.9,
+        spaceBetween: 30,
+      },
+
+      600 : {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+
+      630 : {
+        slidesPerView: 2.1,
+        spaceBetween: 30,
+      },
+
+      660 : {
+        slidesPerView: 2.2,
+        spaceBetween: 30,
+      },
+
+      690 : {
+        slidesPerView: 2.3,
+        spaceBetween: 30,
+      },
+
+      720 : {
+        slidesPerView: 2.4,
+        spaceBetween: 30,
+      },
+
+      750 : {
+        slidesPerView: 2.5,
+        spaceBetween: 30,
+      },
+
+      830 : {
+        slidesPerView: 2.5,
         spaceBetween: 10,
       },
-      670: {
-        slidesPerView: 1.8,
-        spaceBetween: 0,
+
+      850 : {
+        slidesPerView: 2.5,
+        spaceBetween: -10,
       },
-      700: {
-        slidesPerView: 1.9,
-        spaceBetween: -70,
+
+      870 : {
+        slidesPerView: 2.5,
+        spaceBetween: -30,
       },
-      720: {
-        slidesPerView: 1.9,
+
+      900 : {
+        slidesPerView: 2.5,
         spaceBetween: -50,
       },
-      740: {
-        slidesPerView: 2,
-        spaceBetween: -20,
-      },
-      768 : {
-          slidesPerView: 2.2,
-          spaceBetween: 0, 
-      },
-      820 : {
-        slidesPerView: 2.4,
-        spaceBetween: 0, 
-      },
-      870 : {
-        slidesPerView: 2.6,
-        spaceBetween: 0, 
-      },
+
       920 : {
-        slidesPerView: 2.8,
-        spaceBetween: 0, 
+        slidesPerView: 2.5,
+        spaceBetween: -70,
       },
+
+      950 : {
+        slidesPerView: 2.5,
+        spaceBetween: -90,
+      },
+
       970 : {
-        slidesPerView: 2.8,
-        spaceBetween: -10, 
+        slidesPerView: 2.5,
+        spaceBetween: -110,
       },
-      1000 : {
-        slidesPerView: 2.8,
-        spaceBetween: -30, 
+
+      990 : {
+        slidesPerView: 2.5,
+        spaceBetween: -130,
       },
-      1060 : {
-        slidesPerView: 2.8,
-        spaceBetween: -50, 
+
+      1010 : {
+        slidesPerView: 2.5,
+        spaceBetween: -150,
       },
-      1100 : {
-        slidesPerView: 2.8,
-        spaceBetween: -70, 
-      },
-      1130 : {
-        slidesPerView: 2.9,
-        spaceBetween: -70, 
-      },
-      1150 : {
-        slidesPerView: 2.9,
-        spaceBetween: -100, 
-      },
-      1200 : {
-        slidesPerView: 2.9,
+
+      1030 : {
+        slidesPerView: 2.5,
         spaceBetween: -170,
       },
-      1250 : {
-        slidesPerView: 3,
-        spaceBetween: -320,
+
+      1050 : {
+        slidesPerView: 2.5,
+        spaceBetween: -190,
       },
+
+      1070 : {
+        slidesPerView: 2.5,
+        spaceBetween: -210,
+      },
+
+      1090 : {
+        slidesPerView: 2.5,
+        spaceBetween: -230,
+      },
+
+      1110 : {
+        slidesPerView: 2.5,
+        spaceBetween: -250,
+      },
+
+      1130 : {
+        slidesPerView: 2.5,
+        spaceBetween: -270,
+      },
+
+      1150 : {
+        slidesPerView: 2.5,
+        spaceBetween: -290,
+      },
+
+      1170 : {
+        slidesPerView: 3,
+        spaceBetween: -150,
+      },
+
       1400: {
         updateOnWindowResize: false,
-        slidesPerView: 4,
-        spaceBetween: 60,
+        slidesPerView: 3,
+        spaceBetween: -270,
     }
   }
   });
