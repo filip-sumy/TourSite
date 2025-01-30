@@ -183,6 +183,85 @@ ul .nav__text:hover {
     display: none;
   }
 }
+.navigation {
+  padding-top: 20px;
+}
+.navigation .back-arrow {
+  padding-left: 15px;
+}
+.navigation .navigation-block {
+  padding-left: 15px;
+  display: none;
+}
+.navigation .navigation-block .main__link {
+  font-family: "Manrope";
+  font-size: 20px;
+  font-weight: 600;
+  color: #1A1A1A;
+  text-decoration: none;
+}
+.navigation .navigation-block .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation .navigation-block .details__text {
+  font-family: "Manrope";
+  font-size: 20px;
+  font-weight: 600;
+}
+.navigation .navigation-block .details__text .details__link {
+  font-family: "Manrope";
+  font-size: 20px;
+  font-weight: 600;
+  color: #1A1A1A;
+  text-decoration: none;
+}
+.navigation .navigation-block .booking__text {
+  font-family: "Manrope";
+  font-size: 20px;
+  font-weight: 600;
+  color: #E95200;
+}
+.navigation .tour-title {
+  padding-left: 15px;
+  padding-top: 20px;
+  font-family: "Manrope";
+  font-size: 44px;
+  font-weight: 600;
+}
+
+@media (min-width: 670px) {
+  .navigation .back-arrow {
+    display: none;
+  }
+  .navigation .navigation-block {
+    display: flex;
+    gap: 10px;
+  }
+}
+@media (min-width: 1070px) {
+  .navigation .back-arrow {
+    padding-left: 100px;
+  }
+  .navigation .navigation-block {
+    padding-left: 100px;
+  }
+  .navigation .tour-title {
+    padding-left: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  .navigation .back-arrow {
+    padding-left: 200px;
+  }
+  .navigation .navigation-block {
+    padding-left: 200px;
+  }
+  .navigation .tour-title {
+    padding-left: 200px;
+  }
+}
 .footer {
   margin-top: 800px;
   background-color: #1A1A1A;
