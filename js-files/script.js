@@ -22,98 +22,131 @@ const slider1 = new Swiper('.card-wrapper', {
   
   breakpoints: {
       0 : {
-          slidesPerView: 1,
+          slidesPerView: 1.2,
+          spaceBetween: 10,
           
       },
-      375 : {
-        slidesPerView: 1.2,
-        spaceBetween: 30,
+
+      390 : {
+        slidesPerView: 1.3,
+        spaceBetween: 20,
       },
       
       420: {
         slidesPerView: 1.4,
-        spaceBetween: 50,
+        spaceBetween: 20,
       },
-      470: {
+      450: {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+      },
+      480: {
         slidesPerView: 1.6,
-        spaceBetween: 50,
+        spaceBetween: 20,
       },
-      520: {
+      510: {
+        slidesPerView: 1.7,
+        spaceBetween: 20,
+      },
+      540: {
         slidesPerView: 1.8,
-        spaceBetween: 50,
+        spaceBetween: 20,
+      },
+      570: {
+        slidesPerView: 1.9,
+        spaceBetween: 20,
       },
       600: {
-        slidesPerView: 1.8,
-        spaceBetween: 30,
+        slidesPerView: 1.9,
+        spaceBetween: 40,
       },
-      640: {
-        slidesPerView: 1.8,
+      630: {
+        slidesPerView: 1.9,
         spaceBetween: 10,
       },
-      670: {
-        slidesPerView: 1.8,
-        spaceBetween: 0,
+      660: {
+        slidesPerView: 2,
+        spaceBetween: 10,
       },
-      700: {
-        slidesPerView: 1.9,
-        spaceBetween: -70,
+      690: {
+        slidesPerView: 2.1,
+        spaceBetween: 10,
       },
       720: {
-        slidesPerView: 1.9,
+        slidesPerView: 2.2,
+        spaceBetween: 10,
+      },
+      750: {
+        slidesPerView: 2.3,
+        spaceBetween: 10,
+      },
+      780: {
+        slidesPerView: 2.4,
+        spaceBetween: 10,
+      },
+      810: {
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+      },
+      840: {
+        slidesPerView: 2.5,
+        spaceBetween: -10,
+      },
+      870: {
+        slidesPerView: 2.5,
+        spaceBetween: -30,
+      },
+      900: {
+        slidesPerView: 2.5,
         spaceBetween: -50,
       },
-      740: {
-        slidesPerView: 2,
-        spaceBetween: -20,
+      930: {
+        slidesPerView: 2.5,
+        spaceBetween: -70,
       },
-      768 : {
-          slidesPerView: 2.2,
-          spaceBetween: 0, 
+      960: {
+        slidesPerView: 2.5,
+        spaceBetween: -100,
       },
-      820 : {
-        slidesPerView: 2.4,
-        spaceBetween: 0, 
+      990: {
+        slidesPerView: 2.5,
+        spaceBetween: -130,
       },
-      870 : {
-        slidesPerView: 2.6,
-        spaceBetween: 0, 
+      1020: {
+        slidesPerView: 2.5,
+        spaceBetween: -160,
       },
-      920 : {
-        slidesPerView: 2.8,
-        spaceBetween: 0, 
+      1050: {
+        slidesPerView: 2.5,
+        spaceBetween: -190,
       },
-      970 : {
-        slidesPerView: 2.8,
-        spaceBetween: -10, 
+      1070: {
+        slidesPerView: 2.5,
+        spaceBetween: -120,
       },
-      1000 : {
-        slidesPerView: 2.8,
-        spaceBetween: -30, 
+      1100: {
+        slidesPerView: 2.5,
+        spaceBetween: -150,
       },
-      1060 : {
-        slidesPerView: 2.8,
-        spaceBetween: -50, 
+      1130: {
+        slidesPerView: 2.5,
+        spaceBetween: -180,
       },
-      1100 : {
-        slidesPerView: 2.8,
-        spaceBetween: -70, 
+      1160: {
+        slidesPerView: 2.5,
+        spaceBetween: -210,
       },
-      1130 : {
-        slidesPerView: 2.9,
-        spaceBetween: -70, 
+      1190: {
+        slidesPerView: 2.5,
+        spaceBetween: -240,
       },
-      1150 : {
-        slidesPerView: 2.9,
-        spaceBetween: -100, 
+      1200: {
+        slidesPerView: 2.5,
+        spaceBetween: -150,
       },
-      1200 : {
-        slidesPerView: 2.9,
-        spaceBetween: -170,
-      },
-      1250 : {
-        slidesPerView: 3,
-        spaceBetween: -320,
-        
+      1230: {
+        slidesPerView: 2.5,
+        spaceBetween: -180,
       },
       1400: {
         updateOnWindowResize: false,
@@ -144,104 +177,139 @@ const slider2 = new Swiper('.reviews-wrapper', {
   },
   
   breakpoints: {
-      0 : {
-          slidesPerView: 1,
-          
-      },
-      375 : {
+    0 : {
         slidesPerView: 1.2,
-        spaceBetween: 30,
-      },
-      
-      420: {
-        slidesPerView: 1.4,
-        spaceBetween: 50,
-      },
-      470: {
-        slidesPerView: 1.6,
-        spaceBetween: 50,
-      },
-      520: {
-        slidesPerView: 1.8,
-        spaceBetween: 50,
-      },
-      600: {
-        slidesPerView: 1.8,
-        spaceBetween: 30,
-      },
-      640: {
-        slidesPerView: 1.8,
         spaceBetween: 10,
-      },
-      670: {
-        slidesPerView: 1.8,
-        spaceBetween: 0,
-      },
-      700: {
-        slidesPerView: 1.9,
-        spaceBetween: -70,
-      },
-      720: {
-        slidesPerView: 1.9,
-        spaceBetween: -50,
-      },
-      740: {
-        slidesPerView: 2,
-        spaceBetween: -20,
-      },
-      768 : {
-          slidesPerView: 2.2,
-          spaceBetween: 0, 
-      },
-      820 : {
-        slidesPerView: 2.4,
-        spaceBetween: 0, 
-      },
-      870 : {
-        slidesPerView: 2.6,
-        spaceBetween: 0, 
-      },
-      920 : {
-        slidesPerView: 2.8,
-        spaceBetween: 0, 
-      },
-      970 : {
-        slidesPerView: 2.8,
-        spaceBetween: -10, 
-      },
-      1000 : {
-        slidesPerView: 2.8,
-        spaceBetween: -30, 
-      },
-      1060 : {
-        slidesPerView: 2.8,
-        spaceBetween: -50, 
-      },
-      1100 : {
-        slidesPerView: 2.8,
-        spaceBetween: -70, 
-      },
-      1130 : {
-        slidesPerView: 2.9,
-        spaceBetween: -70, 
-      },
-      1150 : {
-        slidesPerView: 2.9,
-        spaceBetween: -100, 
-      },
-      1200 : {
-        slidesPerView: 2.9,
-        spaceBetween: -170,
-      },
-      1250 : {
-        slidesPerView: 3,
-        spaceBetween: -320,
-      },
-      1400: {
-        slidesPerView: 4,
-        spaceBetween: 60,
-    }
+        
+    },
+
+    390 : {
+      slidesPerView: 1.3,
+      spaceBetween: 20,
+    },
+    
+    420: {
+      slidesPerView: 1.4,
+      spaceBetween: 20,
+    },
+    450: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
+    480: {
+      slidesPerView: 1.6,
+      spaceBetween: 20,
+    },
+    510: {
+      slidesPerView: 1.7,
+      spaceBetween: 20,
+    },
+    540: {
+      slidesPerView: 1.8,
+      spaceBetween: 20,
+    },
+    570: {
+      slidesPerView: 1.9,
+      spaceBetween: 20,
+    },
+    600: {
+      slidesPerView: 1.9,
+      spaceBetween: 40,
+    },
+    630: {
+      slidesPerView: 1.9,
+      spaceBetween: 10,
+    },
+    660: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    690: {
+      slidesPerView: 2.1,
+      spaceBetween: 10,
+    },
+    720: {
+      slidesPerView: 2.2,
+      spaceBetween: 10,
+    },
+    750: {
+      slidesPerView: 2.3,
+      spaceBetween: 10,
+    },
+    780: {
+      slidesPerView: 2.4,
+      spaceBetween: 10,
+    },
+    810: {
+      slidesPerView: 2.5,
+      spaceBetween: 10,
+    },
+    840: {
+      slidesPerView: 2.5,
+      spaceBetween: -10,
+    },
+    870: {
+      slidesPerView: 2.5,
+      spaceBetween: -30,
+    },
+    900: {
+      slidesPerView: 2.5,
+      spaceBetween: -50,
+    },
+    930: {
+      slidesPerView: 2.5,
+      spaceBetween: -70,
+    },
+    960: {
+      slidesPerView: 2.5,
+      spaceBetween: -100,
+    },
+    990: {
+      slidesPerView: 2.5,
+      spaceBetween: -130,
+    },
+    1020: {
+      slidesPerView: 2.5,
+      spaceBetween: -160,
+    },
+    1050: {
+      slidesPerView: 2.5,
+      spaceBetween: -190,
+    },
+    1070: {
+      slidesPerView: 2.5,
+      spaceBetween: -120,
+    },
+    1100: {
+      slidesPerView: 2.5,
+      spaceBetween: -150,
+    },
+    1130: {
+      slidesPerView: 2.5,
+      spaceBetween: -180,
+    },
+    1160: {
+      slidesPerView: 2.5,
+      spaceBetween: -210,
+    },
+    1190: {
+      slidesPerView: 2.5,
+      spaceBetween: -240,
+    },
+    1200: {
+      slidesPerView: 2.5,
+      spaceBetween: -150,
+    },
+    1230: {
+      slidesPerView: 2.5,
+      spaceBetween: -180,
+    },
+    1400: {
+      updateOnWindowResize: false,// can also be true here?
+      slidesPerView: 4,
+      spaceBetween: 60,
   }
+}
 
 });
 
@@ -268,99 +336,134 @@ const slider3 = new Swiper('.photos-wrapper', {
   // Breakpoints for responsiveness
   breakpoints: {
     0 : {
-        slidesPerView: 1,
+        slidesPerView: 1.2,
+        spaceBetween: 10,
         
     },
-    375 : {
-      slidesPerView: 1.2,
-      spaceBetween: 30,
+
+    390 : {
+      slidesPerView: 1.3,
+      spaceBetween: 20,
     },
     
     420: {
       slidesPerView: 1.4,
-      spaceBetween: 50,
+      spaceBetween: 20,
     },
-    470: {
+    450: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
+    480: {
       slidesPerView: 1.6,
-      spaceBetween: 50,
+      spaceBetween: 20,
     },
-    520: {
+    510: {
+      slidesPerView: 1.7,
+      spaceBetween: 20,
+    },
+    540: {
       slidesPerView: 1.8,
-      spaceBetween: 50,
+      spaceBetween: 20,
+    },
+    570: {
+      slidesPerView: 1.9,
+      spaceBetween: 20,
     },
     600: {
-      slidesPerView: 1.8,
-      spaceBetween: 30,
+      slidesPerView: 1.9,
+      spaceBetween: 40,
     },
-    640: {
-      slidesPerView: 1.8,
+    630: {
+      slidesPerView: 1.9,
       spaceBetween: 10,
     },
-    670: {
-      slidesPerView: 1.8,
-      spaceBetween: 0,
+    660: {
+      slidesPerView: 2,
+      spaceBetween: 10,
     },
-    700: {
-      slidesPerView: 1.9,
-      spaceBetween: -70,
+    690: {
+      slidesPerView: 2.1,
+      spaceBetween: 10,
     },
     720: {
-      slidesPerView: 1.9,
+      slidesPerView: 2.2,
+      spaceBetween: 10,
+    },
+    750: {
+      slidesPerView: 2.3,
+      spaceBetween: 10,
+    },
+    780: {
+      slidesPerView: 2.4,
+      spaceBetween: 10,
+    },
+    810: {
+      slidesPerView: 2.5,
+      spaceBetween: 10,
+    },
+    840: {
+      slidesPerView: 2.5,
+      spaceBetween: -10,
+    },
+    870: {
+      slidesPerView: 2.5,
+      spaceBetween: -30,
+    },
+    900: {
+      slidesPerView: 2.5,
       spaceBetween: -50,
     },
-    740: {
-      slidesPerView: 2,
-      spaceBetween: -20,
+    930: {
+      slidesPerView: 2.5,
+      spaceBetween: -70,
     },
-    768 : {
-        slidesPerView: 2.2,
-        spaceBetween: 0, 
+    960: {
+      slidesPerView: 2.5,
+      spaceBetween: -100,
     },
-    820 : {
-      slidesPerView: 2.4,
-      spaceBetween: 0, 
+    990: {
+      slidesPerView: 2.5,
+      spaceBetween: -130,
     },
-    870 : {
-      slidesPerView: 2.6,
-      spaceBetween: 0, 
+    1020: {
+      slidesPerView: 2.5,
+      spaceBetween: -160,
     },
-    920 : {
-      slidesPerView: 2.8,
-      spaceBetween: 0, 
+    1050: {
+      slidesPerView: 2.5,
+      spaceBetween: -190,
     },
-    970 : {
-      slidesPerView: 2.8,
-      spaceBetween: -10, 
+    1070: {
+      slidesPerView: 2.5,
+      spaceBetween: -120,
     },
-    1000 : {
-      slidesPerView: 2.8,
-      spaceBetween: -30, 
+    1100: {
+      slidesPerView: 2.5,
+      spaceBetween: -150,
     },
-    1060 : {
-      slidesPerView: 2.8,
-      spaceBetween: -50, 
+    1130: {
+      slidesPerView: 2.5,
+      spaceBetween: -180,
     },
-    1100 : {
-      slidesPerView: 2.8,
-      spaceBetween: -70, 
+    1160: {
+      slidesPerView: 2.5,
+      spaceBetween: -210,
     },
-    1130 : {
-      slidesPerView: 2.9,
-      spaceBetween: -70, 
+    1190: {
+      slidesPerView: 2.5,
+      spaceBetween: -240,
     },
-    1150 : {
-      slidesPerView: 2.9,
-      spaceBetween: -100, 
+    1200: {
+      slidesPerView: 2.5,
+      spaceBetween: -150,
     },
-    1200 : {
-      slidesPerView: 2.9,
-      spaceBetween: -170,
-    },
-    1250 : {
-      slidesPerView: 3,
-      spaceBetween: -320,
+    1230: {
+      slidesPerView: 2.5,
+      spaceBetween: -180,
     },
     1400: {
+      updateOnWindowResize: false,
       slidesPerView: 4,
       spaceBetween: 60,
   }
@@ -369,6 +472,13 @@ const slider3 = new Swiper('.photos-wrapper', {
 
 const slider4 = new Swiper('.question-wrapper', {
   
+  // Pagination
+  pagination: {
+    el: '.question-wrapper .swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+},
+
   // Breakpoints for responsiveness
   breakpoints: {
     0 : {
@@ -377,103 +487,123 @@ const slider4 = new Swiper('.question-wrapper', {
       loop: false,
       //initialSlide: 0,
     },
-    // 375 : {
-    //   slidesPerView: 1.2,
-    //   spaceBetween: 30,
-    // },
-    
-    // 420: {
-    //   slidesPerView: 1.4,
-    //   spaceBetween: 50,
-    // },
-    // 470: {
-    //   slidesPerView: 1.6,
-    //   spaceBetween: 50,
-    // },
-    // 520: {
-    //   slidesPerView: 1.8,
-    //   spaceBetween: 50,
-    // },
     600: {
       allowTouchMove: true,
       freeMode: true,
       loop: true,
-      //initialSlide: 0,
-      slidesPerView: 1.8,
+      slidesPerView: 1.9,
       spaceBetween: 30,
     },
-    640: {
-      slidesPerView: 1.8,
-      spaceBetween: 10,
+    630: {
+      loop: true,
+      slidesPerView: 1.9,
+      spaceBetween: -10,
     },
-    670: {
-      slidesPerView: 1.8,
-      spaceBetween: 0,
+    660: {
+      loop: true,
+      slidesPerView: 1.9,
+      spaceBetween: -40,
     },
-    700: {
+    690: {
+      loop: true,
       slidesPerView: 1.9,
       spaceBetween: -70,
     },
     720: {
+      loop: true,
       slidesPerView: 1.9,
-      spaceBetween: -50,
+      spaceBetween: -100,
     },
-    740: {
+    750: {
+      loop: true,
+      slidesPerView: 1.9,
+      spaceBetween: -130,
+    },
+    780: {
+      loop: true,
+      slidesPerView: 1.9,
+      spaceBetween: -160,
+    },
+    810: {
+      loop: true,
+      slidesPerView: 1.9,
+      spaceBetween: -190,
+    },
+    840: {
+      loop: true,
+      slidesPerView: 1.9,
+      spaceBetween: -220,
+    },
+    870: {
+      loop: true,
+      slidesPerView: 1.9,
+      spaceBetween: -250,
+    },
+    900: {
+      loop: true,
+      slidesPerView: 1.9,
+      spaceBetween: -280,
+    },
+    930: {
+      loop: true,
+      slidesPerView: 1.9,
+      spaceBetween: -310,
+    },
+    960: {
+      loop: true,
+      slidesPerView: 1.9,
+      spaceBetween: -340,
+    },
+    990: {
+      loop: true,
+      slidesPerView: 1.9,
+      spaceBetween: -370,
+    },
+    1020: {
+      loop: true,
+      slidesPerView: 1.9,
+      spaceBetween: -400,
+    },
+    1050: {
+      loop: true,
+      slidesPerView: 1.9,
+      spaceBetween: -430,
+    },
+    1070: {
+      loop: true,
       slidesPerView: 2,
-      spaceBetween: -20,
-    },
-    768 : {
-        slidesPerView: 2.2,
-        spaceBetween: 0, 
-    },
-    820 : {
-      slidesPerView: 2.4,
-      spaceBetween: 0, 
-    },
-    870 : {
-      slidesPerView: 2.6,
-      spaceBetween: 0, 
-    },
-    920 : {
-      slidesPerView: 2.8,
-      spaceBetween: 0, 
-    },
-    970 : {
-      slidesPerView: 2.8,
-      spaceBetween: -10, 
-    },
-    1000 : {
-      slidesPerView: 2.8,
-      spaceBetween: -30, 
-    },
-    1060 : {
-      slidesPerView: 2.8,
-      spaceBetween: -50, 
-    },
-    1100 : {
-      slidesPerView: 2.8,
-      spaceBetween: -70, 
-    },
-    1130 : {
-      slidesPerView: 2.9,
-      spaceBetween: -70, 
-    },
-    1150 : {
-      slidesPerView: 2.9,
-      spaceBetween: -100, 
-    },
-    1200 : {
-      slidesPerView: 2.9,
-      spaceBetween: -170,
-    },
-    1250 : {
-      slidesPerView: 3,
       spaceBetween: -320,
     },
-    1400: {
+    1100: {
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: -350,
+    },
+    1130: {
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: -380,
+    },
+    1160: {
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: -410,
+    },
+    1190: {
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: -440,
+    },
+    1200: {
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: -350,
+    },
+    1250: {
+      loop: true,
       slidesPerView: 4,
-      spaceBetween: 60,
-  }
+      spaceBetween: 0,
+    },
 }
 });
 
