@@ -1,0 +1,63 @@
+.tour {
+    margin-top: 25px;
+    .tour__mobile {
+        padding-left: 15px;
+        .tour__text {
+            font-family: "Manrope";
+            font-size: 44px;
+            font-weight: 600;
+        }
+        .date__text {
+            font-family: "Manrope";
+            font-size: 26px;
+            font-weight: 500;
+        }
+    }
+    .tour__desktop {
+        display: none;
+        .banner {
+            margin: 20px auto;
+            border-radius: 30px;
+            background-color: #FAFAFA;
+            width: 80%;
+            min-width: 345px;
+            max-width: 1140px;
+            .banner__wrapper {
+                padding: 20px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+                .title__text {
+                    font-family: "Manrope";
+                    font-size: 40px;
+                    font-weight: 600;
+                }
+                .date__text {
+                    font-family: "Manrope";
+                    font-size: 25px;
+                    font-weight: 600;
+                    color: #E95200;
+                }
+                .duration__text {
+                    font-family: "Manrope";
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #E95200;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 670px) {
+    .tour {
+        .tour__mobile {
+            display: none;
+        }
+        .tour__desktop {
+            display: flex;
+        }
+    }
+}

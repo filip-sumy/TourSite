@@ -262,6 +262,67 @@ ul .nav__text:hover {
     padding-left: 200px;
   }
 }
+.tour {
+  margin-top: 25px;
+}
+.tour .tour__mobile {
+  padding-left: 15px;
+}
+.tour .tour__mobile .tour__text {
+  font-family: "Manrope";
+  font-size: 44px;
+  font-weight: 600;
+}
+.tour .tour__mobile .date__text {
+  font-family: "Manrope";
+  font-size: 26px;
+  font-weight: 500;
+}
+.tour .tour__desktop {
+  display: none;
+}
+.tour .tour__desktop .banner {
+  margin: 20px auto;
+  border-radius: 30px;
+  background-color: #FAFAFA;
+  width: 80%;
+  min-width: 345px;
+  max-width: 1140px;
+}
+.tour .tour__desktop .banner .banner__wrapper {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.tour .tour__desktop .banner .banner__wrapper .title__text {
+  font-family: "Manrope";
+  font-size: 40px;
+  font-weight: 600;
+}
+.tour .tour__desktop .banner .banner__wrapper .date__text {
+  font-family: "Manrope";
+  font-size: 25px;
+  font-weight: 600;
+  color: #E95200;
+}
+.tour .tour__desktop .banner .banner__wrapper .duration__text {
+  font-family: "Manrope";
+  font-size: 20px;
+  font-weight: 600;
+  color: #E95200;
+}
+
+@media (min-width: 670px) {
+  .tour .tour__mobile {
+    display: none;
+  }
+  .tour .tour__desktop {
+    display: flex;
+  }
+}
 .footer {
   margin-top: 800px;
   background-color: #1A1A1A;
