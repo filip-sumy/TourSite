@@ -448,7 +448,95 @@ ul .nav__text:hover {
   font-weight: 400;
   color: #F6C229;
 }
+.form form .comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+}
+.form form .comment .comment__area {
+  width: 90%;
+  min-width: 270px;
+  max-width: 490px;
+  height: 150px;
+  resize: vertical;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+  padding-top: 25px;
+  padding-left: 25px;
+}
+.form form .comment .comment__area::placeholder {
+  text-align: center;
+  color: #A0A0A0;
+  font-size: 18px;
+}
+.form form .comment .comment__area:focus {
+  outline: none;
+}
+.form form .acception__block {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding-top: 25px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.form form .acception__block .acception__text {
+  font-family: "Manrope";
+  font-size: 10px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.form form .acception__block .acception__text a {
+  text-decoration: none;
+  color: #F6C229;
+}
+.form form .accept-button {
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form form .accept-button button {
+  width: 250px;
+  height: 65px;
+  padding: 15px;
+  font-size: 24px;
+  font-family: "Manrope";
+  font-weight: 400;
+  color: #fff;
+  background-color: #E95200;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.form form .accept-button button:hover {
+  background-color: #FF6C1C;
+}
 
+@media (min-width: 670px) {
+  .contact__text {
+    font-size: 22px !important;
+  }
+  .person__text {
+    font-size: 22px !important;
+  }
+  .block__title {
+    font-size: 22px !important;
+  }
+  .block__desc {
+    font-size: 14px !important;
+  }
+  .acception__text {
+    font-size: 14px !important;
+  }
+  .accept-button button {
+    font-size: 28px;
+    width: 290px;
+  }
+}
 .footer {
   margin-top: 50px;
   background-color: #1A1A1A;
