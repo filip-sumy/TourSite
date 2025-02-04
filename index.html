@@ -594,7 +594,7 @@
                 </p>
             </div>
             <div class="form-container">
-                <form action="mail.php" method="POST">
+                <form action="send_mail.php" name="form" method="POST">
                     <div class="input-wrapper">
                         <img class="icon" src="images/name-icon.svg" alt="">
                         <input class="input" type="text" name="user_name" placeholder="Введіть ваше ім'я" required>
