@@ -1,3 +1,32 @@
+<?php
+// Подключение к базе данных
+$db = new PDO("mysql:host=MySQL-8.2;dbname=extremetrips", "root", "");
+
+// Получение параметра id из URL
+$id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
+
+if ($id > 0) {
+    // Запрос на выборку данных по ID
+    $query = $db->prepare("SELECT * FROM extreme_tours WHERE id = :id");
+    $query->execute(['id' => $id]);
+
+    // Получение данных
+    $tour = $query->fetch(PDO::FETCH_ASSOC);
+
+    // Если запись найдена
+    if ($tour) {
+        $tour_name = htmlspecialchars($tour['tour_name']);
+        $tour_dates = htmlspecialchars($tour['tour_dates']);
+        $tour_duration = htmlspecialchars($tour['tour_duration']);
+        $tour_description = htmlspecialchars($tour['tour_description']);
+    } else {
+        echo "Тур с таким ID не найден.";
+    }
+} else {
+    echo "Неверный ID.";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +65,7 @@
         </div>
         <ul class="nav">
             <li>
-                <a class="nav__link" href="../index.html">Головна</a>
+                <a class="nav__link" href="../testpage.php">Головна</a>
             </li>
             <li>
                 <a class="nav__link" href="booking.html">Бронювання</a>
@@ -49,7 +78,7 @@
     <nav id="menu" class="hidden">
         <ul>
             <li>
-                <a class="nav__text" href="../index.html">Головна</a>
+                <a class="nav__text" href="../testpage.php">Головна</a>
             </li>
             <li>
                 <a class="nav__text" href="booking.html">Бронювання</a>
@@ -59,14 +88,14 @@
     <section id="main" class="main">
         <section class="details-about">
             <div class="back-arrow">
-                <a class="arrow__link" href="../index.html">
+                <a class="arrow__link" href="../testpage.php">
                     <img src="../images/Button_back_to_page.png" alt="" class="arrow__img">
                 </a>
             </div>
             <div class="navigation-block">
                 <div class="main-page">
                     <p class="main__text">
-                        <a class="main__link" href="../index.html">Головна</a>
+                        <a class="main__link" href="../testpage.php">Головна</a>
                     </p>
                 </div>
                 <div class="arrow">
@@ -87,17 +116,17 @@
                 <div class="banner__wrapper">
                     <div class="trip__title">
                         <p class="title__text">
-                            Драгобрат
+                        <?php echo htmlspecialchars($tour['tour_name']); ?>
                         </p>
                     </div>
                     <div class="trip__date">
                         <p class="date__text">
-                            09.01 - 13.01 
+                        <?php echo htmlspecialchars($tour['tour_dates']); ?> 
                         </p>
                     </div>
                     <div class="trip__duration">
                         <p class="duration__text">
-                            4 дні/3 ночі
+                        <?php echo htmlspecialchars($tour['tour_duration']); ?>
                         </p>
                     </div>
                 </div> 
@@ -116,7 +145,7 @@
                                 </div>
                                 <div id="whatToDo-1" class="whatToDo hidden">
                                     <div class="whatToDo__item">
-                                        Текстовое описание из БД
+                                    <?php echo htmlspecialchars($tour['tour_schedule']); ?>
                                     </div>
                                 </div>
                             </div>
@@ -132,7 +161,7 @@
                                 </div>
                                 <div id="whatToDo-2" class="whatToDo hidden">
                                     <div class="whatToDo__item">
-                                        Текстовое описание из БД
+                                    <?php echo htmlspecialchars($tour['tour_fulldescription']); ?>
                                     </div>
                                 </div>
                             </div>
@@ -148,7 +177,7 @@
                                 </div>
                                 <div id="whatToDo-3" class="whatToDo hidden">
                                     <div class="whatToDo__item">
-                                        Текстовое описание из БД
+                                    <?php echo htmlspecialchars($tour['tour_accomodation']); ?>
                                     </div>
                                 </div>
                             </div>
@@ -178,7 +207,7 @@
                     </div>
                     <div class="price">
                         <p class="price__text">
-                            4800 грн
+                        <?php echo htmlspecialchars($tour['tour_price']); ?> грн
                         </p>
                     </div>
                 </div>

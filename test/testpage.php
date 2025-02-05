@@ -155,7 +155,7 @@ else {
                                                         <img src="images/la_skiing.png" alt="Иконка тура">
                                                     </div>
                                                     <!-- Делаем даты тура гиперссылкой с ID -->
-                                                    <a href="/pages/details.php?id=<?= htmlspecialchars($tour['id']) ?>">
+                                                    <a href="testdetails.php?id=<?= htmlspecialchars($tour['id']) ?>">
                                                         <?= htmlspecialchars($tour['tour_dates']) ?> - <?= htmlspecialchars($tour['tour_duration']) ?>
                                                     </a>
                                                 </li>

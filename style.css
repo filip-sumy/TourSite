@@ -11,6 +11,17 @@ html {
   background-color: #E2E2E2;
 }
 
+.tour-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.link__icon img {
+  width: 20px; /* Размер иконки, можно поменять */
+  height: 20px;
+}
+
 body {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
