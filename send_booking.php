@@ -9,8 +9,12 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
 
-$name = $_POST['user_name'];
-$phone = $_POST['user_phone'];
+$email = $_POST['email'];
+$name = $_POST['name'];
+$date_birth = $_POST['date_birth'];
+$phone = $_POST['phone'];
+$city_from = $_POST['city_from'];
+$comment = $_POST['comment'];
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
@@ -34,18 +38,25 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Заявка с формы';
+    $mail->Subject = 'You have a new tour booking!';
     $mail->Body    = '
-        <h4>Name : '.$name.'</h4>
-        <h4>Phone : '.$phone.'</h4>
+        <h4>Почта : '.$email.'</h4>
+        <h4>Имя : '.$name.'</h4>
+        <h4>Дата рождения : '.$date_birth.'</h4>
+        <h4>Телефон : '.$phone.'</h4>
+        <h4>Город выезда : '.$city_from.'</h4>
+        <h4>Комментарий : '.$comment.'</h4>
     ';
 
     $mail->send();
     echo 'Message has been sent';
-} catch (Exception $e) {
+}
+ catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+    echo 'Message has been sent';{
 
+}
 
 ?>
 ?>

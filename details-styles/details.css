@@ -325,7 +325,7 @@ ul .nav__text:hover {
   padding: 15px;
 }
 .slider-4 .card-item .activity .slide .whatToDo .whatToDo__item {
-  height: 55px;
+  height: auto;
   padding: 5px 10px;
   color: #FFFFFF;
   font-size: 15px;
@@ -399,7 +399,8 @@ ul .nav__text:hover {
   font-size: 14px;
   font-weight: 500;
   color: #FFFFFF;
-  text-align-last: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
 .details .details__wrapper .details__cost {
   display: flex;

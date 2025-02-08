@@ -11,17 +11,6 @@ html {
   background-color: #E2E2E2;
 }
 
-.tour-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-}
-.link__icon img {
-  width: 20px; /* Размер иконки, можно поменять */
-  height: 20px;
-}
-
 body {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
@@ -273,7 +262,7 @@ ul .nav__text:hover {
   padding-left: 25px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0px;
 }
 .slider .card-list .card-item .slide .card .card__link .link__container {
   display: flex;
@@ -362,7 +351,8 @@ ul .nav__text:hover {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .slider-4 .card-item .activity .slide {
@@ -386,15 +376,26 @@ ul .nav__text:hover {
   background-color: #161616;
   border-radius: 30px;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 30px;
+  margin-top: 10px;
 }
 .slider-4 .card-item .activity .slide .whatToDo .whatToDo__item {
-  height: 55px;
-  padding: 5px 10px;
+  height: auto;
+  padding: 10px;
   color: #FFFFFF;
   font-size: 15px;
-  border-radius: 30px;
-  border: 1px solid #FFFFFF;
+  font-family: "Manrope";
   margin-bottom: 10px;
+}
+.slider-4 .card-item .activity .slide .whatToDo .activity-box {
+  border: 2px solid white;
+  padding: 10px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 30px;
 }
 
 .activities__text.active {
@@ -571,6 +572,10 @@ ul .nav__text:hover {
   border-radius: 30px;
   font-size: 16px;
   background-color: #F2F2F2;
+}
+
+.input::-moz-placeholder {
+  color: #A0A0A0;
 }
 
 .input::placeholder {

@@ -124,29 +124,29 @@
             </div>
         </section>
         <section class="form">
-                <form action="" method="POST">
+                <form action="../send_booking.php" method="POST">
                     <div class="form__container">
                         <p class="contact__text">Крок 1: Контактна інформація</p>
                         <div class="block__contact">
                             <img class="icon" src="../images/email-icon.svg" alt="">
-                            <input class="input" type="email" name="" placeholder="Введіть вашу пошту" required>
+                            <input class="input" type="email" name="email" placeholder="Введіть вашу пошту" required>
                         </div>
                         <p class="person__text">Персона 1</p>
                         <div class="block__person">
                             <img class="icon" src="../images/name-icon.svg" alt="">
-                            <input class="input" type="text" name="" placeholder="Введіть ваше ім'я та прізвище" required>
+                            <input class="input" type="text" name="name" placeholder="Введіть ваше ім'я та прізвище" required>
                         </div>
                         <div class="block__person">
                             <img class="icon" src="../images/date-icon.svg" alt="">
-                            <input class="input" type="text" name="" placeholder="Введіть вашу дату народження" required>
+                            <input class="input" type="text" name="date_birth" placeholder="Введіть вашу дату народження" required>
                         </div>
                         <div class="block__person">
                             <img class="icon" src="../images/tel-icon.svg" alt="">
-                            <input class="input" type="text" name="" placeholder="Введіть ваш номер телефону" required>
+                            <input class="input" type="text" name="phone" placeholder="Введіть ваш номер телефону" required>
                         </div>
                         <div class="block__person">
                             <img class="icon" src="../images/cityfrom-icon.svg" alt="">
-                            <input class="input" type="text" name="" placeholder="Місце від'їзду" required>
+                            <input class="input" type="text" name="city_from" placeholder="Місце від'їзду" required>
                         </div>
                         <div id="addContainer" class="addContainer"></div>
                         <div class="add-person">
@@ -163,7 +163,7 @@
                             </div>
                         </div>
                         <div class="comment">
-                            <textarea  name="textarea" class="comment__area" placeholder="Складіть загальний коментар до замовлення"></textarea>
+                            <textarea  name="comment" class="comment__area" placeholder="Складіть загальний коментар до замовлення"></textarea>
                         </div>
                         <div class="acception__block">
                             <img class= "acception__icon" src="../images/accept-icon.svg" alt="">

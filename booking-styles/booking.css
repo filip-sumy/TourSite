@@ -370,6 +370,10 @@ ul .nav__text:hover {
   transform: translate(50%, 50%);
   left: 78%;
 }
+.form form .block__contact .input::-moz-placeholder {
+  color: #A0A0A0;
+  font-size: 16px;
+}
 .form form .block__contact .input::placeholder {
   color: #A0A0A0;
   font-size: 16px;
@@ -412,6 +416,10 @@ ul .nav__text:hover {
   top: 50%;
   transform: translate(50%, 50%);
   left: 78%;
+}
+.form form .block__person .input::-moz-placeholder {
+  color: #A0A0A0;
+  font-size: 16px;
 }
 .form form .block__person .input::placeholder {
   color: #A0A0A0;
@@ -466,6 +474,11 @@ ul .nav__text:hover {
   font-size: 18px;
   padding-top: 25px;
   padding-left: 25px;
+}
+.form form .comment .comment__area::-moz-placeholder {
+  text-align: center;
+  color: #A0A0A0;
+  font-size: 18px;
 }
 .form form .comment .comment__area::placeholder {
   text-align: center;
