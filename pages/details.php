@@ -65,10 +65,10 @@ if ($id > 0) {
         </div>
         <ul class="nav">
             <li>
-                <a class="nav__link" href="../testpage.php">Головна</a>
+                <a class="nav__link" href="../index.php">Головна</a>
             </li>
             <li>
-                <a class="nav__link" href="booking.html">Бронювання</a>
+                <a class="nav__link" href="booking.php">Бронювання</a>
             </li>
         </ul>
         <button id="menuButton" class="menu-btn">
@@ -78,24 +78,24 @@ if ($id > 0) {
     <nav id="menu" class="hidden">
         <ul>
             <li>
-                <a class="nav__text" href="../testpage.php">Головна</a>
+                <a class="nav__text" href="../index.php">Головна</a>
             </li>
             <li>
-                <a class="nav__text" href="booking.html">Бронювання</a>
+                <a class="nav__text" href="booking.php">Бронювання</a>
             </li>
         </ul>
     </nav>
     <section id="main" class="main">
         <section class="details-about">
             <div class="back-arrow">
-                <a class="arrow__link" href="../testpage.php">
+                <a class="arrow__link" href="../index.php">
                     <img src="../images/Button_back_to_page.png" alt="" class="arrow__img">
                 </a>
             </div>
             <div class="navigation-block">
                 <div class="main-page">
                     <p class="main__text">
-                        <a class="main__link" href="../testpage.php">Головна</a>
+                        <a class="main__link" href="../index.php">Головна</a>
                     </p>
                 </div>
                 <div class="arrow">
@@ -211,9 +211,10 @@ if ($id > 0) {
                         </p>
                     </div>
                 </div>
-                <a class="booking__button" href="booking.html">
-                    <p class="button__text">забронювати</p>
-                </a>
+                <a class="booking__button"
+                                                            href="/pages/booking.php?id=<?= htmlspecialchars($tour['id']) ?>">
+                                                            <p class="button__text">забронювати</p>
+                                                        </a>
             </div>
             
         </section>

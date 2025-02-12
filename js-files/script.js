@@ -1,7 +1,7 @@
 const slider1 = new Swiper('.card-wrapper', {
   loop: true,
   spaceBetween: 0,
-  slidesPerView: 1,
+  slidesPerView: 3,
   initialSlide: 0,
   freeMode: true,
   

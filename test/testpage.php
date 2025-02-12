@@ -34,11 +34,14 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
+        .link__container{
+            padding-bottom: 20px; /*Отступ контейнера дат тура от нижнего края*/
+        }
         .tour-item {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 8px;
+            gap: 10px; 
+             margin-bottom: -20px;  /*Добавляет расстояние между датами тура */
         }
 
         .link__icon img {
@@ -109,7 +112,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
             <div class="tours__block">
                 <p id="block__text" class="block__text">Наші тури:</p>
             </div>
-        </section>
+            </section>
         <!-- Тут начинается слайдер -->
         <section class="slider">
             <div class="container swiper">
@@ -163,7 +166,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                                             <img src="images/la_skiing.png" alt="Иконка тура">
                                                         </div>
                                                         <!-- Делаем даты тура гиперссылкой с ID -->
-                                                        <a
+                                                        <a class="link__text"
                                                             href="/pages/details.php?id=<?= htmlspecialchars($tour['id']) ?>">
                                                             <?= htmlspecialchars($tour['tour_dates']) ?> -
                                                             <?= htmlspecialchars($tour['tour_duration']) ?>
@@ -220,7 +223,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                                             <img src="images/la_skiing.png" alt="Иконка тура">
                                                         </div>
                                                         <!-- Делаем даты тура гиперссылкой с ID -->
-                                                        <a
+                                                        <a class="link__text"
                                                             href="/pages/details.php?id=<?= htmlspecialchars($tour['id']) ?>">
                                                             <?= htmlspecialchars($tour['tour_dates']) ?> -
                                                             <?= htmlspecialchars($tour['tour_duration']) ?>
@@ -277,7 +280,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                                             <img src="images/la_skiing.png" alt="Иконка тура">
                                                         </div>
                                                         <!-- Делаем даты тура гиперссылкой с ID -->
-                                                        <a
+                                                        <a class="link__text"
                                                             href="/pages/details.php?id=<?= htmlspecialchars($tour['id']) ?>">
                                                             <?= htmlspecialchars($tour['tour_dates']) ?> -
                                                             <?= htmlspecialchars($tour['tour_duration']) ?>
@@ -299,108 +302,73 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
             </div>
             <!-- Тут слайдер заканчивается -->
         </section>
+        
         <section class="questions">
-            <div>
-                <p class="questions__text">
-                    Популярні питанння:
-                </p>
-            </div>
-        </section>
-        <section class="slider slider-4">
-            <div class="container swiper question-wrapper">
-                <ul class="card-list swiper-wrapper">
-                    <li id="whatToDoButton-1" class="card-item swiper-slide">
-                        <div class="activity">
-                            <div class="slide">
-                                <div id="activities-1" class="activities">
-                                    <p id="activities__text-1" class="activities__text">
-                                        Чим зайнятися на Драгобраті?👇🏻
-                                    </p>
-                                </div>
-                                <div id="whatToDo-1" class="whatToDo hidden">
-                                    <div class="whatToDo__item">
-                                        /*<?php
-                                        foreach ($tours as $tour) {
-                                            if ($tour['tour_name'] == 'Лютий') {
-                                                $activities = explode("\n", $tour['tour_activities']); // Разбиваем на массив
-                                        
-                                                foreach ($activities as $activity) {
-                                                    echo '<div class="activity-box">' . htmlspecialchars(trim($activity)) . '</div>';
-                                                }
-                                                break; // Прерываем цикл после первого совпадения
-                                            }
-                                        }
-                                        ?>*/ 
+    <div>
+        <p class="questions__text">
+            Популярні питанння:
+        </p>
+    </div>
+</section>
 
+<section class="slider slider-4">
+    <div class="container swiper question-wrapper">
+        <ul class="card-list swiper-wrapper">
+            <?php
+            // Группируем туры по их названию
+            $groupedTours = [];
+            foreach ($tours as $tour) {
+                $groupedTours[$tour['tour_name']][] = $tour;
+            }
+
+            // Сортируем туры по нужным месяцам
+            $tourNames = ['Драгобрат', 'Буковель', 'Боржомі'];
+
+            // Выводим блоки по группам
+            foreach ($tourNames as $tourName) {
+                // Если есть туры с этим названием, выводим их
+                if (isset($groupedTours[$tourName])) {
+                    foreach ($groupedTours[$tourName] as $index => $tour) {
+                        ?>
+                        <li id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide">
+                            <div class="activity">
+                                <div class="slide">
+                                    <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
+                                        <p class="activities__text">
+                                            Чим зайнятися на <?= htmlspecialchars($tourName) ?>?👇🏻
                                         </p>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li id="whatToDoButton-2" class="card-item swiper-slide">
-                        <div class="activity">
-                            <div class="slide">
-                                <div id="activities-1" class="activities">
-                                    <p id="activities__text-1" class="activities__text">
-                                        Чим зайнятися на Драгобраті?👇🏻
-                                    </p>
-                                </div>
-                                <div id="whatToDo-1" class="whatToDo hidden">
-                                    <div class="whatToDo__item">
-                                        <?php
-                                        foreach ($tours as $tour) {
-                                            if ($tour['tour_name'] == 'Лютий') {
-                                                $activities = explode("\n", $tour['tour_activities']); // Разбиваем на массив
-                                        
-                                                foreach ($activities as $activity) {
-                                                    echo '<div class="activity-box">' . htmlspecialchars(trim($activity)) . '</div>';
-                                                }
-                                                break; // Прерываем цикл после первого совпадения
+                                    <div id="whatToDo-<?= $index ?>" class="whatToDo hidden">
+                                        <div class="whatToDo__item">
+                                            <?php
+                                            $activities = explode("\n", $tour['tour_activities']);
+                                            foreach ($activities as $activity) {
+                                                echo '<div class="activity-box">' . htmlspecialchars(trim($activity)) . '</div>';
                                             }
-                                        }
-                                        ?>
-                                        </p>
+                                            ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    <li id="whatToDoButton-3" class="card-item swiper-slide">
-                        <div class="activity">
-                            <div class="slide">
-                                <div id="activities-1" class="activities">
-                                    <p id="activities__text-1" class="activities__text">
-                                        Чим зайнятися на Драгобраті?👇🏻
-                                    </p>
-                                </div>
-                                <div id="whatToDo-1" class="whatToDo hidden">
-                                    <div class="whatToDo__item">
-                                        <?php
-                                        foreach ($tours as $tour) {
-                                            if ($tour['tour_name'] == 'Лютий') {
-                                                $activities = explode("\n", $tour['tour_activities']); // Разбиваем на массив
-                                        
-                                                foreach ($activities as $activity) {
-                                                    echo '<div class="activity-box">' . htmlspecialchars(trim($activity)) . '</div>';
-                                                }
-                                                break; // Прерываем цикл после первого совпадения
-                                            }
-                                        }
-                                        ?>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="swiper-pagination"></div>
-                <!--
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                -->
-            </div>
+                        </li>
+                        <?php
+                    }
+                }
+            }
+            ?>
+        </ul>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+
+
+<script>
+    function toggleActivities(index) {
+        document.getElementById(`whatToDo-${index}`).classList.toggle('hidden');
+    }
+</script>
+
         </section>
         <section id="contact" class="contact">
             <div class="contact__div">
