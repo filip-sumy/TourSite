@@ -127,7 +127,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                             <p class="month__name">
                                                 <?php
                                                 foreach ($tours as $tour) {
-                                                    if ($tour['tour_month'] == 'Січень') {
+                                                    if ($tour['tour_name'] == 'Лютий') {
                                                         echo htmlspecialchars($tour['tour_name']);
                                                         break; // Прерываем цикл после первого совпадения
                                                     }
@@ -147,7 +147,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                         <p class="description__text">
                                             <?php
                                             foreach ($tours as $tour) {
-                                                if ($tour['tour_month'] == 'Січень') {
+                                                if ($tour['tour_name'] == 'Лютий') {
                                                     echo htmlspecialchars($tour['tour_description']);
                                                     break; // Прерываем цикл после первого совпадения
                                                 }
@@ -161,17 +161,17 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                             <!-- 4️⃣ Вывод данных в виде списка -->
                                             <ul>
                                                 <?php foreach ($tours as $tour): ?>
-                                                    <?php if ($tour['tour_month'] == 'Січень'): ?> <!-- Проверка на месяц -->
-                                                        <li class="tour-item">
-                                                            <div class="link__icon">
-                                                                <img src="images/la_skiing.png" alt="Иконка тура">
-                                                            </div>
-                                                            <!-- Делаем даты тура гиперссылкой с ID -->
-                                                            <a class="link__text" href="/pages/details.php?id=<?= htmlspecialchars($tour['id']) ?>">
-                                                                <?= htmlspecialchars($tour['tour_dates']) ?> - <?= htmlspecialchars($tour['tour_duration']) ?>
-                                                            </a>
-                                                        </li>
-                                                    <?php endif; ?>
+                                                    <li class="tour-item">
+                                                        <div class="link__icon">
+                                                            <img src="images/la_skiing.png" alt="Иконка тура">
+                                                        </div>
+                                                        <!-- Делаем даты тура гиперссылкой с ID -->
+                                                        <a class="link__text"
+                                                            href="/pages/details.php?id=<?= htmlspecialchars($tour['id']) ?>">
+                                                            <?= htmlspecialchars($tour['tour_dates']) ?> -
+                                                            <?= htmlspecialchars($tour['tour_duration']) ?>
+                                                        </a>
+                                                    </li>
                                                 <?php endforeach; ?>
                                             </ul>
                                             <!-- Тут даты туров заканчиваются -->
@@ -186,7 +186,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                             <p class="month__name">
                                                 <?php
                                                 foreach ($tours as $tour) {
-                                                    if ($tour['tour_month'] == 'Лютий') {
+                                                    if ($tour['tour_name'] == 'Лютий') {
                                                         echo htmlspecialchars($tour['tour_name']);
                                                         break; // Прерываем цикл после первого совпадения
                                                     }
@@ -206,7 +206,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                         <p class="description__text">
                                             <?php
                                             foreach ($tours as $tour) {
-                                                if ($tour['tour_month'] == 'Лютий') {
+                                                if ($tour['tour_name'] == 'Лютий') {
                                                     echo htmlspecialchars($tour['tour_description']);
                                                     break; // Прерываем цикл после первого совпадения
                                                 }
@@ -217,20 +217,19 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                     <div id="card__link-2" class="card__link hidden">
                                         <div class="link__container">
                                             <ul>
-                                            <?php foreach ($tours as $tour): ?>
-                                                <?php if ($tour['tour_month'] == 'Лютий'): ?> <!-- Проверка на месяц -->
+                                                <?php foreach ($tours as $tour): ?>
                                                     <li class="tour-item">
                                                         <div class="link__icon">
                                                             <img src="images/la_skiing.png" alt="Иконка тура">
                                                         </div>
                                                         <!-- Делаем даты тура гиперссылкой с ID -->
-                                                        <a class="link__text" href="/pages/details.php?id=<?= htmlspecialchars($tour['id']) ?>">
-                                                            <?= htmlspecialchars($tour['tour_dates']) ?> - <?= htmlspecialchars($tour['tour_duration']) ?>
+                                                        <a class="link__text"
+                                                            href="/pages/details.php?id=<?= htmlspecialchars($tour['id']) ?>">
+                                                            <?= htmlspecialchars($tour['tour_dates']) ?> -
+                                                            <?= htmlspecialchars($tour['tour_duration']) ?>
                                                         </a>
                                                     </li>
-                                                <?php endif; ?>
-                                            <?php endforeach; ?>
-
+                                                <?php endforeach; ?>
                                             </ul>
                                         </div>
                                     </div>
@@ -244,7 +243,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                             <p class="month__name">
                                                 <?php
                                                 foreach ($tours as $tour) {
-                                                    if ($tour['tour_month'] == 'Березень') {
+                                                    if ($tour['tour_name'] == 'Лютий') {
                                                         echo htmlspecialchars($tour['tour_name']);
                                                         break; // Прерываем цикл после первого совпадения
                                                     }
@@ -264,7 +263,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                         <p class="description__text">
                                             <?php
                                             foreach ($tours as $tour) {
-                                                if ($tour['tour_month'] == 'Березень') {
+                                                if ($tour['tour_name'] == 'Лютий') {
                                                     echo htmlspecialchars($tour['tour_description']);
                                                     break; // Прерываем цикл после первого совпадения
                                                 }
@@ -275,20 +274,19 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                     <div id="card__link-3" class="card__link hidden">
                                         <div class="link__container">
                                             <ul>
-                                            <?php foreach ($tours as $tour): ?>
-                                                <?php if ($tour['tour_month'] == 'Березень'): ?> <!-- Проверка на месяц -->
+                                                <?php foreach ($tours as $tour): ?>
                                                     <li class="tour-item">
                                                         <div class="link__icon">
                                                             <img src="images/la_skiing.png" alt="Иконка тура">
                                                         </div>
                                                         <!-- Делаем даты тура гиперссылкой с ID -->
-                                                        <a class="link__text" href="/pages/details.php?id=<?= htmlspecialchars($tour['id']) ?>">
-                                                            <?= htmlspecialchars($tour['tour_dates']) ?> - <?= htmlspecialchars($tour['tour_duration']) ?>
+                                                        <a class="link__text"
+                                                            href="/pages/details.php?id=<?= htmlspecialchars($tour['id']) ?>">
+                                                            <?= htmlspecialchars($tour['tour_dates']) ?> -
+                                                            <?= htmlspecialchars($tour['tour_duration']) ?>
                                                         </a>
                                                     </li>
-                                                <?php endif; ?>
-                                            <?php endforeach; ?>
-
+                                                <?php endforeach; ?>
                                             </ul>
                                         </div>
                                     </div>
@@ -304,66 +302,43 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
             </div>
             <!-- Тут слайдер заканчивается -->
         </section>
-        
         <section class="questions">
-    <div>
-        <p class="questions__text">
-            Популярні питанння:
-        </p>
-    </div>
-</section>
-
-<section class="slider slider-4">
+            <div>
+                <p class="questions__text">
+                    Популярні питанння:
+                </p>
+            </div>
+        </section>
+        <section class="slider slider-4">
     <div class="container swiper question-wrapper">
         <ul class="card-list swiper-wrapper">
-            <?php
-            // Группируем туры по их названию
-            $groupedTours = [];
-            foreach ($tours as $tour) {
-                $groupedTours[$tour['tour_name']][] = $tour;
-            }
-
-            // Сортируем туры по нужным месяцам
-            $tourNames = ['Драгобрат', 'Буковель', 'Боржомі'];
-
-            // Выводим блоки по группам
-            foreach ($tourNames as $tourName) {
-                // Если есть туры с этим названием, выводим их
-                if (isset($groupedTours[$tourName])) {
-                    foreach ($groupedTours[$tourName] as $index => $tour) {
-                        ?>
-                        <li id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide">
-                            <div class="activity">
-                                <div class="slide">
-                                    <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
-                                        <p class="activities__text">
-                                            Чим зайнятися на <?= htmlspecialchars($tourName) ?>?👇🏻
-                                        </p>
-                                    </div>
-                                    <div id="whatToDo-<?= $index ?>" class="whatToDo hidden">
-                                        <div class="whatToDo__item">
-                                            <?php
-                                            $activities = explode("\n", $tour['tour_activities']);
-                                            foreach ($activities as $activity) {
-                                                echo '<div class="activity-box">' . htmlspecialchars(trim($activity)) . '</div>';
-                                            }
-                                            ?>
-                                        </div>
-                                    </div>
+            <?php foreach ($tours as $index => $tour): ?>
+                <li id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide">
+                    <div class="activity">
+                        <div class="slide">
+                            <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
+                                <p class="activities__text">
+                                    Чим зайнятися на Драгобратi?👇🏻
+                                </p>
+                            </div>
+                            <div id="whatToDo-<?= $index ?>" class="whatToDo hidden">
+                                <div class="whatToDo__item">
+                                    <?php
+                                    $activities = explode("\n", $tour['tour_activities']);
+                                    foreach ($activities as $activity) {
+                                        echo '<div class="activity-box">' . htmlspecialchars(trim($activity)) . '</div>';
+                                    }
+                                    ?>
                                 </div>
                             </div>
-                        </li>
-                        <?php
-                    }
-                }
-            }
-            ?>
+                        </div>
+                    </div>
+                </li>
+            <?php endforeach; ?>
         </ul>
         <div class="swiper-pagination"></div>
     </div>
 </section>
-
-
 
 <script>
     function toggleActivities(index) {

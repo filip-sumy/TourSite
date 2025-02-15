@@ -601,11 +601,78 @@ const slider4 = new Swiper('.question-wrapper', {
     },
     1250: {
       loop: true,
+      slidesPerView: 3,
+      spaceBetween: 0,
+    },
+    1350: {
+      loop: true,
       slidesPerView: 4,
+      spaceBetween: 100,
+    },
+
+    1730: {
+      loop: true,
+      slidesPerView: 5,
       spaceBetween: 0,
     },
 }
 });
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const swiperWrapper = document.querySelector('.question-wrapper .swiper-wrapper');
+  
+//   if (!swiperWrapper) return; // Защита от ошибок, если слайдер отсутствует
+
+//   const slideCount = window.slideCount || 0; // Получаем количество слайдов из PHP
+
+//   const slider4 = new Swiper('.question-wrapper', {
+//       slidesPerView: Math.min(slideCount, 5), // Показываем не больше, чем есть, но максимум 5
+//       slidesPerGroup: Math.min(slideCount, 5),
+//       spaceBetween: 20,
+//       loop: slideCount >= 5, // Loop включается, если слайдов 5 или больше
+//       navigation: {
+//           nextEl: '.swiper-button-next',
+//           prevEl: '.swiper-button-prev'
+//       },
+//       pagination: {
+//           el: '.swiper-pagination',
+//           clickable: true
+//       },
+//       breakpoints: {
+//           0: {
+//               allowTouchMove: false,
+//               freeMode: false,
+//               loop: false,
+//           },
+//           600: {
+//               allowTouchMove: true,
+//               freeMode: true,
+//               loop: slideCount >= 5,
+//               slidesPerView: Math.min(slideCount, 1.9),
+//               spaceBetween: 30,
+//           },
+//           768: {
+//               loop: slideCount >= 5,
+//               slidesPerView: Math.min(slideCount, 3),
+//               spaceBetween: 20,
+//           },
+//           1024: {
+//               loop: slideCount >= 5,
+//               slidesPerView: Math.min(slideCount, 4),
+//               spaceBetween: 20,
+//           },
+//           1280: {
+//               loop: slideCount >= 5,
+//               slidesPerView: Math.min(slideCount, 5),
+//               spaceBetween: 20,
+//           }
+//       }
+//   });
+// });
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -636,18 +703,45 @@ document.addEventListener("DOMContentLoaded", () => {
     menuButton.addEventListener("click", toggleMenu);
 });
 
-for (let i = 1; i <= 5; i++) {
-  const whatToDoButton = document.getElementById(`whatToDoButton-${i}`);
-  const whatToDo = document.getElementById(`whatToDo-${i}`);
-  const activitiesText = document.getElementById(`activities__text-${i}`);
-  const activities = document.getElementById(`activities-${i}`);
+// for (let i = 1; i <= 5; i++) {
+//   const whatToDoButton = document.getElementById(`whatToDoButton-${i}`);
+//   const whatToDo = document.getElementById(`whatToDo-${i}`);
 
-  whatToDoButton.addEventListener('click', () => {
-    whatToDo.classList.toggle('hidden');
-    activitiesText.classList.toggle('active');
-    activities.classList.toggle('active');
+//   // Проверяем, нашелся ли элемент
+//   if (!whatToDoButton || !whatToDo) {
+//     console.warn(`Элементы whatToDoButton-${i} или whatToDo-${i} не найдены`);
+//     continue;
+//   }
+
+//   whatToDoButton.addEventListener('click', () => {
+//     whatToDo.classList.toggle('hidden');
+//   });
+// }
+
+document.querySelectorAll('.whatToDoButton').forEach((button) => {
+  button.addEventListener('click', () => {
+    const id = button.id.split('-')[1]; // Получаем номер из id
+    const whatToDo = document.getElementById(`whatToDo-${id}`);
+
+    if (whatToDo) {
+      whatToDo.classList.toggle('hidden');
+    }
   });
-}
+});
+
+
+//  for (let i = 1; i <= 5; i++) {
+//    const whatToDoButton = document.getElementById(`whatToDoButton-${i}`);
+//    const whatToDo = document.getElementById(`whatToDo-${i}`);
+//    const activitiesText = document.getElementById(`activities__text-${i}`);
+//    const activities = document.getElementById(`activities-${i}`);
+
+//    whatToDoButton.addEventListener('click', () => {
+//      whatToDo.classList.toggle('hidden');
+//      activitiesText.classList.toggle('active');
+//      activities.classList.toggle('active');
+//    });
+//  }
 
 for (let i = 1; i <= 3; i++) {
   const cardButton = document.getElementById(`card-button-${i}`);
