@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const footer = document.getElementById("footer");
     const header__container = document.getElementById("header__container");
     const addButton = document.getElementById("add__button");
+    const acceptButton = document.getElementById("acceptButton");
     function toggleMenu() {
         menu.classList.toggle("hidden");
         main.classList.toggle("hidden");
@@ -117,7 +118,20 @@ document.addEventListener("DOMContentLoaded", () => {
         addContainer.appendChild(fieldsContainerCity);
 
     }
+    function sendEmail() {
+        let contentDesktop = document.getElementById("contentDesktop").innerHTML;
+
+        fetch("send_mail.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: "contentDesktop=" + encodeURIComponent(contentDesktop)
+        })
+        .then(response => response.text())
+        .then(data => alert(data))
+        .catch(error => console.error("Ошибка:", error));
+    }
     // Добавляем обработчик события на кнопку
     menuButton.addEventListener("click", toggleMenu);
     addButton.addEventListener("click", addPerson);
+    acceptButton.addEventListener("click", sendEmail);
 });

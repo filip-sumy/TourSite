@@ -135,7 +135,7 @@ if ($id > 0) {
                     <div class="banner__wrapper">
                         <div class="trip__title">
                             <p class="title__text">
-                            <?php echo htmlspecialchars($tour['tour_name']); ?>
+                            <?php echo htmlspecialchars($tour_name); ?>
                             </p>
                         </div>
                         <div class="trip__date">
@@ -154,6 +154,11 @@ if ($id > 0) {
         </section>
         <section class="form">
                 <form action="../send_booking.php" method="POST">
+                    <input type="hidden" name="tour_name" value="<?= htmlspecialchars($tour['tour_name']) ?>">
+                    <input type="hidden" name="tour_dates" value="<?= htmlspecialchars($tour['tour_dates']) ?>">
+                    <input type="hidden" name="tour_duration" value="<?= htmlspecialchars($tour['tour_duration']) ?>">
+                    
+
                     <div class="form__container">
                         <p class="contact__text">Крок 1: Контактна інформація</p>
                         <div class="block__contact">
