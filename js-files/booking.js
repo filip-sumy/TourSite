@@ -1,137 +1,80 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menu = document.getElementById("menu");
-    const body__container = document.getElementById("body__container");
+    const bodyContainer = document.getElementById("body__container");
     const main = document.getElementById("main");
     const menuButton = document.getElementById("menuButton");
     const menuIcon = document.getElementById("menuIcon");
     const footer = document.getElementById("footer");
-    const header__container = document.getElementById("header__container");
+    const headerContainer = document.getElementById("header__container");
     const addButton = document.getElementById("add__button");
+    const addContainer = document.getElementById("addContainer");
     const acceptButton = document.getElementById("acceptButton");
-    function toggleMenu() {
-        menu.classList.toggle("hidden");
-        main.classList.toggle("hidden");
-        footer.classList.toggle("hidden");
-        body__container.classList.toggle("hidden");
-        header__container.classList.toggle("hidden");
-        // Изменяем иконку и alt текст в зависимости от состояния меню
-        if (menu.classList.contains("hidden")) {
-            menuIcon.src = "../images/Menu_button.svg";
-            menuIcon.alt = "Открыть меню";
-        } else {
-            menuIcon.src = "../images/Menu_button_back.svg";
-            menuIcon.alt = "Закрыть меню";
-        }
+
+    if (menuButton && menuIcon) {
+        menuButton.addEventListener("click", () => {
+            const isHidden = menu.classList.toggle("hidden");
+            main?.classList.toggle("hidden");
+            footer?.classList.toggle("hidden");
+            bodyContainer?.classList.toggle("hidden");
+            headerContainer?.classList.toggle("hidden");
+
+            menuIcon.src = isHidden ? "../images/Menu_button.svg" : "../images/Menu_button_back.svg";
+            menuIcon.alt = isHidden ? "Открыть меню" : "Закрыть меню";
+        });
     }
+
     let counter = 1;
-    function addPerson() {
-        counter++;
-        const addContainer = document.getElementById("addContainer");
-        // Создаем подпись
-        const label = document.createElement('p');
-        label.textContent = `Персона ${counter}`;
-        label.classList.add('person__text');
-        addContainer.appendChild(label);
+    if (addButton && addContainer) {
+        addButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            counter++;
 
-        //Создаем div
-        const fieldsContainerName = document.createElement('div');
-        fieldsContainerName.classList.add('block__person');
+            const fields = [
+                { name: "name", placeholder: "Введіть ваше ім'я та прізвище", icon: "../images/name-icon.svg" },
+                { name: "date_birth", placeholder: "Введіть вашу дату народження", icon: "../images/date-icon.svg" },
+                { name: "phone", placeholder: "Введіть ваш номер телефону", icon: "../images/tel-icon.svg" },
+                { name: "city_from", placeholder: "Місце від'їзду", icon: "../images/cityfrom-icon.svg" }
+            ];
 
-        //Создаем input
-        const inputFieldName = document.createElement('input');
-        inputFieldName.classList.add("input");
-        inputFieldName.type = 'text';
-        inputFieldName.placeholder = "Введіть ваше ім'я та прізвище";
-        inputFieldName.required = true;
+            const label = document.createElement("p");
+            label.textContent = `Персона ${counter}`;
+            label.classList.add("person__text");
+            addContainer.appendChild(label);
 
-        //Создаем иконку
-        const iconName = document.createElement('img');
-        iconName.classList.add("icon");
-        iconName.src = '../images/name-icon.svg';
+            fields.forEach(field => {
+                const div = document.createElement("div");
+                div.classList.add("block__person");
 
-        fieldsContainerName.appendChild(iconName);
-        fieldsContainerName.appendChild(inputFieldName);
-        addContainer.appendChild(fieldsContainerName);
+                const img = document.createElement("img");
+                img.classList.add("icon");
+                img.src = field.icon;
 
-        //Date
-        //Создаем div
-        const fieldsContainerDate = document.createElement('div');
-        fieldsContainerDate.classList.add('block__person');
+                const input = document.createElement("input");
+                input.classList.add("input");
+                input.type = "text";
+                input.name = `${field.name}_${counter}`;
+                input.placeholder = field.placeholder;
+                input.required = true;
 
-        //Создаем input
-        const inputFieldDate = document.createElement('input');
-        inputFieldDate.classList.add("input");
-        inputFieldDate.type = 'text';
-        inputFieldDate.placeholder = "Введіть вашу дату народження";
-        inputFieldDate.required = true;
-
-        //Создаем иконку
-        const iconDate = document.createElement('img');
-        iconDate.classList.add("icon");
-        iconDate.src = '../images/date-icon.svg';
-
-        fieldsContainerDate.appendChild(iconDate);
-        fieldsContainerDate.appendChild(inputFieldDate);
-        addContainer.appendChild(fieldsContainerDate);
-
-        //Telephone
-        //Создаем div
-        const fieldsContainerTel = document.createElement('div');
-        fieldsContainerTel.classList.add('block__person');
-
-        //Создаем input
-        const inputFieldTel = document.createElement('input');
-        inputFieldTel.classList.add("input");
-        inputFieldTel.type = 'text';
-        inputFieldTel.placeholder = "Введіть ваш номер телефону";
-        inputFieldTel.required = true;
-
-        //Создаем иконку
-        const iconTel = document.createElement('img');
-        iconTel.classList.add("icon");
-        iconTel.src = '../images/tel-icon.svg';
-
-        fieldsContainerTel.appendChild(iconTel);
-        fieldsContainerTel.appendChild(inputFieldTel);
-        addContainer.appendChild(fieldsContainerTel);
-
-        //City 
-        //Telephone
-        //Создаем div
-        const fieldsContainerCity = document.createElement('div');
-        fieldsContainerCity.classList.add('block__person');
-
-        //Создаем input
-        const inputFieldCity = document.createElement('input');
-        inputFieldCity.classList.add("input");
-        inputFieldCity.type = 'text';
-        inputFieldCity.placeholder = "Місце від'їзду";
-        inputFieldCity.required = true;
-
-        //Создаем иконку
-        const iconCity = document.createElement('img');
-        iconCity.classList.add("icon");
-        iconCity.src = '../images/cityfrom-icon.svg';
-
-        fieldsContainerCity.appendChild(iconCity);
-        fieldsContainerCity.appendChild(inputFieldCity);
-        addContainer.appendChild(fieldsContainerCity);
-
+                div.appendChild(img);
+                div.appendChild(input);
+                addContainer.appendChild(div);
+            });
+        });
     }
-    function sendEmail() {
-        let contentDesktop = document.getElementById("contentDesktop").innerHTML;
 
-        fetch("send_mail.php", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: "contentDesktop=" + encodeURIComponent(contentDesktop)
-        })
-        .then(response => response.text())
-        .then(data => alert(data))
-        .catch(error => console.error("Ошибка:", error));
+    if (acceptButton) {
+        acceptButton.addEventListener("click", () => {
+            const contentDesktop = document.getElementById("contentDesktop");
+
+            fetch("../send_booking.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: "contentDesktop=" + encodeURIComponent(contentDesktop)
+            })
+            .then(response => response.text())
+            .then(data => alert(data))
+            .catch(error => console.error("Ошибка:", error));
+        });
     }
-    // Добавляем обработчик события на кнопку
-    menuButton.addEventListener("click", toggleMenu);
-    addButton.addEventListener("click", addPerson);
-    acceptButton.addEventListener("click", sendEmail);
 });

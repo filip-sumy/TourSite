@@ -327,7 +327,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
-                                    <p class="activities__text">
+                                    <p id="activities__text-<?= $index ?>" class="activities__text">
                                         Чим зайнятися на Драгобраті?👇🏻
                                     </p>
                                 </div>
@@ -361,7 +361,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
-                                    <p class="activities__text">
+                                    <p id="activities__text-<?= $index ?>" class="activities__text">
                                         Чим зайнятися на Буковелі?👇🏻
                                     </p>
                                 </div>
@@ -395,7 +395,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
-                                    <p class="activities__text">
+                                    <p id="activities__text-<?= $index ?>" class="activities__text">
                                         Чим зайнятися на Боржомі?👇🏻
                                     </p>
                                 </div>
@@ -426,11 +426,16 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
 
 <script>
     function toggleActivities(index) {
-        document.getElementById(`whatToDo-${index}`).classList.toggle('hidden');
+        const whatToDo = document.getElementById(`whatToDo-${index}`);
+        const activitiesText = document.getElementById(`activities__text-${index}`);
+        const activities = document.getElementById(`activities-${index}`);
+        whatToDo.classList.toggle('hidden');
+        activitiesText.classList.toggle('active');
+        activities.classList.toggle('active');
     }
 </script>
 
-        </section>
+        
         <section id="contact" class="contact">
             <div class="contact__div">
                 <p class="contact__text">
