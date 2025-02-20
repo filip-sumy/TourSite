@@ -49,6 +49,9 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
             /* Размер иконки, можно поменять */
             height: 20px;
         }
+        .whatToDo {
+            margin-top: 0px !important;
+        }
     </style>
 </head>
 
@@ -84,10 +87,10 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
         </div>
         <ul class="nav">
             <li>
-                <a class="nav__link" href="index.html">Головна</a>
+                <a class="nav__link" href="index.php">Головна</a>
             </li>
             <li>
-                <a class="nav__link" href="/pages/booking.html">Бронювання</a>
+                <a class="nav__link" href="/pages/booking.php">Бронювання</a>
             </li>
         </ul>
         <button id="menuButton" class="menu-btn">
@@ -97,10 +100,10 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
     <nav id="menu" class="hidden">
         <ul>
             <li>
-                <a class="nav__text" href="index.html">Головна</a>
+                <a class="nav__text" href="index.php">Головна</a>
             </li>
             <li>
-                <a class="nav__text" href="booking.html">Бронювання</a>
+                <a class="nav__text" href="booking.php">Бронювання</a>
             </li>
         </ul>
     </nav>
