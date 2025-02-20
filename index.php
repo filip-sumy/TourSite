@@ -49,9 +49,6 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
             /* Размер иконки, можно поменять */
             height: 20px;
         }
-        .whatToDo {
-            margin-top: 0px !important;
-        }
     </style>
 </head>
 
@@ -87,10 +84,10 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
         </div>
         <ul class="nav">
             <li>
-                <a class="nav__link" href="index.php">Головна</a>
+                <a class="nav__link" href="index.html">Головна</a>
             </li>
             <li>
-                <a class="nav__link" href="/pages/booking.php">Бронювання</a>
+                <a class="nav__link" href="/pages/booking.html">Бронювання</a>
             </li>
         </ul>
         <button id="menuButton" class="menu-btn">
@@ -100,10 +97,10 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
     <nav id="menu" class="hidden">
         <ul>
             <li>
-                <a class="nav__text" href="index.php">Головна</a>
+                <a class="nav__text" href="index.html">Головна</a>
             </li>
             <li>
-                <a class="nav__text" href="booking.php">Бронювання</a>
+                <a class="nav__text" href="booking.html">Бронювання</a>
             </li>
         </ul>
     </nav>
@@ -330,7 +327,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
-                                    <p id="activities__text-<?= $index ?>" class="activities__text">
+                                    <p class="activities__text">
                                         Чим зайнятися на Драгобраті?👇🏻
                                     </p>
                                 </div>
@@ -364,7 +361,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
-                                    <p id="activities__text-<?= $index ?>" class="activities__text">
+                                    <p class="activities__text">
                                         Чим зайнятися на Буковелі?👇🏻
                                     </p>
                                 </div>
@@ -398,7 +395,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
-                                    <p id="activities__text-<?= $index ?>" class="activities__text">
+                                    <p class="activities__text">
                                         Чим зайнятися на Боржомі?👇🏻
                                     </p>
                                 </div>
@@ -429,57 +426,32 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
 
 <script>
     function toggleActivities(index) {
-        const whatToDo = document.getElementById(`whatToDo-${index}`);
-        const activitiesText = document.getElementById(`activities__text-${index}`);
-        const activities = document.getElementById(`activities-${index}`);
-        whatToDo.classList.toggle('hidden');
-        activitiesText.classList.toggle('active');
-        activities.classList.toggle('active');
+        document.getElementById(`whatToDo-${index}`).classList.toggle('hidden');
     }
 </script>
 
-        
-<section id="contact" class="contact">
-    <div class="contact__div">
-        <p class="contact__text">
-            Зв’язатися з менеджерами:
-        </p>
-    </div>
-    <div class="form-container">
-    <iframe name="hiddenFrame" style="display: none;"></iframe>
-
-<div id="formContainer">
-    <form action="send_mail.php" method="POST" target="hiddenFrame" id="contactForm">
-        <div class="input-wrapper">
-            <img class="icon" src="images/name-icon.svg" alt="">
-            <input class="input" type="text" name="user_name" placeholder="Введіть ваше ім'я" required>
-        </div>
-        <div class="input-wrapper">
-            <img class="icon" src="images/tel-icon.svg" alt="">
-            <input class="input" type="tel" name="user_phone" placeholder="Введіть ваш номер телефону" required>
-        </div>
-        <button class="form-button" type="submit">ЗАМОВИТИ ДЗВІНОК</button>
-    </form>
-</div>
-    </div>
-</section>
-
-<script>
-document.getElementById("contactForm").addEventListener("submit", function() {
-    // Заменяем форму на сообщение через небольшую задержку
-    setTimeout(() => {
-        document.getElementById("formContainer").innerHTML = `
-            <div style="color: #FFFFFF" class="success-message">
-                <p>Ваші дані передані,<br>
-                наші туристичні котики<br>
-                 зв’яжуться з Вами!</p>
-                 <img style="padding-top: 25px" src="images/cats.svg">
+        </section>
+        <section id="contact" class="contact">
+            <div class="contact__div">
+                <p class="contact__text">
+                    Зв’язатися з менеджерами:
+                </p>
             </div>
-        `;
-    }, 300);
-});
-</script> 
-
+            <div class="form-container">
+                <form action="send_mail.php" name="form" method="POST">
+                    <div class="input-wrapper">
+                        <img class="icon" src="images/name-icon.svg" alt="">
+                        <input class="input" type="text" name="user_name" placeholder="Введіть ваше ім'я" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <img class="icon" src="images/tel-icon.svg" alt="">
+                        <input class="input" type="tel" name="user_phone" placeholder="Введіть ваш номер телефону"
+                            required>
+                    </div>
+                    <button class="form-button" type="submit">ЗАМОВИТИ ДЗВІНОК</button>
+                </form>
+            </div>
+        </section>
         <section class="reviews">
             <div class="your-reviews">
                 <p class="reviews__text">

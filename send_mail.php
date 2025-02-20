@@ -34,7 +34,7 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'You have a new callback!';
+    $mail->Subject = 'Заявка с формы';
     $mail->Body    = '
         <h4>Name : '.$name.'</h4>
         <h4>Phone : '.$phone.'</h4>
