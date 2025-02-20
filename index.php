@@ -439,27 +439,28 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
 </script>
 
         
-        <section id="contact" class="contact">
-            <div class="contact__div">
-                <p class="contact__text">
-                    Зв’язатися з менеджерами:
-                </p>
+<section id="contact" class="contact">
+    <div class="contact__div">
+        <p class="contact__text">
+            Зв’язатися з менеджерами:
+        </p>
+    </div>
+    <div class="form-container">
+        <iframe name="hiddenFrame" style="display: none;"></iframe>
+        <form action="send_mail.php" method="POST" target="hiddenFrame">
+            <div class="input-wrapper">
+                <img class="icon" src="images/name-icon.svg" alt="">
+                <input class="input" type="text" name="user_name" placeholder="Введіть ваше ім'я" required>
             </div>
-            <div class="form-container">
-                <form action="send_mail.php" name="form" method="POST">
-                    <div class="input-wrapper">
-                        <img class="icon" src="images/name-icon.svg" alt="">
-                        <input class="input" type="text" name="user_name" placeholder="Введіть ваше ім'я" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <img class="icon" src="images/tel-icon.svg" alt="">
-                        <input class="input" type="tel" name="user_phone" placeholder="Введіть ваш номер телефону"
-                            required>
-                    </div>
-                    <button class="form-button" type="submit">ЗАМОВИТИ ДЗВІНОК</button>
-                </form>
+            <div class="input-wrapper">
+                <img class="icon" src="images/tel-icon.svg" alt="">
+                <input class="input" type="tel" name="user_phone" placeholder="Введіть ваш номер телефону" required>
             </div>
-        </section>
+            <button class="form-button" type="submit">ЗАМОВИТИ ДЗВІНОК</button>
+        </form>
+    </div>
+</section>
+
         <section class="reviews">
             <div class="your-reviews">
                 <p class="reviews__text">
