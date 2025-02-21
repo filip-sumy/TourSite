@@ -49,6 +49,9 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
             /* Размер иконки, можно поменять */
             height: 20px;
         }
+        .whatToDo {
+            margin-top: 0px !important;
+        }
     </style>
 </head>
 
@@ -84,10 +87,10 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
         </div>
         <ul class="nav">
             <li>
-                <a class="nav__link" href="index.html">Головна</a>
+                <a class="nav__link" href="index.php">Головна</a>
             </li>
             <li>
-                <a class="nav__link" href="/pages/booking.html">Бронювання</a>
+                <a class="nav__link" href="/pages/booking.php">Бронювання</a>
             </li>
         </ul>
         <button id="menuButton" class="menu-btn">
@@ -97,10 +100,10 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
     <nav id="menu" class="hidden">
         <ul>
             <li>
-                <a class="nav__text" href="index.html">Головна</a>
+                <a class="nav__text" href="index.php">Головна</a>
             </li>
             <li>
-                <a class="nav__text" href="booking.html">Бронювання</a>
+                <a class="nav__text" href="booking.php">Бронювання</a>
             </li>
         </ul>
     </nav>
@@ -327,7 +330,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
-                                    <p class="activities__text">
+                                    <p id="activities__text-<?= $index ?>" class="activities__text">
                                         Чим зайнятися на Драгобраті?👇🏻
                                     </p>
                                 </div>
@@ -361,7 +364,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
-                                    <p class="activities__text">
+                                    <p id="activities__text-<?= $index ?>" class="activities__text">
                                         Чим зайнятися на Буковелі?👇🏻
                                     </p>
                                 </div>
@@ -395,7 +398,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
-                                    <p class="activities__text">
+                                    <p id="activities__text-<?= $index ?>" class="activities__text">
                                         Чим зайнятися на Боржомі?👇🏻
                                     </p>
                                 </div>
@@ -426,32 +429,57 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
 
 <script>
     function toggleActivities(index) {
-        document.getElementById(`whatToDo-${index}`).classList.toggle('hidden');
+        const whatToDo = document.getElementById(`whatToDo-${index}`);
+        const activitiesText = document.getElementById(`activities__text-${index}`);
+        const activities = document.getElementById(`activities-${index}`);
+        whatToDo.classList.toggle('hidden');
+        activitiesText.classList.toggle('active');
+        activities.classList.toggle('active');
     }
 </script>
 
-        </section>
-        <section id="contact" class="contact">
-            <div class="contact__div">
-                <p class="contact__text">
-                    Зв’язатися з менеджерами:
-                </p>
+        
+<section id="contact" class="contact">
+    <div class="contact__div">
+        <p class="contact__text">
+            Зв’язатися з менеджерами:
+        </p>
+    </div>
+    <div class="form-container">
+    <iframe name="hiddenFrame" style="display: none;"></iframe>
+
+<div id="formContainer">
+    <form action="send_mail.php" method="POST" target="hiddenFrame" id="contactForm">
+        <div class="input-wrapper">
+            <img class="icon" src="images/name-icon.svg" alt="">
+            <input class="input" type="text" name="user_name" placeholder="Введіть ваше ім'я" required>
+        </div>
+        <div class="input-wrapper">
+            <img class="icon" src="images/tel-icon.svg" alt="">
+            <input class="input" type="tel" name="user_phone" placeholder="Введіть ваш номер телефону" required>
+        </div>
+        <button class="form-button" type="submit">ЗАМОВИТИ ДЗВІНОК</button>
+    </form>
+</div>
+    </div>
+</section>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function() {
+    // Заменяем форму на сообщение через небольшую задержку
+    setTimeout(() => {
+        document.getElementById("formContainer").innerHTML = `
+            <div style="color: #FFFFFF" class="success-message">
+                <p>Ваші дані передані,<br>
+                наші туристичні котики<br>
+                 зв’яжуться з Вами!</p>
+                 <img style="padding-top: 25px" src="images/cats.svg">
             </div>
-            <div class="form-container">
-                <form action="send_mail.php" name="form" method="POST">
-                    <div class="input-wrapper">
-                        <img class="icon" src="images/name-icon.svg" alt="">
-                        <input class="input" type="text" name="user_name" placeholder="Введіть ваше ім'я" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <img class="icon" src="images/tel-icon.svg" alt="">
-                        <input class="input" type="tel" name="user_phone" placeholder="Введіть ваш номер телефону"
-                            required>
-                    </div>
-                    <button class="form-button" type="submit">ЗАМОВИТИ ДЗВІНОК</button>
-                </form>
-            </div>
-        </section>
+        `;
+    }, 300);
+});
+</script> 
+
         <section class="reviews">
             <div class="your-reviews">
                 <p class="reviews__text">
@@ -468,25 +496,21 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                             <div class="card">
                                 <div class="card__container">
                                     <div class="container__image">
-                                        <img src="images/Ellipse 2.svg" alt="">
+                                        <img style="width: 95px; height: 95px; border-radius: 50%" src="images/kate-photo2.jpg" alt="">
                                     </div>
                                     <div class="card__info">
                                         <p class="info__name">
-                                            Андрій
+                                            Катя
                                         </p>
                                         <p class="info__date">
-                                            10.03.2021
+                                            20.12.2023
                                         </p>
                                     </div>
                                 </div>
                                 <div class="card__description">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing<br>
-                                        elit. Sed ullamcorper, magna et iaculis dictum, velit<br>
-                                        diam efficitur metus, in dapibus odio lectus non<br>
-                                        nibh. Nam ut tempus mi. Aliquam aliquam nisi non<br>
-                                        libero vehicula porttitor. Fusce et tincidunt risus. In<br>
-                                        commodo faucibus lectus faucibus molestie.
+                                    <p style="font-size: 14px;">
+                                        Дякую найкращому гіду в світі за супровід <br>
+                                        і всім за чудову компанію &#128151;
                                     </p>
                                 </div>
                             </div>
@@ -497,25 +521,23 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                             <div class="card">
                                 <div class="card__container">
                                     <div class="container__image">
-                                        <img src="images/Ellipse 2.svg" alt="">
+                                        <img style="width: 95px; height: 95px; border-radius: 50%" src="images/ivan-photo2.jpg" alt="">
                                     </div>
                                     <div class="card__info">
                                         <p class="info__name">
-                                            Андрій
+                                            Іван
                                         </p>
                                         <p class="info__date">
-                                            10.03.2021
+                                            15.02.2023
                                         </p>
                                     </div>
                                 </div>
                                 <div class="card__description">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing<br>
-                                        elit. Sed ullamcorper, magna et iaculis dictum, velit<br>
-                                        diam efficitur metus, in dapibus odio lectus non<br>
-                                        nibh. Nam ut tempus mi. Aliquam aliquam nisi non<br>
-                                        libero vehicula porttitor. Fusce et tincidunt risus. In<br>
-                                        commodo faucibus lectus faucibus molestie.
+                                    <p style="font-size: 14px;">
+                                        Всім дуже дякую за цей крутий тріп,
+                                        атмосферу, емоції і ваші посмішки
+                                        якими ви заряджали весь цей час,
+                                        ви суперові &#128525;
                                     </p>
                                 </div>
                             </div>
@@ -526,25 +548,24 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                             <div class="card">
                                 <div class="card__container">
                                     <div class="container__image">
-                                        <img src="images/Ellipse 2.svg" alt="">
+                                        <img style="width: 95px; height: 95px; border-radius: 50%" src="images/ann-photo.jpg" alt="">
                                     </div>
                                     <div class="card__info">
                                         <p class="info__name">
-                                            Андрій
+                                            Аня
                                         </p>
                                         <p class="info__date">
-                                            10.03.2021
+                                            8.01.2023
                                         </p>
                                     </div>
                                 </div>
                                 <div class="card__description">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing<br>
-                                        elit. Sed ullamcorper, magna et iaculis dictum, velit<br>
-                                        diam efficitur metus, in dapibus odio lectus non<br>
-                                        nibh. Nam ut tempus mi. Aliquam aliquam nisi non<br>
-                                        libero vehicula porttitor. Fusce et tincidunt risus. In<br>
-                                        commodo faucibus lectus faucibus molestie.
+                                    <p style="font-size: 14px;">
+                                        Ми з сестрою безмежно вдячні за <br> 
+                                        цей багаж емоцій і досвіду, ви дуже чудесна <br>
+                                        компанія, і звісно гід заслуговує окремих теплих слів. <br>
+                                        <br>
+                                        Ще раз дякую вам за цей час &#128512;
                                     </p>
                                 </div>
                             </div>
@@ -555,25 +576,23 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                             <div class="card">
                                 <div class="card__container">
                                     <div class="container__image">
-                                        <img src="images/Ellipse 2.svg" alt="">
+                                        <img style="width: 95px; height: 95px; border-radius: 50%" src="images/polina-photo.jpg" alt="">
                                     </div>
                                     <div class="card__info">
                                         <p class="info__name">
-                                            Андрій
+                                            Поліна
                                         </p>
                                         <p class="info__date">
-                                            10.03.2021
+                                            06.09.2024
                                         </p>
                                     </div>
                                 </div>
                                 <div class="card__description">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing<br>
-                                        elit. Sed ullamcorper, magna et iaculis dictum, velit<br>
-                                        diam efficitur metus, in dapibus odio lectus non<br>
-                                        nibh. Nam ut tempus mi. Aliquam aliquam nisi non<br>
-                                        libero vehicula porttitor. Fusce et tincidunt risus. In<br>
-                                        commodo faucibus lectus faucibus molestie.
+                                    <p style="font-size: 14px;">
+                                        Дуже дякую за атмосферу! Як завжди все 
+                                        супер круто &#128293; <br>
+                                        До зустрічі зимою &#128507;
+
                                     </p>
                                 </div>
                             </div>
@@ -584,25 +603,21 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                             <div class="card">
                                 <div class="card__container">
                                     <div class="container__image">
-                                        <img src="images/Ellipse 2.svg" alt="">
+                                        <img style="width: 95px; height: 95px; border-radius: 50%" src="images/bojena-photo.jpg" alt="">
                                     </div>
                                     <div class="card__info">
                                         <p class="info__name">
-                                            Андрій
+                                            Божена
                                         </p>
                                         <p class="info__date">
-                                            10.03.2021
+                                            10.09.2024
                                         </p>
                                     </div>
                                 </div>
                                 <div class="card__description">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing<br>
-                                        elit. Sed ullamcorper, magna et iaculis dictum, velit<br>
-                                        diam efficitur metus, in dapibus odio lectus non<br>
-                                        nibh. Nam ut tempus mi. Aliquam aliquam nisi non<br>
-                                        libero vehicula porttitor. Fusce et tincidunt risus. In<br>
-                                        commodo faucibus lectus faucibus molestie.
+                                    <p style="font-size: 14px;">
+                                        Дуууже дякую всім за вайби &#128293; сейм,
+                                        до зустрічі зимою &#10084; ви всі інкредібл! 
                                     </p>
                                 </div>
                             </div>

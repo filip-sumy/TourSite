@@ -39,6 +39,20 @@ if ($id > 0) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        .success-message {
+            margin: 0 auto;
+            padding-top: 80px;
+            width: 70%;
+            min-width: 345px;
+            max-width: 757px;
+            height: 350px;
+            background-color: #161616;
+            border-radius: 30px;
+            text-align: center;
+
+        }
+    </style>
     <link rel="stylesheet" href="../booking-styles/booking.css">
 </head>
 <body>
@@ -153,7 +167,9 @@ if ($id > 0) {
             </div>
         </section>
         <section class="form">
-                <form action="../send_booking.php" method="POST">
+                <iframe name="hiddenFrame" style="display: none;"></iframe>
+                <div id="formContainer">
+                <form id="contactForm" action="../send_booking.php" method="POST" target="hiddenFrame">
                     <input type="hidden" name="tour_name" value="<?= htmlspecialchars($tour['tour_name']) ?>">
                     <input type="hidden" name="tour_dates" value="<?= htmlspecialchars($tour['tour_dates']) ?>">
                     <input type="hidden" name="tour_duration" value="<?= htmlspecialchars($tour['tour_duration']) ?>">
@@ -210,7 +226,24 @@ if ($id > 0) {
                         </div>
                     </div>
                 </form>
+                </div>
+                
         </section>
+        <script>
+document.getElementById("contactForm").addEventListener("submit", function() {
+    // Заменяем форму на сообщение через небольшую задержку
+    setTimeout(() => {
+        document.getElementById("formContainer").innerHTML = `
+            <div style="color: #FFFFFF" class="success-message">
+                <p>Ваші дані передані,<br>
+                наші туристичні котики<br>
+                 зв’яжуться з Вами!</p>
+                 <img style="padding-top: 25px" src="../images/cats.svg">
+            </div>
+        `;
+    }, 300);
+});
+</script> 
     </section>
     <section id="footer" class="footer">
         <div class="public-info">

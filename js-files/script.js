@@ -487,191 +487,132 @@ const slider4 = new Swiper('.question-wrapper', {
       loop: false,
       //initialSlide: 0,
     },
-    600: {
+    600 : {
       allowTouchMove: true,
       freeMode: true,
       loop: true,
-      slidesPerView: 1.9,
+      slidesPerView: 2,
       spaceBetween: 30,
     },
-    630: {
-      loop: true,
-      slidesPerView: 1.9,
+
+    630 : {
+      slidesPerView: 2.1,
+      spaceBetween: 30,
+    },
+
+    660 : {
+      slidesPerView: 2.2,
+      spaceBetween: 30,
+    },
+
+    690 : {
+      slidesPerView: 2.3,
+      spaceBetween: 30,
+    },
+
+    720 : {
+      slidesPerView: 2.4,
+      spaceBetween: 30,
+    },
+
+    750 : {
+      slidesPerView: 2.5,
+      spaceBetween: 30,
+    },
+
+    830 : {
+      slidesPerView: 2.5,
+      spaceBetween: 10,
+    },
+
+    850 : {
+      slidesPerView: 2.5,
       spaceBetween: -10,
     },
-    660: {
-      loop: true,
-      slidesPerView: 1.9,
-      spaceBetween: -40,
+
+    870 : {
+      slidesPerView: 2.5,
+      spaceBetween: -30,
     },
-    690: {
-      loop: true,
-      slidesPerView: 1.9,
+
+    900 : {
+      slidesPerView: 2.5,
+      spaceBetween: -50,
+    },
+
+    920 : {
+      slidesPerView: 2.5,
       spaceBetween: -70,
     },
-    720: {
-      loop: true,
-      slidesPerView: 1.9,
-      spaceBetween: -100,
+
+    950 : {
+      slidesPerView: 2.5,
+      spaceBetween: -90,
     },
-    750: {
-      loop: true,
-      slidesPerView: 1.9,
+
+    970 : {
+      slidesPerView: 2.5,
+      spaceBetween: -110,
+    },
+
+    990 : {
+      slidesPerView: 2.5,
       spaceBetween: -130,
     },
-    780: {
-      loop: true,
-      slidesPerView: 1.9,
-      spaceBetween: -160,
+
+    1010 : {
+      slidesPerView: 2.5,
+      spaceBetween: -150,
     },
-    810: {
-      loop: true,
-      slidesPerView: 1.9,
+
+    1030 : {
+      slidesPerView: 2.5,
+      spaceBetween: -170,
+    },
+
+    1050 : {
+      slidesPerView: 2.5,
       spaceBetween: -190,
     },
-    840: {
-      loop: true,
-      slidesPerView: 1.9,
-      spaceBetween: -220,
+
+    1070 : {
+      slidesPerView: 2.5,
+      spaceBetween: -210,
     },
-    870: {
-      loop: true,
-      slidesPerView: 1.9,
+
+    1090 : {
+      slidesPerView: 2.5,
+      spaceBetween: -230,
+    },
+
+    1110 : {
+      slidesPerView: 2.5,
       spaceBetween: -250,
     },
-    900: {
-      loop: true,
-      slidesPerView: 1.9,
-      spaceBetween: -280,
-    },
-    930: {
-      loop: true,
-      slidesPerView: 1.9,
-      spaceBetween: -310,
-    },
-    960: {
-      loop: true,
-      slidesPerView: 1.9,
-      spaceBetween: -340,
-    },
-    990: {
-      loop: true,
-      slidesPerView: 1.9,
-      spaceBetween: -370,
-    },
-    1020: {
-      loop: true,
-      slidesPerView: 1.9,
-      spaceBetween: -400,
-    },
-    1050: {
-      loop: true,
-      slidesPerView: 1.9,
-      spaceBetween: -430,
-    },
-    1070: {
-      loop: true,
-      slidesPerView: 2,
-      spaceBetween: -320,
-    },
-    1100: {
-      loop: true,
-      slidesPerView: 2,
-      spaceBetween: -350,
-    },
-    1130: {
-      loop: true,
-      slidesPerView: 2,
-      spaceBetween: -380,
-    },
-    1160: {
-      loop: true,
-      slidesPerView: 2,
-      spaceBetween: -410,
-    },
-    1190: {
-      loop: true,
-      slidesPerView: 2,
-      spaceBetween: -440,
-    },
-    1200: {
-      loop: true,
-      slidesPerView: 2,
-      spaceBetween: -350,
-    },
-    1250: {
-      loop: true,
-      slidesPerView: 3,
-      spaceBetween: 0,
-    },
-    1350: {
-      loop: true,
-      slidesPerView: 4,
-      spaceBetween: 100,
+
+    1130 : {
+      slidesPerView: 2.5,
+      spaceBetween: -270,
     },
 
-    1730: {
-      loop: true,
-      slidesPerView: 5,
-      spaceBetween: 0,
+    1150 : {
+      slidesPerView: 2.5,
+      spaceBetween: -290,
     },
+
+    1170 : {
+      slidesPerView: 3,
+      spaceBetween: -150,
+    },
+
+    1400: {
+      
+      slidesPerView: 3,
+      spaceBetween: -270,
+  }
+    
 }
 });
-
-
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const swiperWrapper = document.querySelector('.question-wrapper .swiper-wrapper');
-  
-//   if (!swiperWrapper) return; // Защита от ошибок, если слайдер отсутствует
-
-//   const slideCount = window.slideCount || 0; // Получаем количество слайдов из PHP
-
-//   const slider4 = new Swiper('.question-wrapper', {
-//       slidesPerView: Math.min(slideCount, 5), // Показываем не больше, чем есть, но максимум 5
-//       slidesPerGroup: Math.min(slideCount, 5),
-//       spaceBetween: 20,
-//       loop: slideCount >= 5, // Loop включается, если слайдов 5 или больше
-//       navigation: {
-//           nextEl: '.swiper-button-next',
-//           prevEl: '.swiper-button-prev'
-//       },
-//       pagination: {
-//           el: '.swiper-pagination',
-//           clickable: true
-//       },
-//       breakpoints: {
-//           0: {
-//               allowTouchMove: false,
-//               freeMode: false,
-//               loop: false,
-//           },
-//           600: {
-//               allowTouchMove: true,
-//               freeMode: true,
-//               loop: slideCount >= 5,
-//               slidesPerView: Math.min(slideCount, 1.9),
-//               spaceBetween: 30,
-//           },
-//           768: {
-//               loop: slideCount >= 5,
-//               slidesPerView: Math.min(slideCount, 3),
-//               spaceBetween: 20,
-//           },
-//           1024: {
-//               loop: slideCount >= 5,
-//               slidesPerView: Math.min(slideCount, 4),
-//               spaceBetween: 20,
-//           },
-//           1280: {
-//               loop: slideCount >= 5,
-//               slidesPerView: Math.min(slideCount, 5),
-//               spaceBetween: 20,
-//           }
-//       }
-//   });
-// });
 
 
 
@@ -702,21 +643,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Добавляем обработчик события на кнопку
     menuButton.addEventListener("click", toggleMenu);
 });
-
-// for (let i = 1; i <= 5; i++) {
-//   const whatToDoButton = document.getElementById(`whatToDoButton-${i}`);
-//   const whatToDo = document.getElementById(`whatToDo-${i}`);
-
-//   // Проверяем, нашелся ли элемент
-//   if (!whatToDoButton || !whatToDo) {
-//     console.warn(`Элементы whatToDoButton-${i} или whatToDo-${i} не найдены`);
-//     continue;
-//   }
-
-//   whatToDoButton.addEventListener('click', () => {
-//     whatToDo.classList.toggle('hidden');
-//   });
-// }
 
 document.querySelectorAll('.whatToDoButton').forEach((button) => {
   button.addEventListener('click', () => {
