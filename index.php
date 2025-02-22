@@ -641,28 +641,38 @@ document.getElementById("contactForm").addEventListener("submit", function() {
             <div class="container swiper photos-wrapper">
                 <ul class="card-list swiper-wrapper">
                     <li class="card-item swiper-slide">
-                        <div class="slide">
-                            <img class="card__image " src="images/Photo_desktop.png" alt="">
+                        <div style="border-radius: 30px; width: 360px;" class="slide">
+                            <img style="border-radius: 30px; width: 360px;" class="card__image " src="images/photo1.jpg" alt="">
                         </div>
                     </li>
                     <li class="card-item swiper-slide">
-                        <div class="slide">
-                            <img class="card__image " src="images/Photo_desktop.png" alt="">
+                        <div style="border-radius: 30px; width: 360px;" class="slide">
+                            <img style="border-radius: 30px; width: 360px;" class="card__image " src="images/photo2.JPG" alt="">
                         </div>
                     </li>
                     <li class="card-item swiper-slide">
-                        <div class="slide">
-                            <img class="card__image " src="images/Photo_desktop.png" alt="">
+                        <div style="border-radius: 30px; width: 360px;" class="slide">
+                            <img style="border-radius: 30px; width: 360px;" class="card__image " src="images/photo3.JPG" alt="">
                         </div>
                     </li>
                     <li class="card-item swiper-slide">
-                        <div class="slide">
-                            <img class="card__image " src="images/Photo_desktop.png" alt="">
+                        <div style="border-radius: 30px; width: 360px;" class="slide">
+                            <img style="border-radius: 30px; width: 360px;" class="card__image " src="images/photo4.jpg" alt="">
                         </div>
                     </li>
                     <li class="card-item swiper-slide">
-                        <div class="slide">
-                            <img class="card__image " src="images/Photo_desktop.png" alt="">
+                        <div style="border-radius: 30px; width: 360px;" class="slide">
+                            <img style="border-radius: 30px; width: 360px;" class="card__image " src="images/photo5.JPG" alt="">
+                        </div>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <div style="border-radius: 30px; width: 360px;" class="slide">
+                            <img style="border-radius: 30px; width: 360px;" class="card__image " src="images/photo6.JPG" alt="">
+                        </div>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <div style="border-radius: 30px; width: 360px;" class="slide">
+                            <img style="border-radius: 30px; width: 360px;" class="card__image " src="images/photo7.JPG" alt="">
                         </div>
                     </li>
                 </ul>
