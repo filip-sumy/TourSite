@@ -173,32 +173,32 @@ if ($id > 0) {
                     <input type="hidden" name="tour_name" value="<?= htmlspecialchars($tour['tour_name']) ?>">
                     <input type="hidden" name="tour_dates" value="<?= htmlspecialchars($tour['tour_dates']) ?>">
                     <input type="hidden" name="tour_duration" value="<?= htmlspecialchars($tour['tour_duration']) ?>">
-                    
-
-                    <div class="form__container">
+                    <div id="contentDesktop" name="contentDesktop"></div>
                         <p class="contact__text">Крок 1: Контактна інформація</p>
                         <div class="block__contact">
                             <img class="icon" src="../images/email-icon.svg" alt="">
-                            <input class="input" type="email" name="email" placeholder="Введіть вашу пошту" required>
+                            <input id="email" class="input" type="email" name="email" placeholder="Введіть вашу пошту" required>
                         </div>
                         <p class="person__text">Персона 1</p>
                         <div class="block__person">
                             <img class="icon" src="../images/name-icon.svg" alt="">
-                            <input class="input" type="text" name="name" placeholder="Введіть ваше ім'я та прізвище" required>
+                            <input id="name" class="input" type="text" name="name" placeholder="Введіть ваше ім'я та прізвище" required>
                         </div>
                         <div class="block__person">
                             <img class="icon" src="../images/date-icon.svg" alt="">
-                            <input class="input" type="text" name="date_birth" placeholder="Введіть вашу дату народження" required>
+                            <input id="date_birth" class="input" type="text" name="date_birth" placeholder="Введіть вашу дату народження" required>
                         </div>
                         <div class="block__person">
                             <img class="icon" src="../images/tel-icon.svg" alt="">
-                            <input class="input" type="text" name="phone" placeholder="Введіть ваш номер телефону" required>
+                            <input id="phone" class="input" type="text" name="phone" placeholder="Введіть ваш номер телефону" required>
                         </div>
                         <div class="block__person">
                             <img class="icon" src="../images/cityfrom-icon.svg" alt="">
-                            <input class="input" type="text" name="city_from" placeholder="Місце від'їзду" required>
+                            <input id="city_from" class="input" type="text" name="city_from" placeholder="Місце від'їзду" required>
                         </div>
                         <div id="addContainer" class="addContainer"></div>
+                        <div id="formData" name="formData"></div>
+                        <div class="form__container">
                         <div class="add-person">
                             <button id="add__button" class="add__button">
                                 <img src="../images/Button_add person_desktop.svg" alt="" class="button__img">
@@ -213,7 +213,7 @@ if ($id > 0) {
                             </div>
                         </div>
                         <div class="comment">
-                            <textarea  name="comment" class="comment__area" placeholder="Складіть загальний коментар до замовлення"></textarea>
+                            <textarea  id="comment" name="comment" class="comment__area" placeholder="Складіть загальний коментар до замовлення"></textarea>
                         </div>
                         <div class="acception__block">
                             <img class= "acception__icon" src="../images/accept-icon.svg" alt="">
@@ -229,6 +229,7 @@ if ($id > 0) {
                 </div>
                 
         </section>
+        
         <script>
 document.getElementById("contactForm").addEventListener("submit", function() {
     // Заменяем форму на сообщение через небольшую задержку

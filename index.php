@@ -354,7 +354,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                 // Проверяем, что tour_name == "Драгобрат"
                 if ($tour['tour_name'] == 'Драгобрат') {
                     ?>
-                    <li data-wow-delay="1s" id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide wow animate__animated animate__fadeInDown">
+                    <li data-wow-delay="0.5s" id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide wow animate__animated animate__fadeInUp">
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
@@ -388,7 +388,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                 // Проверяем, что tour_name == "Буковель"
                 if ($tour['tour_name'] == 'Буковель') {
                     ?>
-                    <li data-wow-delay="1.5s" id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide wow animate__animated animate__fadeInDown">
+                    <li data-wow-delay="1s" id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide wow animate__animated animate__fadeInUp">
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
@@ -422,7 +422,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                 // Проверяем, что tour_name == "Боржомі"
                 if ($tour['tour_name'] == 'Боржомі') {
                     ?>
-                    <li data-wow-delay="2s" id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide wow animate__animated animate__fadeInDown">
+                    <li data-wow-delay="1.5s" id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide wow animate__animated animate__fadeInUp">
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
