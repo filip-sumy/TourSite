@@ -33,6 +33,14 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="js-files/wow.min.js"></script>
+    <script>
+              new WOW().init();
+              </script>
     <style>
         .link__container{
             padding-bottom: 20px; /*Отступ контейнера дат тура от нижнего края*/
@@ -346,7 +354,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                 // Проверяем, что tour_name == "Драгобрат"
                 if ($tour['tour_name'] == 'Драгобрат') {
                     ?>
-                    <li id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide">
+                    <li data-wow-delay="1s" id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide wow animate__animated animate__fadeInDown">
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
@@ -380,7 +388,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                 // Проверяем, что tour_name == "Буковель"
                 if ($tour['tour_name'] == 'Буковель') {
                     ?>
-                    <li id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide">
+                    <li data-wow-delay="1.5s" id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide wow animate__animated animate__fadeInDown">
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
@@ -414,7 +422,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                 // Проверяем, что tour_name == "Боржомі"
                 if ($tour['tour_name'] == 'Боржомі') {
                     ?>
-                    <li id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide">
+                    <li data-wow-delay="2s" id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide wow animate__animated animate__fadeInDown">
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
