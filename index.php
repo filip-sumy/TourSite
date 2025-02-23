@@ -84,6 +84,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
 </head>
 
 <body>
+    <!-- Комментарий-->
     <div id="body__container" class="body__container">
         <div class="item left">
             <img class="item__image" src="images/Frame 12.png" alt="">
