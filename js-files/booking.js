@@ -1,3 +1,7 @@
+const addButton = document.getElementById("add__button");
+const addContainer = document.getElementById("addContainer");
+
+let counter = 1;
 if (addButton && addContainer) {
     addButton.addEventListener("click", (event) => {
         event.preventDefault();

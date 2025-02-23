@@ -501,7 +501,7 @@ document.getElementById("contactForm").addEventListener("submit", function() {
                 <p>Ваші дані передані,<br>
                 наші туристичні котики<br>
                  зв’яжуться з Вами!</p>
-                 <img style="padding-top: 25px" src="images/cats.svg">
+                 <img style="padding-top: 25px" src="images/cat.svg">
             </div>
         `;
     }, 300);

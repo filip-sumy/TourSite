@@ -180,6 +180,7 @@ if ($id > 0) {
                             <input id="email" class="input" type="email" name="email" placeholder="Введіть вашу пошту" required>
                         </div>
                         <p class="person__text">Персона 1</p>
+                        
                         <div class="block__person">
                             <img class="icon" src="../images/name-icon.svg" alt="">
                             <input id="name" class="input" type="text" name="name" placeholder="Введіть ваше ім'я та прізвище" required>
@@ -239,7 +240,7 @@ document.getElementById("contactForm").addEventListener("submit", function() {
                 <p>Ваші дані передані,<br>
                 наші туристичні котики<br>
                  зв’яжуться з Вами!</p>
-                 <img style="padding-top: 25px" src="../images/cats.svg">
+                 <img style="padding-top: 25px" src="../images/cat.svg">
             </div>
         `;
     }, 300);
