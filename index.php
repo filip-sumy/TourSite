@@ -52,6 +52,26 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
         .whatToDo {
             margin-top: 0px !important;
         }
+        .slider-3 .slide {
+            width: 335px;
+            height: 340px;
+            border-radius: 30px !important;
+        }
+        .slider-3 .slide .card__image {
+            border-radius: 30px !important;
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        @media (min-width: 600px) {
+            .card {
+                width: 360px !important;
+            }
+            .slider-3 .slide {
+                width: 360px !important;
+            }
+        }
     </style>
 </head>
 
@@ -641,38 +661,38 @@ document.getElementById("contactForm").addEventListener("submit", function() {
             <div class="container swiper photos-wrapper">
                 <ul class="card-list swiper-wrapper">
                     <li class="card-item swiper-slide">
-                        <div style="border-radius: 30px; width: 360px;" class="slide">
-                            <img style="border-radius: 30px; width: 360px;" class="card__image " src="images/photo1.jpg" alt="">
+                        <div class="slide">
+                            <img class="card__image " src="images/photo1.jpg" alt="">
                         </div>
                     </li>
                     <li class="card-item swiper-slide">
-                        <div style="border-radius: 30px; width: 360px;" class="slide">
-                            <img style="border-radius: 30px; width: 360px;" class="card__image " src="images/photo2.JPG" alt="">
+                        <div class="slide">
+                            <img class="card__image " src="images/photo2.JPG" alt="">
                         </div>
                     </li>
                     <li class="card-item swiper-slide">
-                        <div style="border-radius: 30px; width: 360px;" class="slide">
-                            <img style="border-radius: 30px; width: 360px;" class="card__image " src="images/photo3.JPG" alt="">
+                        <div class="slide">
+                            <img class="card__image " src="images/photo3.JPG" alt="">
                         </div>
                     </li>
                     <li class="card-item swiper-slide">
-                        <div style="border-radius: 30px; width: 360px;" class="slide">
-                            <img style="border-radius: 30px; width: 360px;" class="card__image " src="images/photo4.jpg" alt="">
+                        <div class="slide">
+                            <img class="card__image " src="images/photo4.jpg" alt="">
                         </div>
                     </li>
                     <li class="card-item swiper-slide">
-                        <div style="border-radius: 30px; width: 360px;" class="slide">
-                            <img style="border-radius: 30px; width: 360px;" class="card__image " src="images/photo5.JPG" alt="">
+                        <div class="slide">
+                            <img class="card__image " src="images/photo5.JPG" alt="">
                         </div>
                     </li>
                     <li class="card-item swiper-slide">
-                        <div style="border-radius: 30px; width: 360px;" class="slide">
-                            <img style="border-radius: 30px; width: 360px;" class="card__image " src="images/photo6.JPG" alt="">
+                        <div class="slide">
+                            <img class="card__image " src="images/photo6.JPG" alt="">
                         </div>
                     </li>
                     <li class="card-item swiper-slide">
-                        <div style="border-radius: 30px; width: 360px;" class="slide">
-                            <img style="border-radius: 30px; width: 360px;" class="card__image " src="images/photo7.JPG" alt="">
+                        <div class="slide">
+                            <img class="card__image " src="images/photo7.JPG" alt="">
                         </div>
                     </li>
                 </ul>
