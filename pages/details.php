@@ -234,8 +234,7 @@ if ($id > 0) {
             </div>
         </div>
         <div class="powered-by">
-            © Powered by Philip Kokurenchuk
-            Pixel Guard IT
+            © Powered by Pixel Guard IT
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

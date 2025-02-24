@@ -217,20 +217,80 @@ if ($id > 0) {
                             <textarea  id="comment" name="comment" class="comment__area" placeholder="Складіть загальний коментар до замовлення"></textarea>
                         </div>
                         <div class="acception__block">
-                            <img class= "acception__icon" src="../images/accept-icon.svg" alt="">
+                            <img style="display:none;" class= "acception__icon" src="../images/accept-icon.svg" alt="">
+                            <label class="checkbox-wrapper">
+                                <input id="checkbox" type="checkbox">
+                                <span class="checkbox-custom"></span>
+                            </label>
                             <p class="acception__text">
                                 Бронюючи подію, я підтверджую згоду з <a href="../images/public-info-doc.docx.pdf" download="">договіром оферти</a>
                             </p>
                         </div>
-                        <div class="accept-button" type="submit">
-                            <button>забронювати</button>
+                        <div  class="accept-button" type="submit">
+                            <button class="btn" id="submit" disabled>забронювати</button>
                         </div>
                     </div>
                 </form>
                 </div>
-                
         </section>
-        
+        <style>
+        .checkbox-wrapper {
+            display: inline-block;
+            position: relative;
+            width: 25px;
+            height: 25px;
+        }
+
+        .checkbox-wrapper input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            position: absolute;
+        }
+
+        .checkbox-custom {
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s, border-color 0.3s;
+            cursor: pointer;
+        }
+
+        .checkbox-custom::after {
+            content: "✔";
+            font-size: 16px;
+            color: white;
+            display: none;
+        }
+
+        .checkbox-wrapper input:checked + .checkbox-custom {
+            background-color: #E75A0D; /* Оранжевый цвет */
+            border-color: #E75A0D;
+        }
+
+        .checkbox-wrapper input:checked + .checkbox-custom::after {
+            display: block;
+        }
+    </style>
+    <script>
+    const checkbox = document.getElementById('checkbox');
+    const button = document.getElementById('submit');
+
+    checkbox.addEventListener('change', function () {
+        if (this.checked) {
+            button.classList.add('active');
+            button.disabled = false;
+        } else {
+            button.classList.remove('active');
+            button.disabled = true;
+        }
+    });
+</script>
         <script>
 document.getElementById("contactForm").addEventListener("submit", function() {
     // Заменяем форму на сообщение через небольшую задержку
@@ -262,8 +322,7 @@ document.getElementById("contactForm").addEventListener("submit", function() {
             </div>
         </div>
         <div class="powered-by">
-            © Powered by Philip Kokurenchuk
-            Pixel Guard IT
+            © Powered by Pixel Guard IT
         </div>
     </section>
     <script src="../js-files/booking.js"></script>
