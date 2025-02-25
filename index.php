@@ -42,6 +42,9 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
               new WOW().init();
               </script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }   
         .link__container{
             padding-bottom: 20px; /*Отступ контейнера дат тура от нижнего края*/
         }
@@ -119,7 +122,16 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                 <a class="nav__link" href="index.php">Головна</a>
             </li>
             <li>
-                <a class="nav__link" href="/pages/booking.php">Бронювання</a>
+                <a class="nav__link" href="#questions">Питання</a>
+            </li>
+            <li>
+                <a class="nav__link" href="#contact">Контакти</a>
+            </li>
+            <li>
+                <a class="nav__link" href="#reviews">Відгуки</a>
+            </li>
+            <li>
+                <a class="nav__link" href="#photos">Фото</a>
             </li>
         </ul>
         <button id="menuButton" class="menu-btn">
@@ -338,7 +350,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
             <!-- Тут слайдер заканчивается -->
         </section>
         
-        <section class="questions">
+        <section id="questions" class="questions">
     <div>
         <p class="questions__text">
             Популярні питанння:
@@ -509,7 +521,7 @@ document.getElementById("contactForm").addEventListener("submit", function() {
 });
 </script> 
 
-        <section class="reviews">
+        <section id="reviews" class="reviews">
             <div class="your-reviews">
                 <p class="reviews__text">
                     Відгуки:
@@ -658,7 +670,7 @@ document.getElementById("contactForm").addEventListener("submit", function() {
                 <div class="swiper-button-next"></div>
             </div>
         </section>
-        <section class="photos">
+        <section id="photos" class="photos">
             <div class="your-photos">
                 <p class="photos__text">
                     Фотоархів:
