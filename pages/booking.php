@@ -1,6 +1,7 @@
 <?php
 // Подключение к базе данных
-$db = new PDO("mysql:host=MySQL-8.2;dbname=extremetrips", "root", "");
+#$db = new PDO("mysql:host=MySQL-8.2;dbname=extremetrips", "root", "");
+$db = new PDO("mysql:host=localhost;dbname=extremet_tour", "extremet_root", "av80y&kYFb4P");
 
 // Получение параметра id из URL
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
@@ -81,7 +82,7 @@ if ($id > 0) {
                 <a class="nav__link" href="../index.php">Головна</a>
             </li>
             <li>
-                <a class="nav__link" href="booking.php">Бронювання</a>
+                <a class="nav__link" href="../index.php">Бронювання</a>
             </li>
         </ul>
         <button id="menuButton" class="menu-btn">
@@ -94,7 +95,7 @@ if ($id > 0) {
                 <a class="nav__text" href="../index.php">Головна</a>
             </li>
             <li>
-                <a class="nav__text" href="booking.php">Бронювання</a>
+                <a class="nav__text" href="../index.php">Бронювання</a>
             </li>
         </ul>
     </nav>

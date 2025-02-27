@@ -119,7 +119,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                 <a class="nav__link" href="index.php">Головна</a>
             </li>
             <li>
-                <a class="nav__link" href="/pages/booking.php">Бронювання</a>
+                <a class="nav__link" href="index.php">Бронювання</a>
             </li>
         </ul>
         <button id="menuButton" class="menu-btn">
@@ -132,7 +132,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                 <a class="nav__text" href="index.php">Головна</a>
             </li>
             <li>
-                <a class="nav__text" href="booking.php">Бронювання</a>
+                <a class="nav__text" href="index.php">Бронювання</a>
             </li>
         </ul>
     </nav>
@@ -499,7 +499,7 @@ document.getElementById("contactForm").addEventListener("submit", function() {
     setTimeout(() => {
         document.getElementById("formContainer").innerHTML = `
             <div style="color: #FFFFFF" class="success-message">
-                <p>Ваші дані передані,<br>
+                <p>Ваші дані передано,<br>
                 наші туристичні котики<br>
                  зв’яжуться з Вами!</p>
                  <img style="padding-top: 25px" src="images/cat.svg">
