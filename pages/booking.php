@@ -81,9 +81,6 @@ if ($id > 0) {
             <li>
                 <a class="nav__link" href="../index.php">Головна</a>
             </li>
-            <li>
-                <a class="nav__link" href="../index.php">Бронювання</a>
-            </li>
         </ul>
         <button id="menuButton" class="menu-btn">
             <img src="../images/Menu_button.svg" alt="Открыть меню" id="menuIcon">

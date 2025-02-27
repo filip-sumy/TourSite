@@ -181,6 +181,11 @@ ul {
   flex-direction: column;
   gap: 50px;
 }
+
+.nav__links {
+  gap: 20px;
+}
+
 ul .nav__text {
   text-decoration: none;
   font-family: "Manrope";
@@ -255,6 +260,7 @@ ul .nav__text:hover {
 }
 .slider .card-list .card-item .slide .card .card__wrapper {
   display: flex;
+  
 }
 .slider .card-list .card-item .slide .card .card__link {
   padding-top: 30px;
@@ -274,23 +280,31 @@ ul .nav__text:hover {
 }
 .slider .card-list .card-item .slide .card .month {
   padding-top: 45px;
-  padding-left: 25px;
+  padding-left: 15px;
 }
 .slider .card-list .card-item .slide .card .month .month__name {
   font-size: 40px;
   font-weight: 600;
   font-family: "Manrope";
 }
-.slider .card-list .card-item .slide .card .star {
-  margin-top: 50px;
-  margin-left: 50px;
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding-left: 30px;
 }
+
+/* .slider .card-list .card-item .slide .card .star {
+  padding-top: 50px;
+  padding-right: 0px;
+} */
 .slider .card-list .card-item .slide .card .rectangle {
   border: 1px solid #B2B2B2;
   border-radius: 20px;
   height: 25px;
   width: 50px;
-  margin-top: 50px;
+  /* margin-top: 50px;
+  padding-right: 0px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -299,8 +313,9 @@ ul .nav__text:hover {
   color: #B2B2B2;
 }
 .slider .card-list .card-item .slide .card .card__description {
-  padding-top: 50px;
-  padding-left: 25px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
 }
 .slider .card-list .card-item .slide .card .card__description .description__text {
   text-align: left;
@@ -692,7 +707,7 @@ ul .nav__text:hover {
 }
 .footer .info__link {
   font-family: "Manrope";
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   text-align: center;
   color: #FF6C1C;
@@ -721,7 +736,7 @@ ul .nav__text:hover {
 }
 .footer .powered-by {
   font-family: "Manrope";
-  font-size: 8px;
+  font-size: 14px;
   font-weight: 400;
   text-align: center;
   color: #717171;
