@@ -1,6 +1,7 @@
 <?php
 //  Подключаемся к базе данных
-$db = new PDO("mysql:host=MySQL-8.2;dbname=extremetrips", "root", "");
+#$db = new PDO("mysql:host=MySQL-8.2;dbname=extremetrips", "root", "");
+$db = new PDO("mysql:host=localhost;dbname=extremet_tour", "extremet_root", "av80y&kYFb4P");
 
 //  Запрос на получение всех данных
 if ($query = $db->query("SELECT * FROM extreme_tours")) {
@@ -42,6 +43,17 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
               new WOW().init();
               </script>
     <style>
+        
+        .star {
+            padding-top: 0px;
+        }
+        .content-wrapper {
+            display: flex;
+            flex-direction: row;
+            padding-top: 50px;
+            padding-right: 0px;
+
+        }
         html {
             scroll-behavior: smooth;
         }   
@@ -139,15 +151,25 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
         </button>
     </header>
     <nav id="menu" class="hidden">
-        <ul>
+        <ul class="nav__links">
             <li>
                 <a class="nav__text" href="index.php">Головна</a>
             </li>
             <li>
-                <a class="nav__text" href="booking.php">Бронювання</a>
+                <a class="nav__text" href="index.php.#questions">Питання</a>
+            </li>
+            <li>
+                <a class="nav__text" href="index.php.#contact">Контакти</a>
+            </li>
+            <li>
+                <a class="nav__text" href="index.php.#reviews">Відгуки</a>
+            </li>
+            <li>
+                <a class="nav__text" href="index.php.#photos">Фото</a>
             </li>
         </ul>
     </nav>
+    
     <main id="main" class="main">
         <div class="contact-us">
             <a class="contact-button" href="#contact"></a>
@@ -179,13 +201,17 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                                 ?>
                                             </p>
                                         </div>
-                                        <div class="star">
-                                            <img class="star__image" src="images/material-symbols_asterisk.svg"
+                                        <div class="content-wrapper">
+                                            <div class="star">
+                                                <img class="star__image" src="images/material-symbols_asterisk.svg"
                                                 alt="star">
+                                            </div>
+                                            <div class="rectangle">
+                                                <p class="rectangle__text">1/3</p>
+                                            </div>
                                         </div>
-                                        <div class="rectangle">
-                                            <p class="rectangle__text">1/3</p>
-                                        </div>
+                                        
+
                                     </div>
                                     <div class="card__description">
                                         <p class="description__text">
@@ -222,6 +248,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                             <!-- Тут даты туров заканчиваются -->
                                         </div>
                                     </div>
+                                </div>   
                         </li>
                         <li id="card-button-2" class="card-item swiper-slide">
                             <div class="slide">
@@ -239,13 +266,16 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                                 ?>
                                             </p>
                                         </div>
-                                        <div class="star">
-                                            <img class="star__image" src="images/material-symbols_asterisk.svg"
-                                                alt="star">
+                                        <div class="content-wrapper">
+                                            <div class="star">
+                                                <img class="star__image" src="images/material-symbols_asterisk.svg"
+                                                    alt="star">
+                                            </div>
+                                            <div class="rectangle">
+                                                <p class="rectangle__text">2/3</p>
+                                            </div>
                                         </div>
-                                        <div class="rectangle">
-                                            <p class="rectangle__text">2/3</p>
-                                        </div>
+
                                     </div>
                                     <div class="card__description">
                                         <p class="description__text">
@@ -280,6 +310,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         </li>
                         <li id="card-button-3" class="card-item swiper-slide">
                             <div class="slide">
@@ -297,13 +328,16 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                                 ?>
                                             </p>
                                         </div>
-                                        <div class="star">
-                                            <img class="star__image" src="images/material-symbols_asterisk.svg"
-                                                alt="star">
-                                        </div>
-                                        <div class="rectangle">
-                                            <p class="rectangle__text">3/3</p>
-                                        </div>
+                                            <div class="content-wrapper">
+                                                <div class="star">
+                                                    <img class="star__image" src="images/material-symbols_asterisk.svg"
+                                                        alt="star">
+                                                </div>
+                                                <div class="rectangle">
+                                                    <p class="rectangle__text">3/3</p>
+                                                </div>
+                                            </div>
+
                                     </div>
                                     <div class="card__description">
                                         <p class="description__text">
@@ -338,6 +372,7 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         </li>
                     </ul>
 
@@ -739,6 +774,9 @@ document.getElementById("contactForm").addEventListener("submit", function() {
         </div>
         <div class="powered-by">
             © Powered by Pixel Guard IT
+        </div>
+        <div class="powered-by">
+            Developed by Philip Kokurenchuk & Yaroslav Khodun
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
