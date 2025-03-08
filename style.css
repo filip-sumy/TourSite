@@ -176,7 +176,7 @@ body {
 
 ul {
   list-style: none;
-  text-align: center;
+  text-align: center; 
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -404,6 +404,7 @@ ul .nav__text:hover {
   gap: 30px;
   border-radius: 30px;
   margin-top: 10px;
+
 }
 .slider-4 .card-item .activity .slide .whatToDo .whatToDo__item {
   height: auto;
@@ -412,6 +413,8 @@ ul .nav__text:hover {
   font-size: 15px;
   font-family: "Manrope";
   margin-bottom: 10px;
+  
+  
 }
 .slider-4 .card-item .activity .slide .whatToDo .activity-box {
   border: 2px solid white;

@@ -143,7 +143,7 @@ if ($id > 0) {
                                 </div>
                                 <div id="whatToDo-1" class="whatToDo hidden">
                                     <div class="whatToDo__item">
-                                    <?php echo htmlspecialchars($tour['tour_schedule']); ?>
+                                    <?php echo nl2br(htmlspecialchars($tour['tour_schedule'])); ?>
                                     </div>
                                 </div>
                             </div>
@@ -159,7 +159,7 @@ if ($id > 0) {
                                 </div>
                                 <div id="whatToDo-2" class="whatToDo hidden">
                                     <div class="whatToDo__item">
-                                    <?php echo htmlspecialchars($tour['tour_fulldescription']); ?>
+                                    <?php echo nl2br(htmlspecialchars($tour['tour_fulldescription'])); ?>
                                     </div>
                                 </div>
                             </div>
@@ -175,7 +175,7 @@ if ($id > 0) {
                                 </div>
                                 <div id="whatToDo-3" class="whatToDo hidden">
                                     <div class="whatToDo__item">
-                                    <?php echo htmlspecialchars($tour['tour_accomodation']); ?>
+                                    <?php echo nl2br(htmlspecialchars($tour['tour_accomodation'])); ?>
                                     </div>
                                 </div>
                             </div>
