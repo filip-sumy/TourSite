@@ -222,6 +222,14 @@ ul .nav__text:hover {
   font-weight: 600;
   padding-bottom: 25px;
 }
+.tours-box {
+  border: 2px solid white;
+  padding: 10px;
+  margin: 0px 0;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 30px;
+  width: 280px;
+}
 
 @media (min-width: 670px) {
   .menu-btn {

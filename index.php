@@ -229,8 +229,12 @@ foreach ($tours as $tour) {
                                                             <img src="images/la_skiing.png" alt="Иконка тура">
                                                         </div>
                                                         <a class="link__text" href="/pages/details.php?id=<?= htmlspecialchars($tourItem['id']) ?>">
-                                                            <?= htmlspecialchars($tourItem['tour_dates']) ?> - <?= htmlspecialchars($tourItem['tour_duration']) ?>
+                                                            <div class="tours-box">
+                                                                <?= htmlspecialchars($tourItem['tour_dates']) ?> - <?= htmlspecialchars($tourItem['tour_duration'])  ?>
+                                                            </div>
                                                         </a>
+
+
                                                     </li>
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
