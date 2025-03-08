@@ -149,7 +149,7 @@ const slider1 = new Swiper('.card-wrapper', {
         spaceBetween: -180,
       },
       1400: {
-        updateOnWindowResize: false,
+        updateOnWindowResize: true,
         slidesPerView: 4,
         spaceBetween: 60,
     }
@@ -669,7 +669,7 @@ document.querySelectorAll('.whatToDoButton').forEach((button) => {
 //    });
 //  }
 
-for (let i = 1; i <= 3; i++) {
+for (let i = 1; i <= 4; i++) {
   const cardButton = document.getElementById(`card-button-${i}`);
   const cardLink = document.getElementById(`card__link-${i}`);
   const card = document.getElementById(`card-${i}`);
