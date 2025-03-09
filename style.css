@@ -333,14 +333,17 @@ ul .nav__text:hover {
 }
 
 .card__button {
-  border: 1px solid #000000;
+  position: absolute;
+  bottom: 15px;
+  left: 60px;
+  font-family: "Manrope";
   width: 250px;
   border-radius: 30px;
   background-color: #E95200;
   /* padding: 15px 20px;
   width: 300px; */
-  margin: 50px auto;
-  
+  margin: auto;
+ 
   /* padding-left: 20px; */
 }
 

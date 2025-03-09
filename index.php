@@ -219,6 +219,9 @@ foreach ($tours as $tour) {
                                 <div class="card__description">
                                     <p class="description__text"><?= htmlspecialchars($tour['tour_description']) ?></p>
                                 </div>
+                                <div id="calendar__button-<?= $index ?>" class="card__button">
+                                    <p>Переглянути календар</p>
+                                </div>
                                 <div id="card__link-<?= $index ?>" class="card__link hidden">
                                     <div class="link__container">
                                         <ul>

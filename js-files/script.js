@@ -671,9 +671,11 @@ for (let i = 1; i <= 4; i++) {
   const cardButton = document.getElementById(`card-button-${i}`);
   const cardLink = document.getElementById(`card__link-${i}`);
   const card = document.getElementById(`card-${i}`);
+  const calendar__button = document.getElementById(`calendar__button-${i}`);
 
   cardButton.addEventListener('click', () => {
     cardLink.classList.toggle('hidden');
+    calendar__button.classList.toggle('hidden');
     card.classList.toggle('active');
   });
 }
