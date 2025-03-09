@@ -1,7 +1,7 @@
 <?php
 // Подключение к базе данных
-#$db = new PDO("mysql:host=MySQL-8.2;dbname=extremetrips", "root", "");
-$db = new PDO("mysql:host=localhost;dbname=extremet_tour", "extremet_root", "av80y&kYFb4P");
+$db = new PDO("mysql:host=MySQL-8.2;dbname=extremetrips", "root", "");
+#$db = new PDO("mysql:host=localhost;dbname=extremet_tour", "extremet_root", "av80y&kYFb4P");
 
 // Получение параметра id из URL
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;

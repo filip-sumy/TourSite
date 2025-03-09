@@ -1,7 +1,7 @@
 <?php
 //  Подключаемся к базе данных
-#$db = new PDO("mysql:host=MySQL-8.2;dbname=extremetrips", "root", "");
-$db = new PDO("mysql:host=localhost;dbname=extremet_tour", "extremet_root", "av80y&kYFb4P");
+$db = new PDO("mysql:host=MySQL-8.2;dbname=extremetrips", "root", "");
+#$db = new PDO("mysql:host=localhost;dbname=extremet_tour", "extremet_root", "av80y&kYFb4P");
 
 //  Запрос на получение всех данных
 if ($query = $db->query("SELECT * FROM extreme_tours")) {
@@ -175,9 +175,9 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
             <a class="contact-button" href="#contact"></a>
         </div>
         <section class="tours">
-            <div class="tours__block">
+            <!-- <div class="tours__block">
                 <p id="block__text" class="block__text">Наші тури:</p>
-            </div>
+            </div> -->
         </section>
         <!-- Тут начинается слайдер -->
         <section class="slider">
@@ -224,6 +224,9 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                                             }
                                             ?>
                                         </p>
+                                    </div>
+                                    <div class="card__button">
+                                        <p>переглянути календар</p>
                                     </div>
                                     <!-- Тут начинается перечень дат тура -->
                                     <div id="card__link-1" class="card__link hidden">
