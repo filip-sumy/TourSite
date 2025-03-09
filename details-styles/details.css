@@ -325,6 +325,7 @@ ul .nav__text:hover {
   padding: 15px;
 }
 .slider-4 .card-item .activity .slide .whatToDo .whatToDo__item {
+  text-align: left;
   height: auto;
   padding: 5px 10px;
   color: #FFFFFF;

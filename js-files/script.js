@@ -19,11 +19,138 @@ const slider1 = new Swiper('.card-wrapper', {
   speed: 600, // Устанавливаем плавную скорость анимации
 
   breakpoints: {
-    0: { slidesPerView: 1.2, spaceBetween: 10 },
-    480: { slidesPerView: 1.5, spaceBetween: 15 },
-    768: { slidesPerView: 2, spaceBetween: 20 },
-    1024: { slidesPerView: 3, spaceBetween: 30 },
-    1400: { slidesPerView: 4, spaceBetween: 40 }
+      0 : {
+          slidesPerView: 1.2,
+          spaceBetween: 10,
+          
+      },
+
+      390 : {
+        slidesPerView: 1.3,
+        spaceBetween: 20,
+      },
+      
+      420: {
+        slidesPerView: 1.4,
+        spaceBetween: 20,
+      },
+      450: {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+      },
+      480: {
+        slidesPerView: 1.6,
+        spaceBetween: 20,
+      },
+      510: {
+        slidesPerView: 1.7,
+        spaceBetween: 20,
+      },
+      540: {
+        slidesPerView: 1.8,
+        spaceBetween: 20,
+      },
+      570: {
+        slidesPerView: 1.9,
+        spaceBetween: 20,
+      },
+      600: {
+        slidesPerView: 1.9,
+        spaceBetween: 40,
+      },
+      630: {
+        slidesPerView: 1.9,
+        spaceBetween: 10,
+      },
+      660: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      690: {
+        slidesPerView: 2.1,
+        spaceBetween: 10,
+      },
+      720: {
+        slidesPerView: 2.2,
+        spaceBetween: 10,
+      },
+      750: {
+        slidesPerView: 2.3,
+        spaceBetween: 10,
+      },
+      780: {
+        slidesPerView: 2.4,
+        spaceBetween: 10,
+      },
+      810: {
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+      },
+      840: {
+        slidesPerView: 2.5,
+        spaceBetween: -10,
+      },
+      870: {
+        slidesPerView: 2.5,
+        spaceBetween: -30,
+      },
+      900: {
+        slidesPerView: 2.5,
+        spaceBetween: -50,
+      },
+      930: {
+        slidesPerView: 2.5,
+        spaceBetween: -70,
+      },
+      960: {
+        slidesPerView: 2.5,
+        spaceBetween: -100,
+      },
+      990: {
+        slidesPerView: 2.5,
+        spaceBetween: -130,
+      },
+      1020: {
+        slidesPerView: 2.5,
+        spaceBetween: -160,
+      },
+      1050: {
+        slidesPerView: 2.5,
+        spaceBetween: -190,
+      },
+      1070: {
+        slidesPerView: 2.5,
+        spaceBetween: -120,
+      },
+      1100: {
+        slidesPerView: 2.5,
+        spaceBetween: -150,
+      },
+      1130: {
+        slidesPerView: 2.5,
+        spaceBetween: -180,
+      },
+      1160: {
+        slidesPerView: 2.5,
+        spaceBetween: -210,
+      },
+      1190: {
+        slidesPerView: 2.5,
+        spaceBetween: -240,
+      },
+      1200: {
+        slidesPerView: 2.5,
+        spaceBetween: -150,
+      },
+      1230: {
+        slidesPerView: 2.5,
+        spaceBetween: -180,
+      },
+      1400: {
+        updateOnWindowResize: true,
+        slidesPerView: 4,
+        spaceBetween: 60,
+    }
   }
 });
 
@@ -540,7 +667,7 @@ document.querySelectorAll('.whatToDoButton').forEach((button) => {
 //    });
 //  }
 
-for (let i = 1; i <= 3; i++) {
+for (let i = 1; i <= 4; i++) {
   const cardButton = document.getElementById(`card-button-${i}`);
   const cardLink = document.getElementById(`card__link-${i}`);
   const card = document.getElementById(`card-${i}`);

@@ -92,7 +92,7 @@ if ($id > 0) {
                 <a class="nav__text" href="../index.php">Головна</a>
             </li>
             <li>
-                <a class="nav__text" href="booking.php">Бронювання</a>
+                <a class="nav__text" href="../index.php">Бронювання</a>
             </li>
         </ul>
     </nav>

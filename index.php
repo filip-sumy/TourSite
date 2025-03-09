@@ -13,6 +13,20 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
     print_r($db->errorInfo());
     echo "</pre>";
 }
+
+// Получаем уникальные месяцы
+$months = [];
+$tourDataByMonth = [];
+
+foreach ($tours as $tour) {
+    $month = $tour['tour_month'];
+    if (!isset($months[$month])) {
+        $months[$month] = true; // Добавляем уникальный месяц
+        $tourDataByMonth[$month] = $tour; // Сохраняем первый попавшийся тур для этого месяца
+    }
+}
+
+
 ?>
 
 
@@ -179,214 +193,67 @@ if ($query = $db->query("SELECT * FROM extreme_tours")) {
                 <p id="block__text" class="block__text">Наші тури:</p>
             </div> -->
         </section>
-        <!-- Тут начинается слайдер -->
+
         <section class="slider">
-            <div class="container swiper">
-                <div class="card-wrapper">
-                    <ul class="card-list swiper-wrapper">
-                        <!-- Тут начинается первая плитка -->
-                        <li id="card-button-1" class="card-item swiper-slide">
-                            <div class="slide">
-                                <div id="card-1" class="card">
-                                    <div class="card__wrapper">
-                                        <div class="month">
-                                            <p class="month__name">
-                                                <?php
-                                                foreach ($tours as $tour) {
-                                                    if ($tour['tour_month'] == 'Січень') {
-                                                        echo htmlspecialchars($tour['tour_name']);
-                                                        break; // Прерываем цикл после первого совпадения
-                                                    }
-                                                }
-                                                ?>
-                                            </p>
+    <div class="container swiper">
+        <div class="card-wrapper">
+            <ul class="card-list swiper-wrapper">
+                <?php $index = 1; ?>
+                <?php foreach ($tourDataByMonth as $month => $tour): ?>
+                    <li id="card-button-<?= $index ?>" class="card-item swiper-slide">
+                        <div class="slide">
+                            <div id="card-<?= $index ?>" class="card">
+                                <div class="card__wrapper">
+                                    <div class="month">
+                                        <p class="month__name"><?= htmlspecialchars($tour['tour_month']) ?></p>
+                                    </div>
+                                    <div class="content-wrapper">
+                                        <div class="star">
+                                            <img class="star__image" src="images/material-symbols_asterisk.svg" alt="star">
                                         </div>
-                                        <div class="content-wrapper">
-                                            <div class="star">
-                                                <img class="star__image" src="images/material-symbols_asterisk.svg"
-                                                alt="star">
-                                            </div>
-                                            <div class="rectangle">
-                                                <p class="rectangle__text">1/3</p>
-                                            </div>
-                                        </div>
-                                        
-
-                                    </div>
-                                    <div class="card__description">
-                                        <p class="description__text">
-                                            <?php
-                                            foreach ($tours as $tour) {
-                                                if ($tour['tour_month'] == 'Січень') {
-                                                    echo htmlspecialchars($tour['tour_description']);
-                                                    break; // Прерываем цикл после первого совпадения
-                                                }
-                                            }
-                                            ?>
-                                        </p>
-                                    </div>
-                                    <div class="card__button">
-                                        <p>переглянути календар</p>
-                                    </div>
-                                    <!-- Тут начинается перечень дат тура -->
-                                    <div id="card__link-1" class="card__link hidden">
-                                        <div class="link__container">
-                                            <!-- 4️⃣ Вывод данных в виде списка -->
-                                            <ul>
-                                            <?php foreach ($tours as $tour): ?>
-                                                <?php if ($tour['tour_month'] == 'Січень'): ?> <!-- Проверка на месяц -->
-                                                    <li class="tour-item">
-                                                        <div class="link__icon">
-                                                            <img src="images/la_skiing.png" alt="Иконка тура">
-                                                        </div>
-                                                        <!-- Делаем даты тура гиперссылкой с ID -->
-                                                        <a class="link__text" href="/pages/details.php?id=<?= htmlspecialchars($tour['id']) ?>">
-                                                            <?= htmlspecialchars($tour['tour_dates']) ?> - <?= htmlspecialchars($tour['tour_duration']) ?>
-                                                        </a>
-                                                    </li>
-                                                <?php endif; ?>
-                                            <?php endforeach; ?>
-
-                                            </ul>
-                                            <!-- Тут даты туров заканчиваются -->
-                                        </div>
-                                    </div>
-                                </div>   
-                        </li>
-                        <li id="card-button-2" class="card-item swiper-slide">
-                            <div class="slide">
-                                <div id="card-2" class="card">
-                                    <div class="card__wrapper">
-                                        <div class="month">
-                                            <p class="month__name">
-                                                <?php
-                                                foreach ($tours as $tour) {
-                                                    if ($tour['tour_month'] == 'Лютий') {
-                                                        echo htmlspecialchars($tour['tour_name']);
-                                                        break; // Прерываем цикл после первого совпадения
-                                                    }
-                                                }
-                                                ?>
-                                            </p>
-                                        </div>
-                                        <div class="content-wrapper">
-                                            <div class="star">
-                                                <img class="star__image" src="images/material-symbols_asterisk.svg"
-                                                    alt="star">
-                                            </div>
-                                            <div class="rectangle">
-                                                <p class="rectangle__text">2/3</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="card__description">
-                                        <p class="description__text">
-                                            <?php
-                                            foreach ($tours as $tour) {
-                                                if ($tour['tour_month'] == 'Лютий') {
-                                                    echo htmlspecialchars($tour['tour_description']);
-                                                    break; // Прерываем цикл после первого совпадения
-                                                }
-                                            }
-                                            ?>
-                                        </p>
-                                    </div>
-                                    <div id="card__link-2" class="card__link hidden">
-                                        <div class="link__container">
-                                            <ul>
-                                            <?php foreach ($tours as $tour): ?>
-                                                <?php if ($tour['tour_month'] == 'Лютий'): ?> <!-- Проверка на месяц -->
-                                                    <li class="tour-item">
-                                                        <div class="link__icon">
-                                                            <img src="images/la_skiing.png" alt="Иконка тура">
-                                                        </div>
-                                                        <!-- Делаем даты тура гиперссылкой с ID -->
-                                                        <a class="link__text" href="/pages/details.php?id=<?= htmlspecialchars($tour['id']) ?>">
-                                                            <?= htmlspecialchars($tour['tour_dates']) ?> - <?= htmlspecialchars($tour['tour_duration']) ?>
-                                                        </a>
-                                                    </li>
-                                                <?php endif; ?>
-                                            <?php endforeach; ?>
-
-                                            </ul>
+                                        <div class="rectangle">
+                                            <p class="rectangle__text"><?= $index ?>/<?= count($tourDataByMonth) ?></p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li id="card-button-3" class="card-item swiper-slide">
-                            <div class="slide">
-                                <div id="card-3" class="card">
-                                    <div class="card__wrapper">
-                                        <div class="month">
-                                            <p class="month__name">
-                                                <?php
-                                                foreach ($tours as $tour) {
-                                                    if ($tour['tour_month'] == 'Березень') {
-                                                        echo htmlspecialchars($tour['tour_name']);
-                                                        break; // Прерываем цикл после первого совпадения
-                                                    }
-                                                }
-                                                ?>
-                                            </p>
-                                        </div>
-                                            <div class="content-wrapper">
-                                                <div class="star">
-                                                    <img class="star__image" src="images/material-symbols_asterisk.svg"
-                                                        alt="star">
-                                                </div>
-                                                <div class="rectangle">
-                                                    <p class="rectangle__text">3/3</p>
-                                                </div>
-                                            </div>
-
-                                    </div>
-                                    <div class="card__description">
-                                        <p class="description__text">
-                                            <?php
-                                            foreach ($tours as $tour) {
-                                                if ($tour['tour_month'] == 'Березень') {
-                                                    echo htmlspecialchars($tour['tour_description']);
-                                                    break; // Прерываем цикл после первого совпадения
-                                                }
-                                            }
-                                            ?>
-                                        </p>
-                                    </div>
-                                    <div id="card__link-3" class="card__link hidden">
-                                        <div class="link__container">
-                                            <ul>
-                                            <?php foreach ($tours as $tour): ?>
-                                                <?php if ($tour['tour_month'] == 'Березень'): ?> <!-- Проверка на месяц -->
+                                <div class="card__description">
+                                    <p class="description__text"><?= htmlspecialchars($tour['tour_description']) ?></p>
+                                </div>
+                                <div id="card__link-<?= $index ?>" class="card__link hidden">
+                                    <div class="link__container">
+                                        <ul>
+                                            <?php foreach ($tours as $tourItem): ?>
+                                                <?php if ($tourItem['tour_month'] == $month): ?>
                                                     <li class="tour-item">
                                                         <div class="link__icon">
                                                             <img src="images/la_skiing.png" alt="Иконка тура">
                                                         </div>
-                                                        <!-- Делаем даты тура гиперссылкой с ID -->
-                                                        <a class="link__text" href="/pages/details.php?id=<?= htmlspecialchars($tour['id']) ?>">
-                                                            <?= htmlspecialchars($tour['tour_dates']) ?> - <?= htmlspecialchars($tour['tour_duration']) ?>
+                                                        <a class="link__text" href="/pages/details.php?id=<?= htmlspecialchars($tourItem['id']) ?>">
+                                                            <div class="tours-box">
+                                                                <?= htmlspecialchars($tourItem['tour_dates']) ?> - <?= htmlspecialchars($tourItem['tour_duration'])  ?>
+                                                            </div>
                                                         </a>
+
+
                                                     </li>
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
-
-                                            </ul>
-                                        </div>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </li>
+                    <?php $index++; ?>
+                <?php endforeach; ?>
+            </ul>
 
-                    <div class="swiper-pagination"></div>
-
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </div>
-            <!-- Тут слайдер заканчивается -->
-        </section>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</section>
         
         <section id="questions" class="questions">
     <div>
@@ -549,7 +416,7 @@ document.getElementById("contactForm").addEventListener("submit", function() {
     setTimeout(() => {
         document.getElementById("formContainer").innerHTML = `
             <div style="color: #FFFFFF" class="success-message">
-                <p>Ваші дані передані,<br>
+                <p>Ваші дані передано,<br>
                 наші туристичні котики<br>
                  зв’яжуться з Вами!</p>
                  <img style="padding-top: 25px" src="images/cat.svg">
@@ -772,6 +639,15 @@ document.getElementById("contactForm").addEventListener("submit", function() {
             <div class="item__icon">
                 <a class="item__link" href="https://www.instagram.com/extreme__trips?igsh=MWd1d2l5dDFsNzNuMA==">
                     <img class="icon__image" src="images/inst_desktop.png" alt="">
+                </a>
+                <a class="item__link" href="https://www.facebook.com/ExtremeTripsUkr">
+                    <img class="icon__image" src="images/fb_png.png" alt="">
+                </a>
+                <a class="item__link" href="https://t.me/exteme_trips">
+                    <img class="icon__image" src="images/tg_png.png" alt="">
+                </a>
+                <a class="item__link" href="https://www.threads.net/@extreme__trips?igshid=NTc4MTIwNjQ2YQ==">
+                    <img class="icon__image" src="images/threads_png.png" alt="">
                 </a>
             </div>
         </div>
