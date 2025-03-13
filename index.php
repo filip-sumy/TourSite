@@ -77,7 +77,7 @@ foreach ($tours as $tour) {
         .tour-item {
             display: flex;
             align-items: center;
-            gap: 10px; 
+            gap: 15px; 
              margin-bottom: -20px;  /*Добавляет расстояние между датами тура */
         }
 
@@ -113,7 +113,6 @@ foreach ($tours as $tour) {
 </head>
 
 <body>
-    <!-- Комментарий-->
     <div id="body__container" class="body__container">
         <div class="item left">
             <img class="item__image" src="images/Frame 12.png" alt="">
@@ -140,9 +139,9 @@ foreach ($tours as $tour) {
         </div>
     </div>
     <header class="header">
-        <div class="logo">
-            <img src="images/logo.svg" alt="logo">
-        </div>
+    <div class="logo-desktop">
+        <img src="images/logo.svg" alt="logo">
+    </div>
         <ul class="nav">
             <li>
                 <a class="nav__link" href="index.php">Головна</a>
@@ -183,7 +182,9 @@ foreach ($tours as $tour) {
             </li>
         </ul>
     </nav>
-    
+    <div class="logo-mobile">
+        <img src="images/logo.svg" alt="logo">
+    </div>
     <main id="main" class="main">
         <div class="contact-us">
             <a class="contact-button" href="#contact"></a>
@@ -194,7 +195,8 @@ foreach ($tours as $tour) {
             </div> -->
         </section>
 
-        <section class="slider">
+        
+    <section class="slider slider-1">
     <div class="container swiper">
         <div class="card-wrapper">
             <ul class="card-list swiper-wrapper">

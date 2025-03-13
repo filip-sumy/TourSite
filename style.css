@@ -83,10 +83,20 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+@media (max-width: 670px) {
+  .header {
+    justify-content: flex-end;
+  }
+}
+
 .header .logo {
   padding-top: 15px;
   padding-left: 15px;
 }
+
+
+
 .header .nav {
   padding-top: 25px;
   padding-right: 20%;
@@ -208,6 +218,33 @@ ul .nav__text:hover {
   transform: translate(-50%, -50%);
 }
 
+.logo-desktop {
+  padding-top: 20px;
+  padding-left: 20px;
+  display: none;
+}
+
+.logo-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 200px;
+  }    
+}
+
+@media (min-width: 670px) {
+  .logo-desktop {
+    display: block;
+  }
+  .logo-mobile {
+    display: none;
+  }
+}
+
+
+
+
 .tours {
   margin-bottom: 100px;
 }
@@ -228,7 +265,7 @@ ul .nav__text:hover {
   margin: -15px 0;
   background: rgba(255, 255, 255, 0);
   border-radius: 30px;
-  width: 280px;
+  width: 250px;
 }
 
 @media (min-width: 670px) {
@@ -358,6 +395,29 @@ ul .nav__text:hover {
 .slider-1 {
   margin-top: 75px;
 }
+
+@media (max-width: 600px) {
+  .slider-1 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider-1 .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Расстояние между слайдами */
+  }
+  .slider-1 .swiper-button-prev,
+  .slider-1 .swiper-button-next,
+  .slider-1 .swiper-pagination {
+    display: none; /* Скрываем кнопки и пагинацию */
+  }
+
+  /* .slider-1 .swiper-slide {
+    width: 100% !important; 
+  } */
+}
+
 
 .slider-2 {
   margin-top: 15px;
@@ -514,12 +574,15 @@ ul .nav__text:hover {
     display: none; /* Скрываем кнопки и пагинацию */
   }
 }
-@media (max-width: 768px) {
+
+
+/*Этот медиа делает стрелки слайдера невидимыми на мобилках*/
+/* @media (max-width: 768px) {
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
   }
-}
+} */
 @media (max-width: 1070px) {
   .slider .container {
     margin-left: 20px;
