@@ -227,7 +227,16 @@ if ($id > 0) {
         <div class="socials-items">
             <div class="item__icon">
                 <a class="item__link" href="https://www.instagram.com/extreme__trips?igsh=MWd1d2l5dDFsNzNuMA==">
-                    <img class="icon__image" src="../images/inst_desktop.png" alt="">
+                    <img class="icon__image" src="../images/instagram_png.png" alt="">
+                </a>
+                <a class="item__link" href="https://www.facebook.com/ExtremeTripsUkr">
+                    <img class="icon__image" src="../images/fb_png.png" alt="">
+                </a>
+                <a class="item__link" href="https://t.me/exteme_trips">
+                    <img class="icon__image" src="../images/tg_png.png" alt="">
+                </a>
+                <a class="item__link" href="https://www.threads.net/@extreme__trips?igshid=NTc4MTIwNjQ2YQ==">
+                    <img class="icon__image" src="../images/threads_png.png" alt="">
                 </a>
             </div>
         </div>

@@ -1,3 +1,5 @@
+
+
 const slider1 = new Swiper('.card-wrapper', {
   loop: true,
   spaceBetween: 10, // Убираем отрицательные значения

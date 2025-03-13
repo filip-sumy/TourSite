@@ -643,7 +643,7 @@ document.getElementById("contactForm").addEventListener("submit", function() {
         <div class="socials-items">
             <div class="item__icon">
                 <a class="item__link" href="https://www.instagram.com/extreme__trips?igsh=MWd1d2l5dDFsNzNuMA==">
-                    <img class="icon__image" src="images/inst_desktop.png" alt="">
+                    <img class="icon__image" src="images/instagram_png.png" alt="">
                 </a>
                 <a class="item__link" href="https://www.facebook.com/ExtremeTripsUkr">
                     <img class="icon__image" src="images/fb_png.png" alt="">
