@@ -12,7 +12,6 @@ const slider1 = new Swiper('.card-wrapper', {
   slidesPerView: 3,
   initialSlide: 0,
   freeMode: false, // Выключаем freeMode, так как он может вызывать дергание
-  
   pagination: {
     el: '.card-wrapper .swiper-pagination',
     clickable: true,
@@ -27,44 +26,14 @@ const slider1 = new Swiper('.card-wrapper', {
   speed: 600, // Устанавливаем плавную скорость анимации
 
   breakpoints: {
-      0 : {
-          slidesPerView: 1.2,
-          spaceBetween: 10,
-          
-      },
-
-      390 : {
-        slidesPerView: 1.3,
-        spaceBetween: 20,
-      },
-      
-      420: {
-        slidesPerView: 1.4,
-        spaceBetween: 20,
-      },
-      450: {
-        slidesPerView: 1.5,
-        spaceBetween: 20,
-      },
-      480: {
-        slidesPerView: 1.6,
-        spaceBetween: 20,
-      },
-      510: {
-        slidesPerView: 1.7,
-        spaceBetween: 20,
-      },
-      540: {
-        slidesPerView: 1.8,
-        spaceBetween: 20,
-      },
-      570: {
-        slidesPerView: 1.9,
-        spaceBetween: 20,
-      },
+  
       600: {
-        slidesPerView: 1.9,
-        spaceBetween: 40,
+        
+        allowTouchMove: true,
+        freeMode: true,
+        loop: true,
+        slidesPerView: 1.8,
+        spaceBetween: 0,
       },
       630: {
         slidesPerView: 1.9,
@@ -155,12 +124,17 @@ const slider1 = new Swiper('.card-wrapper', {
         spaceBetween: -180,
       },
       1400: {
-        updateOnWindowResize: true,
-        slidesPerView: 4,
-        spaceBetween: 60,
+      // updateOnWindowResize: true,
+      slidesPerView: 3.4,
+      spaceBetween: 10,
     }
   }
+ 
 });
+
+if (window.innerWidth <= 600) {
+  slider1.destroy(true, true);
+}
 
 
 const slider2 = new Swiper('.reviews-wrapper', {
@@ -661,19 +635,6 @@ document.querySelectorAll('.whatToDoButton').forEach((button) => {
   });
 });
 
-
-//  for (let i = 1; i <= 5; i++) {
-//    const whatToDoButton = document.getElementById(`whatToDoButton-${i}`);
-//    const whatToDo = document.getElementById(`whatToDo-${i}`);
-//    const activitiesText = document.getElementById(`activities__text-${i}`);
-//    const activities = document.getElementById(`activities-${i}`);
-
-//    whatToDoButton.addEventListener('click', () => {
-//      whatToDo.classList.toggle('hidden');
-//      activitiesText.classList.toggle('active');
-//      activities.classList.toggle('active');
-//    });
-//  }
 
 for (let i = 1; i <= 4; i++) {
   const cardButton = document.getElementById(`card-button-${i}`);

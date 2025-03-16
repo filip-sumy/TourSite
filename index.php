@@ -79,7 +79,7 @@ $totalTours = $query->fetchColumn();
         .tour-item {
             display: flex;
             align-items: center;
-            gap: 10px; 
+            gap: 15px; 
              margin-bottom: -20px;  /*Добавляет расстояние между датами тура */
         }
 
@@ -143,9 +143,9 @@ $totalTours = $query->fetchColumn();
         </div>
     </div>
     <header class="header">
-        <div class="logo">
-            <img src="images/logo.svg" alt="logo">
-        </div>
+    <div class="logo-desktop">
+        <img src="images/logo.svg" alt="logo">
+    </div>
         <ul class="nav">
             <li>
                 <a class="nav__link" href="index.php">Головна</a>
@@ -186,7 +186,9 @@ $totalTours = $query->fetchColumn();
             </li>
         </ul>
     </nav>
-    
+    <div class="logo-mobile">
+        <img src="images/logo.svg" alt="logo">
+    </div>
     <main id="main" class="main">
         <div class="contact-us">
             <a class="contact-button" href="#contact"></a>
@@ -197,7 +199,8 @@ $totalTours = $query->fetchColumn();
             </div> -->
         </section>
 
-        <section class="slider">
+        
+    <section class="slider slider-1">
     <div class="container swiper">
         <div class="card-wrapper">
             <ul class="card-list swiper-wrapper">

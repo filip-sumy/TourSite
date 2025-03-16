@@ -331,6 +331,9 @@ document.getElementById("contactForm").addEventListener("submit", function() {
         <div class="powered-by">
             © Powered by Pixel Guard IT
         </div>
+        <div class="powered-by">
+            Developed by Philip Kokurenchuk & Yaroslav Khodun
+        </div>
     </section>
     <script src="../js-files/booking.js"></script>
 </body>

@@ -243,6 +243,9 @@ if ($id > 0) {
         <div class="powered-by">
             © Powered by Pixel Guard IT
         </div>
+        <div class="powered-by">
+            Developed by Philip Kokurenchuk & Yaroslav Khodun
+        </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../js-files/details.js"></script>
