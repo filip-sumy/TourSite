@@ -372,17 +372,14 @@ ul .nav__text:hover {
 .card__button {
   position: absolute;
   bottom: 15px;
-  left: 60px;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: "Manrope";
   width: 250px;
   border-radius: 30px;
   background-color: #E95200;
-  /* padding: 15px 20px;
-  width: 300px; */
-  margin: auto;
- 
-  /* padding-left: 20px; */
 }
+
 
 .card__button p {
   font-size: 12px;

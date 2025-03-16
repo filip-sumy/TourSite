@@ -1,10 +1,10 @@
 const totalTours = Number(document.querySelector(".swiper-container").dataset.tours) || 1;
 
-const swiper = new Swiper(".swiper-container", {
-  loop: totalTours > 1,
-  slidesPerView: Math.min(totalTours, 3),
-  spaceBetween: totalTours > 2 ? 30 : 10,
-});
+// const swiper = new Swiper(".swiper-container", {
+//   loop: totalTours > 1,
+//   slidesPerView: Math.min(totalTours, 3),
+//   spaceBetween: totalTours > 2 ? 30 : 10,
+// });
 
 const slider1 = new Swiper('.card-wrapper', {
   loop: true,
