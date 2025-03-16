@@ -26,6 +26,8 @@ foreach ($tours as $tour) {
     }
 }
 
+$query = $db->query("SELECT COUNT(*) FROM extreme_tours");
+$totalTours = $query->fetchColumn();
 
 ?>
 
@@ -113,6 +115,7 @@ foreach ($tours as $tour) {
 </head>
 
 <body>
+<div class="swiper-container" data-tours="<?= $totalTours ?>">
     <!-- Комментарий-->
     <div id="body__container" class="body__container">
         <div class="item left">
