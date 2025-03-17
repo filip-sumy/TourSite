@@ -276,17 +276,22 @@ $totalTours = $query->fetchColumn();
     <div class="container swiper question-wrapper">
         <ul class="card-list swiper-wrapper">
             <?php
-            // Проходим по всем турам
+            $seen_tours = []; // Массив для отслеживания уже обработанных туров
+
             foreach ($tours as $index => $tour) {
-                // Проверяем, что tour_name == "Драгобрат"
-                if ($tour['tour_name'] == 'Драгобрат') {
+                $tour_name = $tour['tour_name'];
+
+                // Проверяем, не обработан ли уже этот тур
+                if (!in_array($tour_name, $seen_tours)) {
+                    $seen_tours[] = $tour_name; // Добавляем тур в список обработанных
+
                     ?>
-                    <li data-wow-delay="0.5s" id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide wow animate__animated animate__fadeInUp">
+                    <li data-wow-delay="<?= $index * 0.5 ?>s" id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide wow animate__animated animate__fadeInUp">
                         <div class="activity">
                             <div class="slide">
                                 <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
                                     <p id="activities__text-<?= $index ?>" class="activities__text">
-                                        Чим зайнятися на Драгобраті?👇🏻
+                                        Чим зайнятися? <?= htmlspecialchars($tour_name) ?>👇🏻
                                     </p>
                                 </div>
                                 <div id="whatToDo-<?= $index ?>" class="whatToDo hidden">
@@ -295,7 +300,6 @@ $totalTours = $query->fetchColumn();
                                         // Разбиваем строку tour_activities на массив
                                         $activities = explode("\n", $tour['tour_activities']);
                                         foreach ($activities as $activity) {
-                                            // Выводим каждую активность в отдельном блоке
                                             echo '<div class="activity-box">' . htmlspecialchars(trim($activity)) . '</div>';
                                         }
                                         ?>
@@ -305,75 +309,6 @@ $totalTours = $query->fetchColumn();
                         </div>
                     </li>
                     <?php
-                    break; // Прерываем цикл после первого найденного "Драгобрата"
-                }
-            }
-            ?>
-                        <?php
-            // Проходим по всем турам
-            foreach ($tours as $index => $tour) {
-                // Проверяем, что tour_name == "Буковель"
-                if ($tour['tour_name'] == 'Буковель') {
-                    ?>
-                    <li data-wow-delay="1s" id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide wow animate__animated animate__fadeInUp">
-                        <div class="activity">
-                            <div class="slide">
-                                <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
-                                    <p id="activities__text-<?= $index ?>" class="activities__text">
-                                        Чим зайнятися на Буковелі?👇🏻
-                                    </p>
-                                </div>
-                                <div id="whatToDo-<?= $index ?>" class="whatToDo hidden">
-                                    <div class="whatToDo__item">
-                                        <?php
-                                        // Разбиваем строку tour_activities на массив
-                                        $activities = explode("\n", $tour['tour_activities']);
-                                        foreach ($activities as $activity) {
-                                            // Выводим каждую активность в отдельном блоке
-                                            echo '<div class="activity-box">' . htmlspecialchars(trim($activity)) . '</div>';
-                                        }
-                                        ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <?php
-                    break; // Прерываем цикл после первого найденного "Драгобрата"
-                }
-            }
-            ?>
-                        <?php
-            // Проходим по всем турам
-            foreach ($tours as $index => $tour) {
-                // Проверяем, что tour_name == "Боржомі"
-                if ($tour['tour_name'] == 'Боржомі') {
-                    ?>
-                    <li data-wow-delay="1.5s" id="whatToDoButton-<?= $index ?>" class="card-item swiper-slide wow animate__animated animate__fadeInUp">
-                        <div class="activity">
-                            <div class="slide">
-                                <div id="activities-<?= $index ?>" class="activities" onclick="toggleActivities(<?= $index ?>)">
-                                    <p id="activities__text-<?= $index ?>" class="activities__text">
-                                        Чим зайнятися на Боржомі?👇🏻
-                                    </p>
-                                </div>
-                                <div id="whatToDo-<?= $index ?>" class="whatToDo hidden">
-                                    <div class="whatToDo__item">
-                                        <?php
-                                        // Разбиваем строку tour_activities на массив
-                                        $activities = explode("\n", $tour['tour_activities']);
-                                        foreach ($activities as $activity) {
-                                            // Выводим каждую активность в отдельном блоке
-                                            echo '<div class="activity-box">' . htmlspecialchars(trim($activity)) . '</div>';
-                                        }
-                                        ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <?php
-                    break; // Прерываем цикл после первого найденного "Драгобрата"
                 }
             }
             ?>
@@ -381,6 +316,7 @@ $totalTours = $query->fetchColumn();
         <div class="swiper-pagination"></div>
     </div>
 </section>
+
 
 <script>
     function toggleActivities(index) {
