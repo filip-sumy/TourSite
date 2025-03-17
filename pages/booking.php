@@ -165,72 +165,143 @@ if ($id > 0) {
             </div>
         </section>
         <section class="form">
-                <iframe name="hiddenFrame" style="display: none;"></iframe>
-                <div id="formContainer">
-                <form id="contactForm" action="../send_booking.php" method="POST" target="hiddenFrame">
-                    <input type="hidden" name="tour_name" value="<?= htmlspecialchars($tour['tour_name']) ?>">
-                    <input type="hidden" name="tour_dates" value="<?= htmlspecialchars($tour['tour_dates']) ?>">
-                    <input type="hidden" name="tour_duration" value="<?= htmlspecialchars($tour['tour_duration']) ?>">
-                    <div id="contentDesktop" name="contentDesktop"></div>
-                        <p class="contact__text">Крок 1: Контактна інформація</p>
-                        <div class="block__contact">
-                            <img class="icon" src="../images/email-icon.svg" alt="">
-                            <input id="email" class="input" type="email" name="email" placeholder="Введіть вашу пошту" required>
-                        </div>
-                        <p class="person__text">Персона 1</p>
-                        
-                        <div class="block__person">
-                            <img class="icon" src="../images/name-icon.svg" alt="">
-                            <input id="name" class="input" type="text" name="name" placeholder="Введіть ваше ім'я та прізвище" required>
-                        </div>
-                        <div class="block__person">
-                            <img class="icon" src="../images/date-icon.svg" alt="">
-                            <input id="date_birth" class="input" type="text" name="date_birth" placeholder="Введіть вашу дату народження" required>
-                        </div>
-                        <div class="block__person">
-                            <img class="icon" src="../images/tel-icon.svg" alt="">
-                            <input id="phone" class="input" type="text" name="phone" placeholder="Введіть ваш номер телефону" required>
-                        </div>
-                        <div class="block__person">
-                            <img class="icon" src="../images/cityfrom-icon.svg" alt="">
-                            <input id="city_from" class="input" type="text" name="city_from" placeholder="Місце від'їзду" required>
-                        </div>
-                        <div id="addContainer" class="addContainer"></div>
-                        <div id="formData" name="formData"></div>
-                        <div class="form__container">
-                        <div class="add-person">
-                            <button id="add__button" class="add__button">
-                                <img src="../images/Button_add person_desktop.svg" alt="" class="button__img">
-                            </button>
-                            <div class="add__block">
-                                <p class="block__title">
-                                    Додати людину
-                                </p>
-                                <p class="block__desc">
-                                    Разом веселіше!
-                                </p>
-                            </div>
-                        </div>
-                        <div class="comment">
-                            <textarea  id="comment" name="comment" class="comment__area" placeholder="Складіть загальний коментар до замовлення"></textarea>
-                        </div>
-                        <div class="acception__block">
-                            <img style="display:none;" class= "acception__icon" src="../images/accept-icon.svg" alt="">
-                            <label class="checkbox-wrapper">
-                                <input id="checkbox" type="checkbox">
-                                <span class="checkbox-custom"></span>
-                            </label>
-                            <p class="acception__text">
-                                Бронюючи подію, я підтверджую згоду з <a href="../images/public-info-doc.docx.pdf" download="">договіром оферти</a>
-                            </p>
-                        </div>
-                        <div  class="accept-button" type="submit">
-                            <button class="btn" id="submit" disabled>забронювати</button>
-                        </div>
-                    </div>
-                </form>
+    <iframe name="hiddenFrame" style="display: none;"></iframe>
+    <div id="formContainer">
+        <form id="contactForm" action="../send_booking.php" method="POST" target="hiddenFrame">
+            <input type="hidden" name="tour_name" value="<?= htmlspecialchars($tour['tour_name']) ?>">
+            <input type="hidden" name="tour_dates" value="<?= htmlspecialchars($tour['tour_dates']) ?>">
+            <input type="hidden" name="tour_duration" value="<?= htmlspecialchars($tour['tour_duration']) ?>">
+            
+            <p class="contact__text">Крок 1: Контактна інформація</p>
+            <div class="block__contact">
+                <img class="icon" src="../images/email-icon.svg" alt="">
+                <input id="email" class="input" type="email" name="email" placeholder="Введіть вашу пошту" required>
+            </div>
+
+            <div id="personsContainer">
+                <!-- Персона 1 (основная) -->
+                <p class="person__text">Персона 1</p>
+                <div class="block__person">
+                    <img class="icon" src="../images/name-icon.svg" alt="">
+                    <input id="name" class="input" type="text" name="name[]" placeholder="Введіть ваше ім'я та прізвище" required>
                 </div>
-        </section>
+                <div class="block__person">
+                    <img class="icon" src="../images/date-icon.svg" alt="">
+                    <input id="date_birth" class="input" type="text" name="date_birth[]" placeholder="Введіть вашу дату народження" required>
+                </div>
+                <div class="block__person">
+                    <img class="icon" src="../images/tel-icon.svg" alt="">
+                    <input id="phone" class="input" type="text" name="phone[]" placeholder="Введіть ваш номер телефону" required>
+                </div>
+                <div class="block__person">
+                    <img class="icon" src="../images/cityfrom-icon.svg" alt="">
+                    <input id="city_from" class="input" type="text" name="city_from[]" placeholder="Місце від'їзду" required>
+                </div>
+            </div>
+
+            <div class="form__container">
+                <!-- Кнопка добавления персоны -->
+                <div class="add-person">
+                    <button id="add__button" type="button" class="add__button">
+                        <img src="../images/Button_add person_desktop.svg" alt="" class="button__img">
+                    </button>
+                    <div class="add__block">
+                        <p class="block__title">Додати людину</p>
+                        <p class="block__desc">Разом веселіше!</p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <textarea id="comment" name="comment" class="comment__area" placeholder="Складіть загальний коментар до замовлення"></textarea>
+                </div>
+
+                <div class="acception__block">
+                    <img style="display:none;" class="acception__icon" src="../images/accept-icon.svg" alt="">
+                    <label class="checkbox-wrapper">
+                        <input id="checkbox" type="checkbox">
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <p class="acception__text">
+                        Бронюючи подію, я підтверджую згоду з <a href="../images/public-info-doc.docx.pdf" download="">договіром оферти</a>
+                    </p>
+                </div>
+
+                <div class="accept-button">
+                    <button class="btn" id="submit" disabled>забронювати</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let personCount = 2;
+    const personsContainer = document.getElementById("personsContainer");
+    const addButton = document.getElementById("add__button");
+    const removedPersons = []; // Массив для отслеживания удаленных персон
+
+    addButton.addEventListener("click", function () {
+        let personId;
+
+        // Если есть удаленные персоны, используем освобожденный индекс
+        if (removedPersons.length > 0) {
+            personId = removedPersons.pop(); // Извлекаем индекс освобожденной персоны
+        } else {
+            personId = personCount; // Если нет удаленных, увеличиваем общий счетчик
+            personCount++;
+        }
+
+        const personBlock = document.createElement("div");
+        personBlock.classList.add("person-block");
+        personBlock.setAttribute("id", `person-${personId}`);
+        personBlock.innerHTML = `
+            <p class="person__text">Персона ${personId}  
+                <button type="button" class="remove-person" onclick="removePerson(${personId})">
+                    <img src="../images/bin-icon.png" alt="Удалить" class="bin-icon">
+                </button> 
+            </p>
+            <div class="block__person">
+                <img class="icon" src="../images/name-icon.svg" alt="">
+                <input class="input" type="text" name="name[]" placeholder="Введіть ім'я та прізвище" required>
+            </div>
+            <div class="block__person">
+                <img class="icon" src="../images/date-icon.svg" alt="">
+                <input class="input" type="text" name="date_birth[]" placeholder="Введіть дату народження" required>
+            </div>
+            <div class="block__person">
+                <img class="icon" src="../images/tel-icon.svg" alt="">
+                <input class="input" type="text" name="phone[]" placeholder="Введіть номер телефону" required>
+            </div>
+            <div class="block__person">
+                <img class="icon" src="../images/cityfrom-icon.svg" alt="">
+                <input class="input" type="text" name="city_from[]" placeholder="Місце від'їзду" required>
+            </div>
+        `;
+
+        personsContainer.appendChild(personBlock);
+    });
+
+    // Функция удаления персоны
+    window.removePerson = function (id) {
+        const personElement = document.getElementById(`person-${id}`);
+        if (personElement) {
+            personElement.remove();
+            removedPersons.push(id); // Добавляем индекс удаленной персоны в массив
+        }
+    }
+});
+
+
+
+function removePerson(id) {
+    const personElement = document.getElementById(`person-${id}`);
+    if (personElement) {
+        personElement.remove();
+    }
+}
+</script>
+
         <style>
         .checkbox-wrapper {
             display: inline-block;
@@ -274,6 +345,21 @@ if ($id > 0) {
         .checkbox-wrapper input:checked + .checkbox-custom::after {
             display: block;
         }
+
+        .remove-person {
+             background:transparent; 
+            /* color: white; */
+            /* float: right; */
+            /* margin-right: auto;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 5px;
+            cursor: pointer;
+            border-radius: 5px; */
+}
+        .remove-person:hover {
+            background:rgb(114, 113, 113); 
+}
     </style>
     <script>
     const checkbox = document.getElementById('checkbox');
